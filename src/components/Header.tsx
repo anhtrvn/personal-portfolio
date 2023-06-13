@@ -13,8 +13,10 @@ export default function Header({}: Props) {
   	if (contactRef.current == null || socialsRef.current == null) {
   	  return;
   	}
-  	contactRef.current.style.marginLeft = "0px";
   	socialsRef.current.style.marginRight = "0px";
+  	contactRef.current.style.marginLeft = "0px";
+		socialsRef.current.style.opacity = "1";
+		contactRef.current.style.opacity = "1";
 	}
 
 	useEffect(() => {
@@ -23,9 +25,9 @@ export default function Header({}: Props) {
 
 	return (
 	  <header>
-	  	<div className="sticky top-0 p-5 flex item-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
+	  	<div className="sticky top-0 p-5 flex item-start justify-between max-w-6xl mx-auto z-20 xl:items-center">
 				{/* Socials */}
-	  		<div ref={contactRef} className="flex flex-row items-center space-x-2 -ml-[100px] transition-margin duration-1000">
+	  		<div ref={contactRef} className="flex flex-row items-center space-x-2 -ml-[100px] opacity-0 transition-margin duration-1000">
 	  		  <a href="https://www.linkedin.com/in/anh-tran-12b233233/">
 	  		    <FontAwesomeIcon icon={faLinkedin} fixedWidth />
 	  		  </a>
@@ -35,7 +37,7 @@ export default function Header({}: Props) {
 	  		</div>
 	
 	  		{/* Contact */}
-	  	  	<div ref={socialsRef} className="flex flex-row items-center space-x-2 cursor-pointer -mr-[100px] transition-margin duration-1000">
+	  	  	<div ref={socialsRef} className="flex flex-row items-center space-x-2 cursor-pointer -mr-[100px] opacity-0 transition-margin duration-1000">
 	  	  	  <FontAwesomeIcon icon={faEnvelope} fixedWidth />
 	  	  	  <p className="uppercase hidden md:inline-flex text-sm cursor-pointer">Get In Touch</p>
 	  	  	</div>

@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
+import "./styles.css";
 
 export default function Typewriter() {
-  const firstText = "hi, i'm just testing";
-  const secondText = "the typewriter effect i wrote myself";
-  const thirdText = "it's a bit confusing haha";
+  const firstText = "hi, I'm Anh Tran";
+  const secondText = "welcome to my space";
+  const thirdText = "<made with many cups of coffee/>";
 
   const [text1, setText1] = useState("");
   const [text2, setText2] = useState("");
@@ -24,13 +25,13 @@ export default function Typewriter() {
       }
       else if (typing === "isTyping" && text1 === firstText) {
         sleep(2000).then(() => {
-          setTyping(textState[1])
+          setTyping(textState[1]);
         })
       }
-      else if (typing === "isDeleting" && text1 === firstText) {
+      else if ((typing === "isDeleting" && text1 === firstText) || typing === "isDeleting") {
         setText1(firstText.slice(0, text1.length - 1));
         if(text1.length <= 2){
-          setTyping(textState[0])
+          setTyping(textState[0]);
         }
       }
     }, 100);
@@ -44,13 +45,13 @@ export default function Typewriter() {
       }
       else if (typing === "isTyping" && text2 === secondText) {
         sleep(2000).then(() => {
-          setTyping(textState[1])
+          setTyping(textState[1]);
         })
       }
-      else if (typing === "isDeleting" && text2 === secondText) {
+      else if ((typing === "isDeleting" && text2 === secondText) || typing === "isDeleting") {
         setText2(secondText.slice(0, text2.length - 1));
         if(text2.length <= 2){
-          setTyping(textState[0])
+          setTyping(textState[0]);
         }
       }
     }, 250);
@@ -64,13 +65,13 @@ export default function Typewriter() {
       }
       else if (typing === "isTyping" && text3 === thirdText) {
         sleep(2000).then(() => {
-          setTyping(textState[1])
+          setTyping(textState[1]);
         })
       }
-      else if (typing === "isDeleting" && text3 === thirdText) {
+      else if ((typing === "isDeleting" && text3 === thirdText) || typing === "isDeleting") {
         setText3(thirdText.slice(0, text3.length - 1));
         if(text3.length <= 2){
-          setTyping(textState[0])
+          setTyping(textState[0]);
         }
       }
     }, 300);
