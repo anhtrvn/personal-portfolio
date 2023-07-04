@@ -5,7 +5,7 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import ContactMe from "./components/ContactMe";
+import Contact from "./components/Contact";
 import "./index.css";
 
 export default function App() {
@@ -21,9 +21,9 @@ export default function App() {
         <About />
       </section>
 
-      <section id="experience" className="snap-center">
+      {/* <section id="experience" className="snap-center">
         <Experience />
-      </section>
+      </section> */}
 
       <section id="skills" className="snap-center">
         <Skills />
@@ -34,7 +34,7 @@ export default function App() {
       </section>
 
       <section id="contact" className="snap-start">
-        <ContactMe />
+        <Contact />
       </section>
     </div>
   );

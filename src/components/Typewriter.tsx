@@ -80,11 +80,10 @@ export default function Typewriter() {
   return (
     <div className="flex justify-center items-center">
       <div className="flex items-center rounded-md">
-        {/* Display */}
         <span>
-          <div className="text-2xl text-white blinking-cursor">{text1}</div>
-          <div className="text-2xl text-white blinking-cursor">{text2}</div>
-          <div className="text-2xl text-white blinking-cursor">{text3}</div>
+          <div className="text-3xl text-white blinking-cursor">{text1}</div>
+          <div className="text-3xl text-white blinking-cursor">{text2}</div>
+          <div className="text-3xl text-white blinking-cursor">{text3}</div>
         </span>
       </div>
     </div>

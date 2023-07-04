@@ -28,21 +28,24 @@ export default function Header({}: Props) {
 	  	<div className="sticky top-0 p-5 flex item-start justify-between max-w-6xl mx-auto 
 			z-20 xl:items-center">
 				{/* Socials */}
-	  		<div ref={contactRef} className="flex flex-row items-center space-x-2 -ml-[100px] 
-				opacity-0 transition-margin duration-1000">
-	  		  <a href="https://www.linkedin.com/in/anh-tran-12b233233/">
-	  		    <FontAwesomeIcon icon={faLinkedin} fixedWidth />
+	  		<div ref={contactRef} className="flex flex-row items-center space-x-2 -ml-[100px] opacity-0 transition-margin duration-1000">
+	  		  <a className="px-1" href="https://www.linkedin.com/in/anh-tran-12b233233/">
+	  		    <FontAwesomeIcon icon={faLinkedin} />
 	  		  </a>
-	  		  <a href="https://github.com/anhtrvn">
-	  		    <FontAwesomeIcon icon={faGithub} fixedWidth />
+	  		  <a className="px-1" href="https://github.com/anhtrvn">
+	  		    <FontAwesomeIcon icon={faGithub} />
 	  		  </a>
 	  		</div>
 	
 	  		{/* Contact */}
 	  	  <div ref={socialsRef} className="flex flex-row items-center space-x-2 cursor-pointer
 				-mr-[100px] opacity-0 transition-margin duration-1000">
-	  	  	<p className="uppercase hidden md:inline-flex text-sm cursor-pointer">Contact Me</p>
-					<FontAwesomeIcon icon={faPaperPlane} fixedWidth/>
+	  	  	<a href="#contact">
+            <p className="uppercase hidden md:inline-flex text-sm text-gray-400 px-1 transition-all hover:text-white">
+							Get In Touch
+						</p>
+						<FontAwesomeIcon icon={faPaperPlane} className="px-1"/>
+          </a>
 				</div>
 	  	</div>
 		</header>
