@@ -30,10 +30,10 @@ export default function Header({}: Props) {
 				{/* Socials */}
 	  		<div ref={contactRef} className="flex flex-row items-center space-x-2 -ml-[100px] opacity-0 transition-margin duration-1000">
 	  		  <a className="px-1" href="https://www.linkedin.com/in/anh-tran-12b233233/">
-	  		    <FontAwesomeIcon icon={faLinkedin} />
+	  		    <FontAwesomeIcon icon={faLinkedin} size="lg" />
 	  		  </a>
 	  		  <a className="px-1" href="https://github.com/anhtrvn">
-	  		    <FontAwesomeIcon icon={faGithub} />
+	  		    <FontAwesomeIcon icon={faGithub} size="lg" />
 	  		  </a>
 	  		</div>
 	
@@ -44,7 +44,7 @@ export default function Header({}: Props) {
             <p className="uppercase hidden md:inline-flex text-sm text-gray-400 px-1 transition-all hover:text-white">
 							Get In Touch
 						</p>
-						<FontAwesomeIcon icon={faPaperPlane} className="px-1"/>
+						<FontAwesomeIcon icon={faPaperPlane} size="lg" className="px-1"/>
           </a>
 				</div>
 	  	</div>

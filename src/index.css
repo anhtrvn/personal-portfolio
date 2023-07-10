@@ -17,5 +17,9 @@
     border-[#282c34] placeholder-gray-500 transition-all focus:border-gray-400
     focus:text-white hover:border-gray-400
   }
+
+  .skill-icon-fade {
+    @apply opacity-100 hover:opacity-20 transition-opacity duration-300 ease-in-out
+  }
 }
 

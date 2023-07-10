@@ -9,7 +9,7 @@ export default function ContactMe({}: Props) {
     <div className="flex flex-col relative h-screen text-center md:flex-row md:text-left max-w-7xl
     justify-evenly items-center px-10 mx-auto">
       <h3 className="uppercase absolute top-24 text-gray-400 text-2xl tracking-[20px]">
-        Get In Touch
+        Contact
       </h3>
       
       <div className="space-y-10">

@@ -25,7 +25,7 @@ export default function App() {
         <Experience />
       </section> */}
 
-      <section id="skills" className="snap-center">
+      <section id="skills" className="snap-start">
         <Skills />
       </section>
       
