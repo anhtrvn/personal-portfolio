@@ -10,7 +10,8 @@ import "./index.css";
 
 export default function App() {
   return (
-    <div className="bg-[#282c34] text-white">
+    <div className="bg-[#282c34] text-white h-screen w-screen overflow-scroll 
+    snap-mandatory snap-y">
       <Header />
 
       <section id="hero" className="snap-start">
@@ -21,9 +22,9 @@ export default function App() {
         <About />
       </section>
 
-      {/* <section id="experience" className="snap-center">
+      <section id="experience" className="snap-center">
         <Experience />
-      </section> */}
+      </section>
 
       <section id="skills" className="snap-start">
         <Skills />

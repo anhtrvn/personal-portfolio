@@ -3,27 +3,47 @@
 @tailwind utilities;
 
 @layer components {
-  .blinking-cursor {
-    @apply after:animate-[blink];
+  .cursor-blink:after {
+    content: '|';
+    @apply text-white;
+    animation: blink 1s step-start infinite;
+  }
+  
+  @keyframes blink {
+    50% { opacity: 0; } 
   }
 
   .hero-button {
     @apply uppercase text-sm text-gray-400 px-6 py-2 rounded-full border border-[#282c34] 
-    tracking-widest transition-all hover:border-gray-400 hover:text-white
+    tracking-widest transition-all hover:border-gray-400 hover:text-white;
   }
 
   .contact-input {
     @apply outline-none bg-[#333842] text-gray-400 px-6 py-3 rounded-sm border-b
     border-[#282c34] placeholder-gray-500 transition-all focus:border-gray-400
-    focus:text-white hover:border-gray-400
+    focus:text-white hover:border-gray-400;
   }
 
-  .skill-icon-fade {
-    @apply opacity-90 group-hover:opacity-10 transition-opacity duration-300 ease-in-out
+  .skill {
+    @apply relative flex cursor-pointer opacity-0;
   }
-  .skill-name-appear {
+
+  .skill-fade {
+    @apply opacity-90 group-hover:opacity-10 transition-opacity duration-300 ease-in-out;
+  }
+  
+  .skill-name {
     @apply absolute justify-center items-center opacity-0 group-hover:opacity-100
-    transition-opacity duration-300 ease-in-out
+    transition-opacity duration-300 ease-in-out;
+  }
+
+  .skill-show {
+    @apply transition-all opacity-100 delay-300 duration-1000;
+    animation: bounce-once 1s;
+  }
+
+  @keyframes bounce-once {
+    0%, 100$ { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
   }
 }
-
