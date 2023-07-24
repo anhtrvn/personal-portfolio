@@ -5,7 +5,7 @@ type Props = {}
 
 export default function Hero({}: Props) {
   const txts = ["hi, I'm Anh Tran", "welcome to my space", "<made with many cups of coffee />"];
-  const txt = useTypewriter(txts);
+  const {typed, text} = useTypewriter(txts);
 
   return (
     <div className="flex flex-col h-screen space-y-8 items-center justify-center 
@@ -24,8 +24,12 @@ export default function Hero({}: Props) {
 
         {/* Typewriter effect */}
         <h1>
-          <span className="text-3xl text-white cursor-blink">{txt}</span>
-          {/* <span><Typewriter /></span> */}
+          <span 
+            className="text-3xl text-white cursor-blink"
+            aria-label={text}
+          >
+            {typed}
+          </span>
         </h1>
 
         {/* Section buttons */}

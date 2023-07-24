@@ -14,7 +14,9 @@ type Inputs = {
 
 export default function ContactMe({}: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (formData) => console.log(formData);
+  const onSubmit: SubmitHandler<Inputs> = (formData) => {
+    window.location.href = "mailto:anhtran18202@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})"
+  };
 
   return (
     <div className="flex flex-col relative h-screen text-center md:flex-row md:text-left

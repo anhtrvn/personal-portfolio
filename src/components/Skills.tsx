@@ -14,8 +14,8 @@ type Props = {}
 
 export default function Skills({}: Props) {
   const skills = document.querySelectorAll<HTMLDivElement>(".skill");
+  // TODO: find solution to no animation in view
   const observer = new IntersectionObserver(entries => {
-    console.log("hi");
     entries.forEach(entry => {
       entry.target.classList.toggle("skill-show", entry.isIntersecting);
     })

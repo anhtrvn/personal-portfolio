@@ -2,37 +2,62 @@ import React, { useEffect, useState } from "react";
 
 type Props = {};
 
-enum TypedState {
-  typing,
-  pausing,
-  deleting,
+export enum TypeState {
+  Typing,
+  Pausing,
+  Deleting,
 }
 
 const TYPE_TIME = 150;
 const PAUSE_TIME = 1000;
 const DELETE_TIME = 50;
 
-export const useTypewriter = (txts: string[]) => {
-  const [typedState, setTypedState] = useState(TypedState.typing);
+export const useTypewriter = (txts: string[]): {
+  typed: string,
+  text: string,
+} => {
+  const [index, setIndex] = useState(0);
+  const [typeState, setTypeState] = useState(TypeState.Typing);
   const [typed, setTyped] = useState("");
+
   useEffect(() => {
-    if (typedState === TypedState.pausing) return;
+    switch(typeState) {
+      case TypeState.Typing: {
+        {/* Typing State */}
+        const nextType = txts[index].slice(0, typed.length + 1);
+        if (nextType === typed) {
+          setTypeState(TypeState.Pausing);
+          return;
+        }
+        const timeout = setTimeout(() => {
+          setTyped(nextType);
+        }, TYPE_TIME);
+      
+        return () => clearTimeout(timeout);
+      }
+      case TypeState.Deleting: {
+        if (!typed) {
+          const nextIndex = index + 1;
+          setIndex(txts[nextIndex] ? nextIndex : 0);
+          setTypeState(TypeState.Typing);
+          return;
+        }
+        const nextRemaining = txts[index].slice(0, typed.length - 1);
 
-    const nextTyped = txts[0].slice(0, typed.length + 1);
-    if (nextTyped === typed) {
-      setTypedState(TypedState.pausing);
-      const timeout = setTimeout(() => {
-        setTypedState(TypedState.deleting);
-      }, PAUSE_TIME)
-      return;
+        const timeout = setTimeout(() => {
+          setTyped(nextRemaining);
+        }, DELETE_TIME);
+      
+        return () => clearTimeout(timeout);
+      }
+      case TypeState.Pausing:
+      default:
+        const timeout = setTimeout(() => {
+          setTypeState(TypeState.Deleting);
+        }, PAUSE_TIME)
+        return () => clearTimeout(timeout);
     }
-  
-    const timeout = setTimeout(() => {
-      setTyped(txts[0].slice(0, typed.length + 1));
-    }, TYPE_TIME);
-  
-    return () => clearTimeout(timeout);
-  }, [typed])
+  }, [txts, typed, index, typeState])
 
-  return typed;
+  return {typed, text: txts[index]};
 }
