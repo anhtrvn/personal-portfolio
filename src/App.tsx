@@ -14,29 +14,15 @@ export default function App() {
     snap-mandatory snap-y">
       <Header />
 
-      <section id="hero" className="snap-start">
-        <Hero />
-      </section>
+      <Hero />
 
-      <section id="about" className="snap-center">
-        <About />
-      </section>
+      <About />
 
-      <section id="experience" className="snap-center">
-        <Experience />
-      </section>
+      <Experience />
 
-      <section id="skills" className="snap-start">
-        <Skills />
-      </section>
-      
-      <section id="projects" className="snap-center">
-        <Projects />
-      </section>
+      <Skills />
 
-      <section id="contact" className="snap-start">
-        <Contact />
-      </section>
+      <Contact />
     </div>
   );
 }

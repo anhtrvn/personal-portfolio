@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {}
 
@@ -19,8 +19,10 @@ export default function ContactMe({}: Props) {
   };
 
   return (
-    <div className="flex flex-col relative h-screen text-center md:flex-row md:text-left
-    max-w-7xl justify-evenly items-center px-10 mx-auto">
+    <section id="contact"
+      className="flex flex-col relative h-screen text-center md:flex-row md:text-left
+      max-w-7xl justify-evenly items-center px-10 mx-auto"
+    >
       <h3 className="uppercase absolute top-24 text-gray-400 text-2xl tracking-[20px]">
         Contact
       </h3>
@@ -31,13 +33,11 @@ export default function ContactMe({}: Props) {
         </h4>
 
         <div className="space-y-5">
-          <div className="flex justify-center items-center space-x-5">
-            <FontAwesomeIcon icon={faEnvelope} size="lg" />
-            <p className="text-2xl text-gray-400">anhtran18202@gmail.com</p>
-          </div>
-          <div className="flex justify-center items-center space-x-5">
-            <FontAwesomeIcon icon={faPhone} size="lg" />
-            <p className="text-2xl text-gray-400">+1 (832) 916-1508</p>
+          <div className="flex justify-center items-center space-x-5 ">
+            <FontAwesomeIcon icon={faEnvelope} size="xl" />
+            <p className="text-2xl text-white underline decoration-gray-500">
+              anhtran18202@gmail.com
+            </p>
           </div>
         </div>
 
@@ -62,6 +62,6 @@ export default function ContactMe({}: Props) {
           <button className="hero-button" type="submit">Submit</button>
         </form>
       </div>
-    </div>
+    </section>
   )
 }

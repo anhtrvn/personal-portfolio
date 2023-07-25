@@ -43,7 +43,13 @@
   }
 
   @keyframes bounce-once {
-    0%, 100$ { transform: translateY(0); }
+    0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-50px); }
+  }
+
+  .xp-card {
+    @apply flex flex-col flex-shrink-0 rounded-lg items-center bg-[#333842] p-10 space-y-7 
+    cursor-pointer overflow-hidden w-[500px] px-0 md:px-10 opacity-50 transition-opacity
+    hover:opacity-100 duration-200
   }
 }

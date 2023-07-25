@@ -8,8 +8,10 @@ export default function Hero({}: Props) {
   const {typed, text} = useTypewriter(txts);
 
   return (
-    <div className="flex flex-col h-screen space-y-8 items-center justify-center 
-    text-center overflow-hidden">
+    <section id="hero"
+      className="flex flex-col h-screen space-y-8 items-center justify-center 
+      text-center overflow-hidden"
+    >
       {/* Profile */}
       <img
         className="relative rounded-full border-double border-8 border-gray-500 h-32 w-32 
@@ -43,11 +45,11 @@ export default function Hero({}: Props) {
           <a href="#experience">
             <button className="hero-button">Experience</button>
           </a>
-          <a href="#projects">
+          {/* <a href="#projects">
             <button className="hero-button">Projects</button>
-          </a>
+          </a> */}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

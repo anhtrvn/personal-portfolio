@@ -15,6 +15,7 @@ type Props = {}
 export default function Skills({}: Props) {
   const skills = document.querySelectorAll<HTMLDivElement>(".skill");
   // TODO: find solution to no animation in view
+  console.log("h");
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       entry.target.classList.toggle("skill-show", entry.isIntersecting);
@@ -26,8 +27,10 @@ export default function Skills({}: Props) {
   })
   
   return (
-    <div className="flex flex-col h-screen relative text-center md:text-left justify-center
-    items-center xl:flex-row xl:px-10 xl:space-y-0 max-w-[2000px] min-h-screen mx-auto">
+    <section id="skills"
+      className="h-screen flex flex-col relative text-center md:text-left justify-center
+      items-center xl:flex-row xl:px-10 xl:space-y-0 max-w-[2000px] min-h-screen mx-auto"
+    >
       <h3 className="uppercase absolute top-24 text-gray-400 text-2xl tracking-[20px]">
         Skills
       </h3>
@@ -94,6 +97,6 @@ export default function Skills({}: Props) {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
