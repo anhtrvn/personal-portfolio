@@ -20,10 +20,14 @@ export default function ContactMe({}: Props) {
 
   return (
     <section id="contact"
-      className="flex flex-col relative h-screen text-center md:flex-row md:text-left
-      max-w-7xl justify-evenly items-center px-10 mx-auto"
+      className="relative flex flex-col md:flex-row
+      h-4/6 max-w-7xl px-10 mx-auto
+      justify-evenly items-center
+      text-center md:text-left"
     >
-      <h3 className="uppercase absolute top-24 text-gray-400 text-2xl tracking-[20px]">
+      <h3 className="absolute top-20 
+      uppercase text-gray-400 text-2xl tracking-[20px]"
+      >
         Contact
       </h3>
       
@@ -33,7 +37,7 @@ export default function ContactMe({}: Props) {
         </h4>
 
         <div className="space-y-5">
-          <div className="flex justify-center items-center space-x-5 ">
+          <div className="flex justify-center items-center space-x-5">
             <FontAwesomeIcon icon={faEnvelope} size="xl" />
             <p className="text-2xl text-white underline decoration-gray-500">
               anhtran18202@gmail.com
@@ -42,7 +46,7 @@ export default function ContactMe({}: Props) {
         </div>
 
         <form onSubmit={ handleSubmit(onSubmit) }
-          className="flex flex-col space-y-2 mx-auto w-fit"
+          className="flex flex-col w-fit space-y-2 mx-auto"
         >
           <div className="flex space-x-2">
             <input { ...register("name") }

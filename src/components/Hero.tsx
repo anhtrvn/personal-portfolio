@@ -9,25 +9,28 @@ export default function Hero({}: Props) {
 
   return (
     <section id="hero"
-      className="flex flex-col h-screen space-y-8 items-center justify-center 
-      text-center overflow-hidden"
+      className="flex flex-col
+      items-center justify-center overflow-hidden 
+      h-4/6 space-y-8 
+      text-center"
     >
       {/* Profile */}
       <img
-        className="relative rounded-full border-double border-8 border-gray-500 h-32 w-32 
-        mx-auto object-cover hover:animate-spin"
+        className="relative h-32 w-32 mx-auto 
+        rounded-full border-double border-8 border-gray-500  
+        object-cover hover:animate-spin"
         src="https://cdn.discordapp.com/attachments/697129633090371677/1118230003918839929/IMG_20230114_042647_304.jpg"
         alt=""
       />
       <div className="z-20">
-        <h2 className="uppercase text-sm pb-5 text-gray-400 tracking-[10px]">
+        <h2 className="pb-5 uppercase text-sm text-gray-400 tracking-[10px]">
           — Software Engineer —
         </h2>
 
         {/* Typewriter effect */}
         <h1>
           <span 
-            className="text-3xl text-white cursor-blink"
+            className="cursor-blink text-3xl text-white"
             aria-label={text}
           >
             {typed}

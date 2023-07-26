@@ -14,14 +14,17 @@
   }
 
   .hero-button {
-    @apply uppercase text-sm text-gray-400 px-6 py-2 rounded-full border border-[#282c34] 
-    tracking-widest transition-all hover:border-gray-400 hover:text-white;
+    @apply px-6 py-2
+    uppercase text-sm text-gray-400 tracking-widest hover:text-white
+    rounded-full border border-[#282c34] hover:border-gray-400
+    transition-all;
   }
 
   .contact-input {
-    @apply outline-none bg-[#333842] text-gray-400 px-6 py-3 rounded-sm border-b
-    border-[#333842] placeholder-gray-500 transition-all focus:border-gray-400
-    focus:text-white hover:border-gray-400;
+    @apply bg-[#333842] px-6 py-3 
+    text-gray-400 focus:text-white placeholder-gray-500
+    border-[#333842] outline-none rounded-sm border-b hover:border-gray-400 focus:border-gray-400
+    transition-all;
   }
 
   .skill {
@@ -33,12 +36,13 @@
   }
   
   .skill-name {
-    @apply absolute justify-center items-center opacity-0 group-hover:opacity-100
+    @apply absolute justify-center items-center
+    opacity-0 group-hover:opacity-100
     transition-opacity duration-300 ease-in-out;
   }
 
   .skill-show {
-    @apply transition-all opacity-100 delay-300 duration-1000;
+    @apply opacity-100 transition-all delay-300 duration-1000;
     animation: bounce-once 1s;
   }
 
@@ -47,9 +51,36 @@
     50% { transform: translateY(-50px); }
   }
 
-  .xp-card {
-    @apply flex flex-col flex-shrink-0 rounded-lg items-center bg-[#333842] p-10 space-y-7 
-    cursor-pointer overflow-hidden w-[500px] px-0 md:px-10 opacity-50 transition-opacity
-    hover:opacity-100 duration-200
+  .card-group, 
+  .card {
+    @apply p-10 px-0 md:px-10 w-[500px] cursor-pointer 
+    hover:opacity-100 hover:z-10 transition-all;
+    
+  }
+
+  .card {
+    @apply absolute rounded-lg items-center
+    bg-[#333842] opacity-50
+    duration-700 ease-in-out;
+  }
+
+  .card:nth-child(1) {
+    @apply translate-x-[-10%] group-hover:translate-x-[-75%] group-hover:translate-y-[16%]
+    rotate-[-1deg] group-hover:rotate-[-24deg];
+  }
+
+  .card:nth-child(2) {
+    @apply rotate-[2deg] group-hover:rotate-[-8deg]
+    group-hover:translate-x-[-25%] group-hover:translate-y-[8%];
+  }
+
+  .card:nth-child(3) {
+    @apply translate-x-[-6%] group-hover:translate-x-[25%] group-hover:translate-y-[8%] 
+    rotate-[-3deg] group-hover:rotate-[8deg];
+  }
+
+  .card:nth-child(4) {
+    @apply translate-x-[10%] translate-y-[3%] group-hover:translate-x-[75%] group-hover:translate-y-[16%]
+    rotate-[5deg] group-hover:rotate-[24deg];
   }
 }

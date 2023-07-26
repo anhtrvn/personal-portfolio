@@ -22,16 +22,24 @@ export default function Header({}: Props) {
 	}, []);
 
 	return (
-	  <header className="sticky top-0 p-5 flex item-start justify-between max-w-6xl mx-auto 
-		xl:items-center z-20">
+	  <header className="sticky top-0 flex 
+		item-start xl:items-center justify-between 
+		p-5 max-w-6xl mx-auto z-20"
+		>
 				{/* Home button */}
 	  		<div ref={homeRef} 
-					className="flex flex-row items-center space-x-2 -ml-[100px] opacity-0
+					className="flex flex-row 
+					items-center 
+					space-x-2 -ml-[100px] 
+					opacity-0
 					transition-all duration-1000"
 				>
 					<a href="#hero">
-            <button className="uppercase hidden md:inline-flex text-sm text-gray-400 px-1
-						hover:text-white hover:-translate-y-1 duration-300">
+            <button className="md:inline-flex
+						uppercase text-sm text-gray-400 hover:text-white 
+						px-1 hover:-translate-y-1 
+						duration-300"
+					>
 							// AnhTran.
 						</button>
         	</a>
@@ -39,17 +47,24 @@ export default function Header({}: Props) {
 	
 	  		{/* Contact */}
 	  	  <div ref={contactRef} 
-					className="flex flex-row items-center space-x-2 cursor-pointer -mr-[100px] 
-					opacity-0 transition-all duration-1000"
+					className="flex flex-row 
+					items-center cursor-pointer 
+					space-x-2 -mr-[100px] 
+					opacity-0 
+					transition-all duration-1000"
 				>
-	  	  	<a href="#contact">
-            <p className="uppercase hidden md:inline-flex text-sm text-gray-400 px-1
-						hover:text-white hover:-translate-y-1 duration-300">
+	  	  	<a href="#contact" className="group">
+            <p className="md:inline-flex hidden 
+						uppercase text-sm text-gray-400 
+						px-1 group-hover:-translate-y-1 
+						group-hover:text-white 
+						duration-300"
+					>
 							// ContactMe.
 						</p>
-						{/* <FontAwesomeIcon icon={faPaperPlane} size="lg"
+						<FontAwesomeIcon icon={faPaperPlane} size="lg"
 							className="px-1 group-hover:-translate-y-1 group-hover:scale-110 duration-300" 
-						/> */}
+						/>
           </a>
 					<a href="https://www.linkedin.com/in/anh-tran-12b233233/">
 	  		    <FontAwesomeIcon icon={faLinkedin} size="lg" 

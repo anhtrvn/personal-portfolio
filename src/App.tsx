@@ -15,13 +15,9 @@ export default function App() {
       <Header />
 
       <Hero />
-
       <About />
-
-      <Experience />
-
       <Skills />
-
+      <Experience />
       <Contact />
     </div>
   );
