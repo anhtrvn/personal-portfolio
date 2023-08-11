@@ -10,7 +10,8 @@ import "./index.css";
 
 export default function App() {
   return (
-    <div className="bg-[#282c34] text-white h-screen w-screen overflow-scroll 
+    <div className="bg-[#282c34] text-white 
+    h-screen w-screen overflow-scroll scroll-smooth
     snap-mandatory snap-y">
       <Header />
 
@@ -19,6 +20,7 @@ export default function App() {
       <Skills />
       <Experience />
       <Contact />
+
     </div>
   );
 }

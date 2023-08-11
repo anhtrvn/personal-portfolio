@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ReactComponent as IconCplusplus } from "../icons/cplusplus-svgrepo-com.svg";
 import { ReactComponent as IconCsharp } from "../icons/csharp2-svgrepo-com.svg";
 import { ReactComponent as IconJS } from "../icons/js02-svgrepo-com.svg";
@@ -13,25 +13,27 @@ import { ReactComponent as IconVScode } from "../icons/visual-studio-code-svgrep
 type Props = {}
 
 export default function Skills({}: Props) {
-  const skills = document.querySelectorAll<HTMLDivElement>(".skill");
-  // TODO: find solution to no animation in view
-  console.log("hi");
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      entry.target.classList.toggle("skill-show", entry.isIntersecting);
+  useEffect(() => {
+    const skills = document.querySelectorAll<HTMLDivElement>(".skill");
+    const skillObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        entry.target.classList.toggle("skill-show", entry.isIntersecting);
+      })
     })
-  })
 
-  skills.forEach(skill => {
-    observer.observe(skill);
-  })
+    skills.forEach(skill => {
+      skillObserver.observe(skill);
+    })
+  }, []);
+  
   
   return (
     <section id="skills"
       className="relative flex flex-col xl:flex-row 
-      justify-center items-center  
-      h-4/6 max-w-[2000px] xl:px-10 xl:space-y-0 mx-auto
-      text-center md:text-left"
+      justify-center items-center h-screen
+      md:h-4/6 max-w-[2000px] xl:px-10 xl:space-y-0 mx-auto
+      text-center md:text-left font-mono
+      snap-center"
     >
       <h3 className="absolute top-24 uppercase text-gray-400 text-2xl tracking-[20px]">
         Skills

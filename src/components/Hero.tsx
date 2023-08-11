@@ -12,7 +12,8 @@ export default function Hero({}: Props) {
       className="flex flex-col
       items-center justify-center overflow-hidden 
       h-4/6 space-y-8 
-      text-center"
+      text-center
+      snap-center"
     >
       {/* Profile */}
       <img
@@ -40,13 +41,13 @@ export default function Hero({}: Props) {
         {/* Section buttons */}
         <div className="pt-5">
           <a href="#about">
-            <button className="hero-button">About</button>
+            <button className="hero-button">// About</button>
           </a>
           <a href="#skills">
-            <button className="hero-button">Skills</button>
+            <button className="hero-button">// Skills</button>
           </a>
           <a href="#experience">
-            <button className="hero-button">Experience</button>
+            <button className="hero-button">// Experience</button>
           </a>
           {/* <a href="#projects">
             <button className="hero-button">Projects</button>

@@ -12,6 +12,8 @@ type Inputs = {
   message: string;
 }
 
+// TODO: find a different method to submit contact info
+
 export default function ContactMe({}: Props) {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
@@ -21,12 +23,12 @@ export default function ContactMe({}: Props) {
   return (
     <section id="contact"
       className="relative flex flex-col md:flex-row
-      h-4/6 max-w-7xl px-10 mx-auto
+      h-screen max-w-7xl px-10 mx-auto
       justify-evenly items-center
-      text-center md:text-left"
+      text-center md:text-left
+      snap-start"
     >
-      <h3 className="absolute top-20 
-      uppercase text-gray-400 text-2xl tracking-[20px]"
+      <h3 className="absolute top-24 uppercase text-gray-400 text-2xl font-mono tracking-[20px]"
       >
         Contact
       </h3>
@@ -39,9 +41,12 @@ export default function ContactMe({}: Props) {
         <div className="space-y-5">
           <div className="flex justify-center items-center space-x-5">
             <FontAwesomeIcon icon={faEnvelope} size="xl" />
-            <p className="text-2xl text-white underline decoration-gray-500">
-              anhtran18202@gmail.com
-            </p>
+            <div className="relative group">
+              <p className="relative font-mono text-2xl text-white z-10">
+                anhtran18202@gmail.com
+              </p>
+              <div className="highlighter"></div>
+            </div>
           </div>
         </div>
 

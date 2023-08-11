@@ -15,7 +15,7 @@
 
   .hero-button {
     @apply px-6 py-2
-    uppercase text-sm text-gray-400 tracking-widest hover:text-white
+    uppercase text-sm text-gray-400 font-mono tracking-widest hover:text-white
     rounded-full border border-[#282c34] hover:border-gray-400
     transition-all;
   }
@@ -51,36 +51,10 @@
     50% { transform: translateY(-50px); }
   }
 
-  .card-group, 
-  .card {
-    @apply p-10 px-0 md:px-10 w-[500px] cursor-pointer 
-    hover:opacity-100 hover:z-10 transition-all;
-    
-  }
-
-  .card {
-    @apply absolute rounded-lg items-center
-    bg-[#333842] opacity-50
-    duration-700 ease-in-out;
-  }
-
-  .card:nth-child(1) {
-    @apply translate-x-[-10%] group-hover:translate-x-[-75%] group-hover:translate-y-[16%]
-    rotate-[-1deg] group-hover:rotate-[-24deg];
-  }
-
-  .card:nth-child(2) {
-    @apply rotate-[2deg] group-hover:rotate-[-8deg]
-    group-hover:translate-x-[-25%] group-hover:translate-y-[8%];
-  }
-
-  .card:nth-child(3) {
-    @apply translate-x-[-6%] group-hover:translate-x-[25%] group-hover:translate-y-[8%] 
-    rotate-[-3deg] group-hover:rotate-[8deg];
-  }
-
-  .card:nth-child(4) {
-    @apply translate-x-[10%] translate-y-[3%] group-hover:translate-x-[75%] group-hover:translate-y-[16%]
-    rotate-[5deg] group-hover:rotate-[24deg];
+  .highlighter {
+    @apply absolute bg-gray-500 z-0
+    bottom-0 left-0 w-full h-0.5 group-hover:h-full
+    origin-bottom transition-all duration-300 ease-in-out;
   }
 }
+

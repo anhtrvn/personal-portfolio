@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faPaperPlane, faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {};
 
@@ -24,7 +24,8 @@ export default function Header({}: Props) {
 	return (
 	  <header className="sticky top-0 flex 
 		item-start xl:items-center justify-between 
-		p-5 max-w-6xl mx-auto z-20"
+		p-5 max-w-6xl mx-auto z-20
+		font-mono text-md"
 		>
 				{/* Home button */}
 	  		<div ref={homeRef} 
@@ -34,17 +35,20 @@ export default function Header({}: Props) {
 					opacity-0
 					transition-all duration-1000"
 				>
-					<a href="#hero">
-            <button className="md:inline-flex
-						uppercase text-sm text-gray-400 hover:text-white 
-						px-1 hover:-translate-y-1 
+					<a href="#hero" className="group">
+            <p className="md:inline-flex hidden
+						uppercase text-gray-400 group-hover:text-white tracking-[1px]
+						px-1 group-hover:-translate-y-1 
 						duration-300"
-					>
-							// AnhTran.
-						</button>
+						>
+							// AnhTran
+						</p>
+						<FontAwesomeIcon icon={faAngleUp} style={{color: "#ffffff",}} 
+							className="group-hover:-translate-y-1 group-hover:scale-110 duration-300"
+						/>
         	</a>
 	  		</div>
-	
+
 	  		{/* Contact */}
 	  	  <div ref={contactRef} 
 					className="flex flex-row 
@@ -53,19 +57,6 @@ export default function Header({}: Props) {
 					opacity-0 
 					transition-all duration-1000"
 				>
-	  	  	<a href="#contact" className="group">
-            <p className="md:inline-flex hidden 
-						uppercase text-sm text-gray-400 
-						px-1 group-hover:-translate-y-1 
-						group-hover:text-white 
-						duration-300"
-					>
-							// ContactMe.
-						</p>
-						<FontAwesomeIcon icon={faPaperPlane} size="lg"
-							className="px-1 group-hover:-translate-y-1 group-hover:scale-110 duration-300" 
-						/>
-          </a>
 					<a href="https://www.linkedin.com/in/anh-tran-12b233233/">
 	  		    <FontAwesomeIcon icon={faLinkedin} size="lg" 
 							className="px-1 hover:-translate-y-1 hover:scale-110 duration-300" 
@@ -76,6 +67,22 @@ export default function Header({}: Props) {
 							className="px-1 hover:-translate-y-1 hover:scale-110 duration-300"
 						/>
 	  		  </a>
+	  	  	<a href="#contact" className="group">
+            <p className="md:inline-flex hidden 
+						uppercase text-gray-400 tracking-[1px]
+						px-1 group-hover:-translate-y-1 
+						group-hover:text-white 
+						duration-300"
+						>
+							// ContactMe
+						</p>
+						<FontAwesomeIcon icon={faAngleDown} style={{color: "#ffffff",}}
+							className="px-1 group-hover:-translate-y-1 group-hover:scale-110 duration-300"
+						/>
+						{/* <FontAwesomeIcon icon={faPaperPlane} size="lg"
+							className="px-1 group-hover:-translate-y-1 group-hover:scale-110 duration-300" 
+						/> */}
+          </a>
 				</div>
 		</header>
 	);
