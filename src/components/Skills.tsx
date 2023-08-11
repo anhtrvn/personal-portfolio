@@ -10,97 +10,94 @@ import { ReactComponent as IconGit } from "../icons/git-svgrepo-com.svg";
 import { ReactComponent as IconUnity } from "../icons/unity-svgrepo-com.svg";
 import { ReactComponent as IconVScode } from "../icons/visual-studio-code-svgrepo-com.svg";
 
-type Props = {}
+type Props = {};
 
 export default function Skills({}: Props) {
   useEffect(() => {
     const skills = document.querySelectorAll<HTMLDivElement>(".skill");
-    const skillObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        entry.target.classList.toggle("skill-show", entry.isIntersecting);
-      })
-    })
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("bounce-show", entry.isIntersecting);
+      });
+    });
 
-    skills.forEach(skill => {
+    skills.forEach((skill) => {
       skillObserver.observe(skill);
-    })
+    });
   }, []);
-  
-  
+
   return (
-    <section id="skills"
-      className="relative flex flex-col xl:flex-row 
-      justify-center items-center h-screen
-      md:h-4/6 max-w-[2000px] xl:px-10 xl:space-y-0 mx-auto
-      text-center md:text-left font-mono
-      snap-center"
+    <section
+      id="skills"
+      className="relative mx-auto flex h-screen max-w-[2000px] snap-center flex-col items-center justify-center text-center
+      font-mono md:h-4/6 md:text-left xl:flex-row xl:space-y-0 xl:px-10"
     >
-      <h3 className="absolute top-24 uppercase text-gray-400 text-2xl tracking-[20px]">
+      <h3 className="absolute top-24 text-2xl uppercase tracking-[20px] text-gray-400">
         Skills
       </h3>
 
-      <div className="grid grid-cols-3 md:grid-cols-5 gap-5">
+      <div className="z-10 grid grid-cols-3 gap-5 md:grid-cols-5">
         <div className="skill group">
-          <IconCplusplus className="skill-fade w-[100px] h-[100px]"/>
+          <IconCplusplus className="skill-fade h-[100px] w-[100px]" />
           <div className="skill-name m-[21px] my-[30px]">
-            <p className="font-semibold text-3xl">C++</p>
+            <p className="text-3xl font-semibold">C++</p>
           </div>
         </div>
         <div className="skill group">
-          <IconPython className="skill-fade w-[100px] h-[100px]" />
+          <IconPython className="skill-fade h-[100px] w-[100px]" />
           <div className="skill-name mx-[2px] my-[30px]">
-            <p className="font-semibold text-3xl">Python</p>
+            <p className="text-3xl font-semibold">Python</p>
           </div>
         </div>
         <div className="skill group">
-          <IconCsharp className="skill-fade w-[105px] h-[105px]" />
+          <IconCsharp className="skill-fade h-[105px] w-[105px]" />
           <div className="skill-name m-[34px] my-[34px]">
-            <p className="font-semibold text-3xl">C#</p>
+            <p className="text-3xl font-semibold">C#</p>
           </div>
         </div>
         <div className="skill group">
-          <IconJS className="skill-fade w-[100px] h-[100px]" />
-          <div className="skill-name ml-[-15px] my-[30px]">
-            <p className="font-semibold text-3xl">Javascript</p>
+          <IconJS className="skill-fade h-[100px] w-[100px]" />
+          <div className="skill-name my-[30px] ml-[-15px]">
+            <p className="text-3xl font-semibold">Javascript</p>
           </div>
         </div>
         <div className="skill group">
-          <IconTS className="skill-fade w-[130px] h-[130px] ml-[-8px] mt-[-17px]" />
-          <div className="skill-name ml-[-15px] my-[30px]">
-            <p className="font-semibold text-3xl">Typescript</p>
+          <IconTS className="skill-fade ml-[-8px] mt-[-17px] h-[130px] w-[130px]" />
+          <div className="skill-name my-[30px] ml-[-15px]">
+            <p className="text-3xl font-semibold">Typescript</p>
           </div>
         </div>
         <div className="skill group">
-          <IconTailwind className="skill-fade w-[100px] h-[100px]" />
-          <div className="skill-name ml-[-21px] my-[12px]">
-            <p className="font-semibold text-3xl text-center">Tailwind CSS</p>
+          <IconTailwind className="skill-fade h-[100px] w-[100px]" />
+          <div className="skill-name my-[12px] ml-[-21px]">
+            <p className="text-center text-3xl font-semibold">Tailwind CSS</p>
           </div>
         </div>
         <div className="skill group">
-          <IconReact className="skill-fade w-[100px] h-[100px]" />
-          <div className="skill-name ml-[10px] my-[30px]">
-            <p className="font-semibold text-3xl">React</p>
+          <IconReact className="skill-fade h-[100px] w-[100px]" />
+          <div className="skill-name my-[30px] ml-[10px]">
+            <p className="text-3xl font-semibold">React</p>
           </div>
         </div>
         <div className="skill group">
-          <IconVScode className="skill-fade w-[92px] h-[92px]" />
-          <div className="skill-name ml-[-5px] my-[27px]">
-            <p className="font-semibold text-3xl text-center">VSCode</p>
+          <IconVScode className="skill-fade h-[92px] w-[92px]" />
+          <div className="skill-name my-[27px] ml-[-5px]">
+            <p className="text-center text-3xl font-semibold">VSCode</p>
           </div>
         </div>
         <div className="skill group">
-          <IconUnity className="skill-fade w-[100px] h-[100px]" />
+          <IconUnity className="skill-fade h-[100px] w-[100px]" />
           <div className="skill-name m-[16px] my-[30px]">
-            <p className="font-semibold text-3xl">Unity</p>
+            <p className="text-3xl font-semibold">Unity</p>
           </div>
         </div>
         <div className="skill group">
-          <IconGit className="skill-fade w-[120px] h-[120px] ml-[-8px]" />
+          <IconGit className="skill-fade ml-[-8px] h-[120px] w-[120px]" />
           <div className="skill-name m-[30px] my-[40px] ">
-            <p className="font-semibold text-3xl">Git</p>
+            <p className="text-3xl font-semibold">Git</p>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
