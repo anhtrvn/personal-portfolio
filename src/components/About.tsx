@@ -8,18 +8,26 @@ export default function About({}: Props) {
   const headerRef = useRef<HTMLHeadingElement>(null);
   const bioRef = useRef<HTMLParagraphElement>(null);
 
-  function inView() {
+  function bioInView() {
     if (headerRef.current == null || bioRef.current == null) return;
     headerRef.current.style.marginLeft = "0px";
     headerRef.current.style.opacity = "1";
     bioRef.current.style.opacity = "1";
   }
 
+  function bioOutView() {
+    if (headerRef.current == null || bioRef.current == null) return;
+    headerRef.current.style.marginLeft = "-400px";
+    headerRef.current.style.opacity = "0";
+    bioRef.current.style.opacity = "0";
+  }
+
   useEffect(() => {
     const bioObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) inView();
+          if (entry.isIntersecting) bioInView();
+          else bioOutView();
         });
       },
       {
@@ -33,8 +41,8 @@ export default function About({}: Props) {
   return (
     <section
       id="about"
-      className="mx-7xl relative mx-auto flex h-screen snap-start flex-col items-center justify-evenly px-5 text-center 
-      md:flex-row md:text-left"
+      className="mx-7xl relative mx-auto flex h-screen snap-start flex-col items-center justify-evenly
+      px-5 text-center md:flex-row md:text-left"
     >
       <h3 className="absolute top-24 font-mono text-2xl uppercase tracking-[20px] text-gray-400">
         About
@@ -61,30 +69,17 @@ export default function About({}: Props) {
           ref={bioRef}
           className="opacity-0 transition-all delay-300 duration-1000"
         >
-          [Your Name], a passionate and forward-thinking undergraduate student
-          at the esteemed University of Houston, eagerly pursuing a degree in
-          Computer Science with an unwavering determination to become a skilled
-          software engineer. Since a young age, [Your Name] has been captivated
-          by the world of creativity, finding joy in a plethora of artistic
-          endeavors such as visual and performing arts, as well as engaging in
-          exciting DIY projects. Their fascination with the ever-evolving
-          technologies has been a driving force behind their pursuit of
-          knowledge and innovation. As [Your Name] ventured into the realm of
-          higher education, the allure of computer science proved irresistible,
-          as it seamlessly blends creativity and problem-solving, leading to the
-          creation of imaginative and practical solutions—an endeavor [Your
-          Name] finds true fulfillment in. Beyond the intricacies of
-          programming, [Your Name] seeks solace and exhilaration in various
-          physical activities, from the invigorating challenges of weight
-          lifting and bouldering to pushing their physical boundaries, fostering
-          a sense of growth and achievement. Amidst the hustle and bustle, [Your
-          Name] cherishes moments of relaxation and companionship, enjoying the
-          company of their beloved feline friends and finding tranquility
-          through cruising, whether it be in their car or on their skateboard.
-          With an unyielding commitment to combining creativity, technology, and
-          a balanced lifestyle, [Your Name] is destined to embark on an
-          extraordinary journey as a software engineer, while embracing life's
-          diverse passions and experiences along the way.
+          Hi there, I'm Anh, a student at the University of Houston. Currently,
+          I'm exploring the world of Computer Science, striving to become a
+          proficient software engineer. Beyond coding, I've got this adventurous
+          side that's drawn to creativity and pushing boundaries – whether
+          that's delving into artsy projects or challenging workout routines. I
+          like to view challenges as opportunities for growth and learning. When
+          I'm not in productive mode, I love spending time with my sweet furry
+          buddies and cruising around town. My guidance stems from blending
+          technology, creativity, and moments of relaxation. Thus, I'm on a
+          journey to relish the software engineering world while maintaining a
+          balanced and enjoyable lifestyle.
         </p>
       </div>
 
