@@ -23,8 +23,8 @@ export default function Header({}: Props) {
 
   return (
     <header
-      className="item-start text-md sticky top-0 z-50 mx-auto flex max-w-6xl justify-between p-5 font-mono 
-      xl:items-center"
+      className="item-start text-md sticky top-0 z-50 mx-auto flex max-w-6xl justify-between p-5
+      font-mono xl:items-center"
     >
       {/* Home button */}
       <div
@@ -32,12 +32,7 @@ export default function Header({}: Props) {
         className="-ml-[100px] flex flex-row items-center space-x-2 opacity-0 transition-all duration-1000"
       >
         <a href="#hero" className="group">
-          <p
-            className="hidden px-1 uppercase tracking-[1px] text-gray-400 duration-300 group-hover:-translate-y-1
-          group-hover:text-white md:inline-flex"
-          >
-            // AnhTran
-          </p>
+          <p className="header-button">// AnhTran</p>
           <FontAwesomeIcon
             icon={faAngleUp}
             style={{ color: "#ffffff" }}
@@ -49,29 +44,25 @@ export default function Header({}: Props) {
       {/* Contact */}
       <div
         ref={contactRef}
-        className="-mr-[100px] flex cursor-pointer flex-row items-center space-x-2 opacity-0 transition-all duration-1000"
+        className="-mr-[100px] flex cursor-pointer flex-row items-center space-x-2 opacity-0 
+        transition-all duration-1000"
       >
         <a href="https://www.linkedin.com/in/anh-tran-12b233233/">
           <FontAwesomeIcon
             icon={faLinkedin}
-            size="lg"
+            size="xl"
             className="px-1 duration-300 hover:-translate-y-1 hover:scale-110"
           />
         </a>
         <a href="https://github.com/anhtrvn">
           <FontAwesomeIcon
             icon={faGithub}
-            size="lg"
+            size="xl"
             className="px-1 duration-300 hover:-translate-y-1 hover:scale-110"
           />
         </a>
         <a href="#contact" className="group">
-          <p
-            className="hidden px-1 uppercase tracking-[1px] text-gray-400 duration-300 group-hover:-translate-y-1
-          group-hover:text-white md:inline-flex"
-          >
-            // ContactMe
-          </p>
+          <p className="header-button">// ContactMe</p>
           <FontAwesomeIcon
             icon={faAngleDown}
             style={{ color: "#ffffff" }}

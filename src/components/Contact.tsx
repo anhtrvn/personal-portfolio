@@ -22,10 +22,10 @@ export default function ContactMe({}: Props) {
   return (
     <section
       id="contact"
-      className="relative mx-auto flex h-5/6 max-w-7xl snap-start flex-col items-center justify-evenly px-10 
+      className="relative mx-auto flex h-[90%] max-w-7xl snap-start flex-col items-center justify-evenly px-10 
       text-center md:flex-row md:text-left"
     >
-      <h3 className="absolute top-24 font-mono text-2xl uppercase tracking-[20px] text-gray-400">
+      <h3 className="absolute top-24 font-mono text-4xl uppercase tracking-[20px] text-gray-400">
         Contact
       </h3>
 
@@ -33,7 +33,7 @@ export default function ContactMe({}: Props) {
         <h4 className="text-center text-4xl">let's talk!</h4>
 
         <div className="space-y-5">
-          <div className="flex items-center justify-center space-x-5">
+          <div className="flex animate-pulse items-center justify-center space-x-5">
             <FontAwesomeIcon icon={faEnvelope} size="xl" />
             <div className="group relative">
               <p className="relative z-10 font-mono text-2xl text-white">
@@ -74,6 +74,7 @@ export default function ContactMe({}: Props) {
             placeholder="Message"
             className="contact-input"
           />
+
           <button className="hero-button" type="submit">
             Submit
           </button>

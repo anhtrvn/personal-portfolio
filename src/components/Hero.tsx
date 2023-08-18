@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useTypewriter } from "./useTypewriter";
-import Shapes from "./Shapes";
+import HeroCircles from "./HeroCircles";
 
 type Props = {};
 
@@ -26,21 +26,23 @@ export default function Hero({}: Props) {
   return (
     <section
       id="hero"
-      className="flex h-5/6 snap-center flex-col items-center justify-center space-y-8 overflow-hidden text-center"
+      className="flex h-[90%] snap-center flex-col items-center justify-center space-y-8 overflow-hidden
+      text-center"
     >
       {/* Profile */}
       <img
         ref={pfpRef}
-        className="relative z-20 mx-auto h-32 w-32 rounded-full border-8 border-double border-gray-500 object-cover"
+        className="relative z-20 mx-auto h-36 w-36 rounded-full border-8 border-double border-gray-500
+        object-cover"
         src="https://cdn.discordapp.com/attachments/697129633090371677/1118230003918839929/IMG_20230114_042647_304.jpg"
         alt=""
       />
       <div>
-        <h2 className="pb-5 text-sm uppercase tracking-[10px] text-gray-400">
+        <h2 className="pb-5 text-xs uppercase tracking-[10px] text-gray-400 md:text-base">
           — Software Engineer —
         </h2>
 
-        <Shapes />
+        <HeroCircles />
 
         {/* Typewriter effect */}
         <h1>

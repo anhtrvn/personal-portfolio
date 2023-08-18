@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 @layer components {
+  .header-button {
+    @apply hidden px-1 text-lg uppercase tracking-[1px] text-gray-400 duration-300
+    group-hover:-translate-y-1 group-hover:text-white md:inline-flex;
+  }
+
+  .hero-button {
+    @apply rounded-full border border-[#282c34] px-6 py-2 font-mono text-xs uppercase tracking-widest 
+    text-gray-400 transition-all hover:border-gray-400 hover:text-white md:text-base;
+  }
+
   .cursor-blink:after {
     content: "|";
     @apply text-white;
@@ -50,7 +60,7 @@
   }
 
   .load-outer-circle {
-    @apply transition-all delay-300 ease-in-out;
+    @apply h-[250px] w-[250px] transition-all delay-300 ease-in-out md:h-[300px] md:w-[300px];
     animation: circle-out 1s forwards;
   }
 
@@ -64,14 +74,8 @@
     }
   }
 
-  .hero-button {
-    @apply rounded-full border border-[#282c34] px-6 py-2 font-mono text-sm uppercase 
-    tracking-widest text-gray-400 transition-all hover:border-gray-400 hover:text-white;
-  }
-
-  .contact-input {
-    @apply rounded-sm border-b border-[#333842] bg-[#333842] px-6 py-3 text-gray-400 placeholder-gray-500 
-    outline-none transition-all hover:border-gray-400 focus:border-gray-400 focus:text-white;
+  .pulse-circle {
+    @apply h-[500px] w-[500px] animate-pulse md:h-[600px] md:w-[600px];
   }
 
   .skill {
@@ -103,7 +107,19 @@
   }
 
   .highlighter {
-    @apply absolute bottom-0 left-0 z-0 h-0.5 w-full origin-bottom bg-gray-500 transition-all duration-300 ease-in-out 
-    group-hover:h-full;
+    @apply absolute bottom-0 left-0 z-0 h-0.5 w-full origin-bottom bg-gray-500 transition-all
+    duration-300 ease-in-out group-hover:h-full;
+  }
+
+  .card {
+    @apply flex w-[500px] flex-shrink-0 snap-center flex-col items-center space-y-7 overflow-hidden 
+    rounded-lg bg-[#49505f] p-10 text-center opacity-40 transition-opacity duration-200
+    hover:opacity-100;
+  }
+
+  .contact-input {
+    @apply rounded-md border-b border-[#333842] bg-[#333842] px-6 py-3 text-gray-400 
+    placeholder-gray-500 outline-none transition-all hover:border-gray-400 focus:border-white
+    focus:text-white;
   }
 }
