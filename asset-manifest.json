@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-webfolio/static/css/main.14e3970e.css",
+    "main.js": "/react-webfolio/static/js/main.93921f58.js",
+    "static/js/787.28cb0dcd.chunk.js": "/react-webfolio/static/js/787.28cb0dcd.chunk.js",
+    "static/media/python-127-svgrepo-com.svg": "/react-webfolio/static/media/python-127-svgrepo-com.cd2b0599222ec4973a44203a8d731f7c.svg",
+    "static/media/tailwind-svgrepo-com.svg": "/react-webfolio/static/media/tailwind-svgrepo-com.290b48ab09ad9727c7a6c5e81d9b69eb.svg",
+    "static/media/react-svgrepo-com.svg": "/react-webfolio/static/media/react-svgrepo-com.b32db8c830e75123119099344e9606b9.svg",
+    "static/media/csharp2-svgrepo-com.svg": "/react-webfolio/static/media/csharp2-svgrepo-com.04f54d5d641b60af43b59bd2395e5316.svg",
+    "static/media/js02-svgrepo-com.svg": "/react-webfolio/static/media/js02-svgrepo-com.7cd7f4e32222f409b20c30a8f3167884.svg",
+    "static/media/cplusplus-svgrepo-com.svg": "/react-webfolio/static/media/cplusplus-svgrepo-com.9831f9ef1d32a26384bcd07f1e370778.svg",
+    "static/media/typescript-svgrepo-com.svg": "/react-webfolio/static/media/typescript-svgrepo-com.72b9e5fab409bd5a257407757fdfa494.svg",
+    "static/media/visual-studio-code-svgrepo-com.svg": "/react-webfolio/static/media/visual-studio-code-svgrepo-com.759b25318b8d6438ae888a997a6eafe0.svg",
+    "static/media/git-svgrepo-com.svg": "/react-webfolio/static/media/git-svgrepo-com.d40d4546ab21b26c3088801b20c91c34.svg",
+    "static/media/unity-svgrepo-com.svg": "/react-webfolio/static/media/unity-svgrepo-com.363e0600ea7f458c8579edb90bf1a8a8.svg",
+    "index.html": "/react-webfolio/index.html",
+    "main.14e3970e.css.map": "/react-webfolio/static/css/main.14e3970e.css.map",
+    "main.93921f58.js.map": "/react-webfolio/static/js/main.93921f58.js.map",
+    "787.28cb0dcd.chunk.js.map": "/react-webfolio/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14e3970e.css",
+    "static/js/main.93921f58.js"
+  ]
+}
