@@ -22,10 +22,13 @@ export default function ContactMe({}: Props) {
   return (
     <section
       id="contact"
-      className="relative mx-auto flex h-[90%] max-w-7xl snap-start flex-col items-center justify-evenly px-10 
-      text-center md:flex-row md:text-left"
+      className="relative mx-auto flex h-screen max-w-7xl snap-start flex-col items-center justify-evenly
+      px-10 text-center md:h-[90%] md:flex-row md:text-left"
     >
-      <h3 className="absolute top-24 font-mono text-4xl uppercase tracking-[20px] text-gray-400">
+      <h3
+        className="absolute top-24 font-mono text-2xl uppercase tracking-[20px] text-gray-400
+        md:text-3xl"
+      >
         Contact
       </h3>
 

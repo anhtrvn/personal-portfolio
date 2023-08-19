@@ -62,9 +62,6 @@ export default function Hero({}: Props) {
           <a href="#experience">
             <button className="hero-button">// Experience</button>
           </a>
-          {/* <a href="#projects">
-            <button className="hero-button">Projects</button>
-          </a> */}
         </div>
       </div>
     </section>

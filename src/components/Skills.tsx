@@ -30,9 +30,9 @@ export default function Skills({}: Props) {
     <section
       id="skills"
       className="relative mx-auto flex h-screen max-w-[2000px] snap-center flex-col items-center
-      justify-center text-center font-mono md:h-4/6 md:text-left xl:flex-row xl:space-y-0 xl:px-10"
+      justify-center text-center font-mono md:h-[90%] md:text-left xl:flex-row xl:space-y-0 xl:px-10"
     >
-      <h3 className="absolute top-24 text-2xl uppercase tracking-[20px] text-gray-400">
+      <h3 className="absolute top-24 text-2xl uppercase tracking-[20px] text-gray-400 md:text-3xl">
         Skills
       </h3>
 
@@ -40,65 +40,65 @@ export default function Skills({}: Props) {
         <div className="skill group">
           <IconCplusplus className="skill-fade h-[80px] w-[80px] md:h-[100px] md:w-[100px]" />
           <div className="skill-name m-[17px] my-[20px] md:m-[21px] md:my-[30px]">
-            <p className="text-3xl font-semibold">C++</p>
+            <p className="skill-text">C++</p>
           </div>
         </div>
         <div className="skill group">
           <IconPython className="skill-fade h-[80px] w-[80px] md:h-[100px] md:w-[100px]" />
           <div className="skill-name -mx-[8px] my-[20px] md:mx-[2px] md:my-[30px]">
-            <p className="text-3xl font-semibold">Python</p>
+            <p className="skill-text">Python</p>
           </div>
         </div>
         <div className="skill group">
           <IconCsharp className="skill-fade h-[85px] w-[85px] md:h-[105px] md:w-[105px]" />
           <div className="skill-name m-[24px] my-[22px] md:m-[34px] md:my-[34px]">
-            <p className="text-3xl font-semibold">C#</p>
+            <p className="skill-text">C#</p>
           </div>
         </div>
         <div className="skill group">
           <IconJS className="skill-fade h-[80px] w-[80px] md:h-[100px] md:w-[100px]" />
-          <div className="skill-name my-[5px] -ml-[5px] md:my-[11px] md:ml-[10px]">
-            <p className="text-center text-3xl font-semibold">
+          <div className="skill-name my-[5px] -ml-[2px] md:my-[11px] md:ml-[10px]">
+            <p className="skill-text">
               Java <br /> script
             </p>
           </div>
         </div>
         <div className="skill group">
           <IconTS className="skill-fade -ml-[8px] -mt-[17px] h-[109px] w-[109px] md:h-[130px] md:w-[130px]" />
-          <div className="skill-name my-[5px] -ml-[5px] md:my-[30px] md:-ml-[15px]">
-            <p className="text-3xl font-semibold">
+          <div className="skill-name my-[2px] -ml-[5px] md:my-[12px] md:ml-[5px]">
+            <p className="skill-text">
               Type <br /> script
             </p>
           </div>
         </div>
         <div className="skill group">
           <IconTailwind className="skill-fade h-[80px] w-[80px] md:h-[100px] md:w-[100px]" />
-          <div className="skill-name my-[12px] ml-[-21px]">
-            <p className="text-center text-3xl font-semibold">Tailwind CSS</p>
+          <div className="skill-name my-[6px] ml-[-21px] md:my-[12px] md:ml-[-21px]">
+            <p className="skill-text">Tailwind CSS</p>
           </div>
         </div>
         <div className="skill group">
           <IconReact className="skill-fade h-[80px] w-[80px] md:h-[100px] md:w-[100px]" />
-          <div className="skill-name my-[30px] ml-[10px]">
-            <p className="text-3xl font-semibold">React</p>
+          <div className="skill-name my-[20px] md:my-[30px] md:ml-[10px]">
+            <p className="skill-text">React</p>
           </div>
         </div>
         <div className="skill group">
           <IconVScode className="skill-fade h-[72px] w-[72px] md:h-[92px] md:w-[92px]" />
-          <div className="skill-name my-[27px] ml-[-5px]">
-            <p className="text-center text-3xl font-semibold">VSCode</p>
+          <div className="skill-name my-[15px] -ml-[10px] md:my-[27px] md:-ml-[2px]">
+            <p className="skill-text">VSCode</p>
           </div>
         </div>
         <div className="skill group">
           <IconUnity className="skill-fade h-[80px] w-[80px] md:h-[100px] md:w-[100px]" />
-          <div className="skill-name m-[16px] my-[30px]">
-            <p className="text-3xl font-semibold">Unity</p>
+          <div className="skill-name m-[5px] my-[20px] md:m-[16px] md:my-[30px]">
+            <p className="skill-text">Unity</p>
           </div>
         </div>
         <div className="skill group">
           <IconGit className="skill-fade ml-[-8px] h-[98px] w-[98px] md:h-[120px] md:w-[120px]" />
-          <div className="skill-name m-[30px] my-[40px] ">
-            <p className="text-3xl font-semibold">Git</p>
+          <div className="skill-name m-[17px] my-[30px] md:m-[30px] md:my-[40px]">
+            <p className="skill-text">Git</p>
           </div>
         </div>
       </div>

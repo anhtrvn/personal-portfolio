@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import ExperienceCard from "./ExperienceCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -74,7 +74,10 @@ export default function Experience({}: Props) {
       className="relative mx-auto flex h-screen max-w-full snap-start flex-col items-center
       justify-evenly overflow-hidden px-5 text-center md:flex-row md:text-left"
     >
-      <h3 className="absolute top-24 font-mono text-2xl uppercase tracking-[20px] text-gray-400">
+      <h3
+        className="absolute top-24 font-mono text-2xl uppercase tracking-[20px] text-gray-400
+        md:text-3xl"
+      >
         Experience
       </h3>
 

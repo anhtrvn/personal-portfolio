@@ -44,14 +44,15 @@ export default function About({}: Props) {
       className="mx-7xl relative mx-auto flex h-screen snap-start flex-col items-center justify-evenly
       px-5 text-center md:flex-row md:text-left"
     >
-      <h3 className="absolute top-24 font-mono text-2xl uppercase tracking-[20px] text-gray-400 md:text-4xl">
+      <h3 className="absolute top-24 font-mono text-2xl uppercase tracking-[20px] text-gray-400 md:text-3xl">
         About
       </h3>
 
       <div className="z-10 space-y-10 md:px-10">
         <h4
           ref={headerRef}
-          className="-ml-[400px] text-3xl font-semibold opacity-0 transition-all delay-300 duration-1000 md:text-4xl"
+          className="-ml-[400px] text-3xl font-semibold opacity-0 transition-all delay-300 duration-1000 
+          md:text-4xl"
         >
           <FontAwesomeIcon
             icon={faBookmark}
