@@ -41,6 +41,7 @@ export default function Experience({}: Props) {
         "Team Lead: Directed game development, managed sub-teams (UI, gameplay, level design), and led productive meetings.",
         "Gameplay Designer: Designed player skills, enemy types, and attacks for engaging gameplay mechanics.",
         "Level Designer: Crafted game maps and strategic enemy placements for immersive and challenging experiences.",
+        "Game Demo Video: https://youtu.be/Q9Z-05qVYfE",
       ],
     },
     {
