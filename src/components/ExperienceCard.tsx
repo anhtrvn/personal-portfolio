@@ -43,9 +43,9 @@ export default function ExperienceCard({
             <div key={i}>{icon}</div>
           ))}
         </div>
-        <p className="text-md py-5 uppercase text-gray-300">{date}</p>
+        <p className="text-md py-2 uppercase text-gray-300">{date}</p>
       </div>
-      <ul className="ml-5 list-disc space-y-4 text-lg">
+      <ul className="ml-5 list-disc space-y-4 text-left text-lg">
         {summaries.map((summary, j) => (
           <li key={j}>{summary}</li>
         ))}

@@ -70,7 +70,7 @@ export default function About({}: Props) {
         {/* Bio */}
         <p
           ref={bioRef}
-          className="text-base opacity-0 transition-all delay-300 duration-1000 md:text-xl"
+          className="text-base opacity-0 transition-all delay-300 duration-1000 md:text-lg"
         >
           {"<"} Hi there, I'm Anh, a student at the University of Houston.
           Currently, I'm exploring the world of Computer Science, striving to

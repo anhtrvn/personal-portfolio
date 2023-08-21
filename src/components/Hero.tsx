@@ -26,7 +26,7 @@ export default function Hero({}: Props) {
   return (
     <section
       id="hero"
-      className="flex h-[90%] snap-center flex-col items-center justify-center space-y-8 overflow-hidden
+      className="flex h-screen snap-center flex-col items-center justify-center space-y-8 overflow-hidden
       text-center"
     >
       {/* Profile */}
@@ -52,7 +52,7 @@ export default function Hero({}: Props) {
         </h1>
 
         {/* Section buttons */}
-        <div className="relative pt-5">
+        <div className="relative flex flex-col pt-5 md:flex-row">
           <a href="#about">
             <button className="hero-button">// About</button>
           </a>

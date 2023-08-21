@@ -28,12 +28,12 @@ export default function HeroCircles({}: Props) {
     <div className="relative z-0 flex items-center justify-center">
       <div
         ref={innerRef}
-        className="absolute -mt-[280px] h-[170px] w-[170px] rounded-full border border-gray-500
-        md:-mt-[300px]"
+        className="absolute -mt-[285px] h-[150px] w-[150px] rounded-full border border-gray-500 md:-mt-[300px] md:h-[170px]
+        md:w-[170px]"
       ></div>
       <div
         ref={outerRef}
-        className="absolute -mt-[280px] rounded-full border border-gray-500"
+        className="absolute -mt-[285px] rounded-full border border-gray-500"
       ></div>
     </div>
   );
