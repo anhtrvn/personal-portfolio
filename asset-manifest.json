@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-webfolio/static/css/main.e8734b07.css",
-    "main.js": "/react-webfolio/static/js/main.3390351a.js",
+    "main.js": "/react-webfolio/static/js/main.7058ef60.js",
     "static/js/787.28cb0dcd.chunk.js": "/react-webfolio/static/js/787.28cb0dcd.chunk.js",
     "static/media/python-127-svgrepo-com.svg": "/react-webfolio/static/media/python-127-svgrepo-com.cd2b0599222ec4973a44203a8d731f7c.svg",
     "static/media/tailwind-svgrepo-com.svg": "/react-webfolio/static/media/tailwind-svgrepo-com.290b48ab09ad9727c7a6c5e81d9b69eb.svg",
@@ -15,11 +15,11 @@
     "static/media/unity-svgrepo-com.svg": "/react-webfolio/static/media/unity-svgrepo-com.363e0600ea7f458c8579edb90bf1a8a8.svg",
     "index.html": "/react-webfolio/index.html",
     "main.e8734b07.css.map": "/react-webfolio/static/css/main.e8734b07.css.map",
-    "main.3390351a.js.map": "/react-webfolio/static/js/main.3390351a.js.map",
+    "main.7058ef60.js.map": "/react-webfolio/static/js/main.7058ef60.js.map",
     "787.28cb0dcd.chunk.js.map": "/react-webfolio/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e8734b07.css",
-    "static/js/main.3390351a.js"
+    "static/js/main.7058ef60.js"
   ]
 }
