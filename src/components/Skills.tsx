@@ -97,7 +97,7 @@ export default function Skills({}: Props) {
         </div>
         <div className="skill group">
           <IconGit className="skill-fade ml-[-8px] h-[98px] w-[98px] md:h-[120px] md:w-[120px]" />
-          <div className="skill-name m-[17px] my-[30px] md:m-[30px] md:my-[40px]">
+          <div className="skill-name m-[17px] my-[30px] md:m-[25px] md:my-[40px]">
             <p className="skill-text">Git</p>
           </div>
         </div>
