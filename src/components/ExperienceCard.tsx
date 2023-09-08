@@ -5,7 +5,7 @@ type ExperienceData = {
   company: string;
   techIcons: React.ReactNode[];
   date: string;
-  summaries: string[];
+  summaries: React.ReactNode[];
 };
 
 export default function ExperienceCard({
@@ -15,24 +15,6 @@ export default function ExperienceCard({
   date,
   summaries,
 }: ExperienceData) {
-  // useEffect(() => {
-  //   const cards = document.querySelectorAll<HTMLDivElement>(".card");
-  //   const skillObserver = new IntersectionObserver((entries) => {
-  //     entries.forEach(
-  //       (entry) => {
-  //         entry.target.classList.toggle("bounce-show", entry.isIntersecting);
-  //       },
-  //       {
-  //         threshold: 2,
-  //       },
-  //     );
-  //   });
-
-  //   cards.forEach((card) => {
-  //     skillObserver.observe(card);
-  //   });
-  // }, []);
-
   return (
     <article className="card">
       <div className="px-0 md:px-10">
