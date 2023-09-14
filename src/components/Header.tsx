@@ -23,7 +23,7 @@ export default function Header({}: Props) {
 
   return (
     <header
-      className="item-start text-md sticky top-0 z-50 mx-auto flex max-w-6xl justify-between p-5
+      className="text-md sticky top-0 z-50 mx-auto flex max-w-6xl items-start justify-between p-5
       font-mono xl:items-center"
     >
       {/* Home button */}
