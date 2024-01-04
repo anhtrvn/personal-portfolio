@@ -6,6 +6,7 @@ import {
   faBackwardStep,
   faForwardStep,
 } from "@fortawesome/free-solid-svg-icons";
+// Icons Imports
 import { ReactComponent as IconCplusplus } from "../icons/cplusplus-svgrepo-com.svg";
 import { ReactComponent as IconCsharp } from "../icons/csharp2-svgrepo-com.svg";
 import { ReactComponent as IconPython } from "../icons/python-127-svgrepo-com.svg";
@@ -23,13 +24,13 @@ type Props = {};
 export default function Experience({}: Props) {
   const experienceData = [
     {
-      title: "CS Tutor",
+      title: "CS Academic Tutor",
       company: "ConocoPhillips CS Learning Center at UofH",
       techIcons: [
         <IconCplusplus className="h-[42px] w-[42px]" />,
         <IconPython className="h-[40px] w-[40px]" />,
       ],
-      date: "Sept 2022 - Present",
+      date: "Sep. 2022 - Dec. 2023",
       summaries: [
         "Hosted both individualized and group tutoring sessions in Computer Science.",
         "Instructed a wide array of CS concepts, spanning from foundational basics and syntax to advanced data structures and algorithms. ",
@@ -37,14 +38,14 @@ export default function Experience({}: Props) {
       ],
     },
     {
-      title: "Action Side-scrolling Game Demo",
+      title: "3D Action Side-scrolling Game Demo",
       company: "Interactive Game Development at UofH",
       techIcons: [
         <IconCsharp className="h-[42px] w-[42px]" />,
         <IconUnity className="h-[40px] w-[40px]" />,
         <IconGit className="h-[46px] w-[46px]" />,
       ],
-      date: "Aug - Dec 2022",
+      date: "Aug. - Dec. 2022",
       summaries: [
         "Team Lead: Directed game development, managed sub-teams (UI, gameplay, level design), and led productive meetings.",
         "Gameplay Designer: Designed player skills, enemy types, and attacks for engaging gameplay mechanics.",
@@ -56,7 +57,7 @@ export default function Experience({}: Props) {
       ],
     },
     {
-      title: "Fullstack Fuel Website",
+      title: "Fullstack Fuel Price Website",
       company: "Software Design at UofH",
       techIcons: [
         <IconMongoDB className="h-[42px] w-[42px]" />,
@@ -67,12 +68,12 @@ export default function Experience({}: Props) {
         <IconTailwind className="h-[42px] w-[42px]" />,
         <IconGit className="h-[46px] w-[46px]" />,
       ],
-      date: "Ongoing",
+      date: "Sep. - Dec. 2023",
       summaries: [
-        "Developing and refining backend functionalities to support diverse business requirements with Node.js (Express)",
-        "Implementing MongoDB for efficient and organized data storage",
+        "Developed backend functionalities (i.e. microservices) to support diverse business requirements with Node.js (Express)",
+        "Implemented MongoDB for efficient and organized data storage",
         "Continuously enhancing proficiency in React, TypeScript, and Tailwind to craft engaging and dynamic user interfaces.",
-        "Employing Git for robust version control practices to facilitate collaborative and organized development processes.",
+        "Employed Git for robust version control practices to facilitate collaborative and organized development processes.",
       ],
     },
     {
