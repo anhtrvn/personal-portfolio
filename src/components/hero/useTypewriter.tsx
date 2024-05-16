@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-
-type Props = {};
+import React, { useEffect, useState } from 'react';
 
 export enum TypeState {
   Typing,
@@ -12,22 +10,14 @@ const TYPE_TIME = 150;
 const PAUSE_TIME = 1000;
 const DELETE_TIME = 50;
 
-export const useTypewriter = (
-  txts: string[],
-): {
-  typed: string;
-  text: string;
-} => {
+export const useTypewriter = (txts: string[]): { typed: string; text: string; } => {
   const [index, setIndex] = useState(0);
   const [typeState, setTypeState] = useState(TypeState.Typing);
-  const [typed, setTyped] = useState("");
+  const [typed, setTyped] = useState('');
 
   useEffect(() => {
     switch (typeState) {
       case TypeState.Typing: {
-        {
-          /* Typing State */
-        }
         const nextType = txts[index].slice(0, typed.length + 1);
         if (nextType === typed) {
           setTypeState(TypeState.Pausing);
@@ -39,6 +29,7 @@ export const useTypewriter = (
 
         return () => clearTimeout(timeout);
       }
+
       case TypeState.Deleting: {
         if (!typed) {
           const nextIndex = index + 1;
@@ -54,7 +45,9 @@ export const useTypewriter = (
 
         return () => clearTimeout(timeout);
       }
+
       case TypeState.Pausing:
+        
       default:
         const timeout = setTimeout(() => {
           setTypeState(TypeState.Deleting);

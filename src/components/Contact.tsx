@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-
-type Props = {};
+import React from 'react';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 type Inputs = {
   name: string;
@@ -12,74 +10,77 @@ type Inputs = {
   message: string;
 };
 
-export default function ContactMe({}: Props) {
+export default function ContactMe() {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
     window.location.href =
-      "mailto:anhtran18202@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})";
+      'mailto:anhtran18202@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})';
   };
 
   return (
     <section
-      id="contact"
-      className="relative mx-auto flex h-screen max-w-7xl snap-start flex-col items-center justify-evenly
-      px-10 text-center md:h-[90%] md:flex-row md:text-left"
+      id='contact'
+      className='px-5 h-screen relative mx-auto flex max-w-7xl snap-start flex-col items-center justify-evenly md:px-10 text-center md:flex-row md:text-left'
     >
-      <h3
-        className="absolute top-24 font-mono text-2xl uppercase tracking-[20px] text-gray-400
-        md:text-3xl"
-      >
+      <h3 className='absolute top-24 text-2xl uppercase tracking-[20px] text-[#99d6ea] md:text-3xl'>
         Contact
       </h3>
 
-      <div className="space-y-10">
-        <h4 className="text-center text-4xl">let's talk!</h4>
+      <div className='space-y-10'>
+        <h4 className='animate-pulse text-center text-3xl'>let's talk!</h4>
 
-        <div className="space-y-5">
-          <div className="flex animate-pulse items-center justify-center space-x-5">
-            <FontAwesomeIcon icon={faEnvelope} size="xl" />
-            <div className="group relative">
-              <p className="relative z-10 font-mono text-2xl text-white">
+        <div className='space-y-5 text-[#99d6ea]'>
+          <div className='group flex items-center justify-center space-x-5'>
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              size='xl'
+              className='group-hover:text-[#fca6d1]'
+            />
+            <div className='relative'>
+              <p className='relative z-10 text-2xl delay-100 hover:text-[#1b1d36]'>
                 anhtran18202@gmail.com
               </p>
-              <div className="highlighter"></div>
+              <div className='highlighter'></div>
             </div>
           </div>
         </div>
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="mx-auto flex w-fit flex-col space-y-2"
+          className='mx-auto flex w-fit flex-col space-y-2'
         >
-          <div className="flex space-x-2">
+          <div className='flex space-x-2'>
             <input
-              {...register("name")}
-              placeholder="Name"
-              className="contact-input"
-              type="text"
+              {...register('name')}
+              placeholder='Name'
+              className='contact-input'
+              type='text'
             />
             <input
-              {...register("email")}
-              placeholder="Email"
-              className="contact-input"
-              type="email"
+              {...register('email')}
+              placeholder='Email'
+              className='contact-input'
+              type='email'
             />
           </div>
 
           <input
-            {...register("subject")}
-            placeholder="Subject"
-            className="contact-input"
-            type="text"
+            {...register('subject')}
+            placeholder='Subject'
+            className='contact-input'
+            type='text'
           />
           <textarea
-            {...register("message")}
-            placeholder="Message"
-            className="contact-input"
+            {...register('message')}
+            placeholder='Message'
+            className='contact-input'
           />
 
-          <button className="hero-button" type="submit">
-            Submit
+          <button
+            type='submit'
+            className='rounded-lg bg-[#fca6d1] px-6 py-2 text-lg font-semibold tracking-widest text-[#1b1d36] transition-all hover:border-gray-400 hover:bg-[#e1e7ec] active:bg-[#99d6ea]'
+          >
+            submit
           </button>
         </form>
       </div>
