@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import image0 from '../../icons/image0.png';
 
 export default function HeroCircles() {
   const innerRef = useRef<HTMLDivElement>(null);
@@ -29,7 +30,8 @@ export default function HeroCircles() {
       <img
         ref={pfpRef}
         className='relative z-10 mx-auto -mt-[295px] h-40 w-40 rounded-full border-4 border-double border-[#e1e7ec] bg-[#1b1d36] object-cover md:-mt-[320px]'
-        src='https://cdn.discordapp.com/attachments/468879354299154432/1240431160270786631/image0.png?ex=6646890a&is=6645378a&hm=d6acbf4d917d8ab5848f974c5e813357b708acfbb58714bde63246c7cc5d1f62&'
+        src={image0}
+        alt='profile picture'
       />
       <div
         ref={innerRef}

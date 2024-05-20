@@ -1,12 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  html {
-    @apply scroll-smooth;
-  }
-}
 
 @layer components {
   /* Header */
@@ -136,5 +134,10 @@
   .highlighter {
     @apply absolute bottom-0 left-0 z-0 h-0.5 w-full origin-bottom bg-[#fca6d1] transition-all
     duration-300 ease-in-out group-hover:h-full;
+  }
+
+  .aboutme {
+    @apply max-w-6xl text-left text-[#e1e7ec] opacity-0 transition-all delay-300 duration-1000 
+    md:text-lg;
   }
 }
