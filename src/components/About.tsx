@@ -48,7 +48,7 @@ export default function About() {
       <div className='z-10 space-y-10 md:px-10'>
         <h4
           ref={headerRef}
-          className='mt-20 sm:mt-auto sm:-ml-[400px] text-2xl font-semibold text-[#99d6ea] opacity-0 transition-all delay-300 duration-1000 md:text-3xl'
+          className='mt-20 text-2xl font-semibold text-[#99d6ea] opacity-0 transition-all delay-300 duration-1000 sm:-ml-[400px] sm:mt-auto md:text-3xl'
         >
           <FontAwesomeIcon icon={faBookmark} className='pr-4' />a{' '}
           <span className='group relative'>
@@ -63,7 +63,7 @@ export default function About() {
         {/* Bio */}
         <p
           ref={bioRef}
-          className='text-base opacity-0 transition-all delay-300 duration-1000 md:text-lg max-w-6xl'
+          className='max-w-6xl text-left text-[#e1e7ec] opacity-0 transition-all delay-300 duration-1000 md:text-lg'
         >
           <span className='text-xl font-semibold text-[#fca6d1]'>{'<>'}</span>
           <br />
@@ -78,7 +78,7 @@ export default function About() {
         </p>
       </div>
 
-      <div className='absolute left-0 top-[30%] h-[300px] sm:h-[500px] w-full -skew-y-6 bg-[#17182c]'></div>
+      <div className='absolute left-0 top-[30%] h-[300px] w-full -skew-y-6 bg-[#17182c] sm:h-[500px]'></div>
     </section>
   );
 }

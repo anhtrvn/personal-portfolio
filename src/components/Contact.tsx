@@ -20,24 +20,22 @@ export default function ContactMe() {
   return (
     <section
       id='contact'
-      className='px-5 h-screen relative mx-auto flex max-w-7xl snap-start flex-col items-center justify-evenly md:px-10 text-center md:flex-row md:text-left'
+      className='relative mx-auto flex h-screen max-w-6xl snap-start flex-col items-center justify-evenly px-5 text-center md:flex-row md:px-10 md:text-left'
     >
       <h3 className='absolute top-24 text-2xl uppercase tracking-[20px] text-[#99d6ea] md:text-3xl'>
         Contact
       </h3>
 
-      <div className='space-y-10'>
-        <h4 className='animate-pulse text-center text-3xl'>let's talk!</h4>
+      <div className='max-w-full space-y-10'>
+        <h4 className='animate-pulse text-center text-3xl text-[#e1e7ec]'>
+          let's talk!
+        </h4>
 
         <div className='space-y-5 text-[#99d6ea]'>
           <div className='group flex items-center justify-center space-x-5'>
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              size='xl'
-              className='group-hover:text-[#fca6d1]'
-            />
+            <FontAwesomeIcon icon={faEnvelope} size='xl' className='group-hover:text-[#fca6d1]' />
             <div className='relative'>
-              <p className='relative z-10 text-2xl delay-100 hover:text-[#1b1d36]'>
+              <p className='relative z-10 text-xl sm:text-2xl delay-100 hover:text-[#1b1d36]'>
                 anhtran18202@gmail.com
               </p>
               <div className='highlighter'></div>
@@ -47,9 +45,9 @@ export default function ContactMe() {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className='mx-auto flex w-fit flex-col space-y-2'
+          className='mx-auto max-w-full flex flex-col space-y-2'
         >
-          <div className='flex space-x-2'>
+          <span className='flex space-x-2'>
             <input
               {...register('name')}
               placeholder='Name'
@@ -62,7 +60,7 @@ export default function ContactMe() {
               className='contact-input'
               type='email'
             />
-          </div>
+          </span>
 
           <input
             {...register('subject')}

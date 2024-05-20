@@ -27,7 +27,7 @@ export default function Header() {
           className='-ml-[100px] flex flex-row items-center space-x-2 md:space-x-4 opacity-0 transition-all duration-1000'
         >
           <a href='#hero'>
-            <p className='header-button text-[#fca6d1]'>anhtran.</p>
+            <p className='hidden sm:inline-flex header-button text-[#fca6d1]'>anhtran.</p>
           </a>
           <a href='#about'>
             <button className='header-button'>about</button>
@@ -43,8 +43,11 @@ export default function Header() {
         {/* Contact */}
         <div
           ref={contactRef}
-          className='-mr-[100px] flex cursor-pointer flex-row items-center space-x-2  opacity-0 transition-all duration-1000'
+          className='-mr-[100px] flex cursor-pointer flex-row items-center space-x-2 opacity-0 transition-all duration-1000'
         >
+          <a href='#contact'>
+            <p className='header-button hidden sm:inline-flex text-[#fca6d1]'>contact.</p>
+          </a>
           <a href='https://www.linkedin.com/in/anh-tran-12b233233/'>
             <FontAwesomeIcon icon={faLinkedin} size='xl' className='header-icon'
             />
@@ -52,9 +55,6 @@ export default function Header() {
           <a href='https://github.com/anhtrvn'>
             <FontAwesomeIcon icon={faGithub} size='xl' className='header-icon'
             />
-          </a>
-          <a href='#contact'>
-            <p className='header-button text-[#fca6d1]'>contact.</p>
           </a>
         </div>
       </section>

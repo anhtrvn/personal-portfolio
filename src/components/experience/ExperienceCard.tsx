@@ -27,9 +27,9 @@ export default function ExperienceCard({
           <li key={j}>{summary}</li>
         ))}
       </ul>
-      <div className='mb-2 mt-4 flex flex-row items-center justify-center space-x-2 text-[#99d6ea]'>
+      <div className='mb-2 mt-4 text-center space-x-2 text-[#99d6ea] max-w-full'>
         {techs.map((tech, i) => (
-          <div key={i}>{tech}</div>
+          <span key={i}>{tech}</span>
         ))}
       </div>
     </div>

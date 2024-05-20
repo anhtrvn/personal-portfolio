@@ -2,11 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
 @layer components {
   /* Header */
   .header-button {
-    @apply px-1 sm:text-lg tracking-[1px] text-[#99d6ea] duration-300 hover:-translate-y-1 
-    hover:text-[#e1e7ec] inline-flex font-semibold;
+    @apply px-1 text-lg tracking-[1px] text-[#99d6ea] duration-300 hover:-translate-y-1 
+    hover:text-[#e1e7ec] font-semibold;
   }
 
   .header-icon {
@@ -85,7 +91,7 @@
   }
   
   .skill-text {
-    @apply flex items-center justify-center text-center text-lg md:text-3xl font-semibold text-[#fca6d1] break-all;
+    @apply flex items-center justify-center text-center text-lg md:text-3xl font-semibold text-[#fca6d1];
   }
 
   .skill-fade {
@@ -113,16 +119,17 @@
 
   /* Experience */
   .card {
-    @apply flex max-h-full w-[350px] flex-shrink-0 snap-center flex-col items-center space-y-7 
-    break-words rounded-lg bg-[#17182c] border border-[#17182c] p-10 text-center text-[#e1e7ec] transition-all duration-300 
-    hover:border-[#e1e7ec] md:w-[700px] xl:w-[900px];
+    @apply flex max-h-full w-full flex-shrink-0 snap-center flex-col items-center 
+    space-y-7 break-words rounded-lg bg-[#17182c] border border-[#17182c] p-10 text-center 
+    text-[#e1e7ec] transition-all duration-300 hover:border-[#e1e7ec] md:w-[700px] xl:w-[900px] 
+    overflow-y-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-transparent;
   }
 
   /* Contact */
   .contact-input {
     @apply rounded-lg border-b border-[#17182c] bg-[#17182c] px-6 py-3 text-[#e1e7ec]
   placeholder-[#e1e7ec]/70 outline-none transition-all hover:border-[#e1e7ec] focus:border-[#e1e7ec]
-  focus:text-[#e1e7ec];
+  focus:text-[#e1e7ec] w-full;
   }
 
   /* About and Contact */
