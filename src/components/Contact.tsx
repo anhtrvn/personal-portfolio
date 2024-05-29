@@ -13,8 +13,7 @@ type Inputs = {
 export default function ContactMe() {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href =
-      'mailto:anhtran18202@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})';
+    window.location.href = 'mailto:anhtran18202@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})';
   };
 
   return (
@@ -28,7 +27,7 @@ export default function ContactMe() {
 
       <div className='max-w-full space-y-10'>
         <h4 className='animate-pulse text-center text-3xl text-[#e1e7ec]'>
-          let's talk!
+          connect with me!
         </h4>
 
         <div className='space-y-5 text-[#99d6ea]'>

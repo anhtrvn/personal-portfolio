@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -49,12 +50,10 @@ export default function Header() {
             <p className='header-button hidden sm:inline-flex text-[#fca6d1]'>contact.</p>
           </a>
           <a href='https://www.linkedin.com/in/anh-tran-12b233233/'>
-            <FontAwesomeIcon icon={faLinkedin} size='xl' className='header-icon'
-            />
+            <FontAwesomeIcon icon={faLinkedin} size='xl' className='header-icon' />
           </a>
           <a href='https://github.com/anhtrvn'>
-            <FontAwesomeIcon icon={faGithub} size='xl' className='header-icon'
-            />
+            <FontAwesomeIcon icon={faGithub} size='xl' className='header-icon' />
           </a>
         </div>
       </section>

@@ -9,7 +9,7 @@ import './index.css';
 
 export default function App() {
   return (
-    <div className='scrollbar-track-transparent scrollbar-thin scrollbar-thumb-[#99d6ea] h-screen w-screen snap-y snap-mandatory overflow-auto bg-[#1b1d36] font-mono'>
+    <div className='h-screen w-screen overflow-auto scroll-smooth bg-[#1b1d36] font-mono scrollbar-thin scrollbar-track-transparent scrollbar-thumb-[#99d6ea]'>
       <Header />
       <Hero />
       <About />
