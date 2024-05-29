@@ -1,7 +1,7 @@
 export const experienceData = [
   {
     title: 'ETL Data Pipeline Manager Web App',
-    company: 'Software Design, Fall 23',
+    company: 'Software Development Practices, Fall 23',
     techs: [
       'MongoDB',
       'MySQL',
@@ -33,7 +33,7 @@ export const experienceData = [
     date: 'Sep. - Dec. 2023',
     summaries: [
       <a href='https://github.com/anhtrvn/FuelQuoteWebsite' className='underline underline-offset-2' >
-        Repo
+        Repository 🚀
       </a>,
       'Managed and assigned tasks to team members with recurring weekly meetings.',
       'Created a full-stack website enabling users to register accounts, request fuel quotes based on gallons, and access previous quote requests and personal information.',
@@ -46,7 +46,7 @@ export const experienceData = [
     date: 'Sep. - Dec. 2022',
     summaries: [
       <a href='https://youtu.be/Q9Z-05qVYfE' className='underline underline-offset-2'>
-        Demo
+        Demo 🚀
       </a>,
       'Team lead: directed the game’s development in Unity, coordinated tasks across three specialized sub-teams in UI, gameplay, and level designs within 3-week sprints.',
       'Gameplay designer: developed game mechanics, including  player skill kits and enemy behaviors.',

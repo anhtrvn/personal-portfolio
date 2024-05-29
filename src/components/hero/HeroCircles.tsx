@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import image0 from '../../icons/image0.png';
+import profile from '../../images/profile.png';
 
 export default function HeroCircles() {
   const innerRef = useRef<HTMLDivElement>(null);
@@ -30,7 +30,7 @@ export default function HeroCircles() {
       <img
         ref={pfpRef}
         className='relative z-10 mx-auto -mt-[295px] h-40 w-40 rounded-full border-4 border-double border-[#e1e7ec] bg-[#1b1d36] object-cover md:-mt-[320px]'
-        src={image0}
+        src={profile}
         alt='profile'
       />
       <div
