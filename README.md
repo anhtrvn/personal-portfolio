@@ -6,7 +6,7 @@
 I embarked on this project to learn React, starting with a [simple tutorial](https://youtu.be/urgi2iz9P6U), and added my own touches ✨
 
 <div align='center'></div>
-![Screenshot](images/website_screenshot.png)
+![Screenshot](src/images/website_screenshot.png)
 
 ## Tools
 
