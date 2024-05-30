@@ -1,7 +1,7 @@
 # [personal-portfolio](https://github.com/anhtrvn/personal-portfolio)
 
 <div align='center'>
-  Welcome to my [first portfolio website](https://anhtrvn.github.io/PersonalPortfolio/) 🚀
+  Welcome to my [first portfolio website](https://anhtrvn.github.io/personal-portfolio/) 🚀
 </div>
 
 [simple tutorial]
