@@ -51,22 +51,18 @@ export default function About() {
           ref={bioRef}
           className='max-w-6xl text-left text-[#e1e7ec] opacity-0 transition-all delay-300 duration-1000 md:text-lg'
         >
-          <span className='font-semibold text-[#fca6d1]'>{'<background>'}</span>
+          <span className='font-semibold text-[#fca6d1]'>{'background.'}</span>
           <br />
           <ul className='pl-4'>
             <li>
               🎓 I'm Anh, a recent computer science graduate from the University
-              of Houston, passionate about pursuing a career as a software
-              engineer.
+              of Houston and an aspiring software engineer.
             </li>
             <li>
               💻 My technical experiences lie in fullstack web development,
               particularly in backend alley.
             </li>
           </ul>
-          <span className='font-semibold text-[#fca6d1]'>
-            {'<background/>'}
-          </span>
         </div>
 
         {/* Hobbies */}
@@ -74,12 +70,22 @@ export default function About() {
           ref={hobbiesRef}
           className='max-w-6xl text-left text-[#e1e7ec] opacity-0 transition-all delay-300 duration-1000 md:text-lg'
         >
-          <span className='font-semibold text-[#fca6d1]'>{'<hobbies>'}</span>
+          <span className='font-semibold text-[#fca6d1]'>{'hobbies.'}</span>
           <br />
-          <p className='pl-4'>
-            🏋️‍♂️ gym rat 🐱 cat lover 🎨 art and diy 🚗 car and motorcycle enthusiast
-          </p>
-          <span className='font-semibold text-[#fca6d1]'>{'<hobbies/>'}</span>
+          <ul className='pl-4'>
+            <li>
+              🏋️‍♂️ gym rat
+            </li>
+            <li>
+              🐱 cat lover
+            </li>
+            <li>
+              🎨 art and diy
+            </li>
+            <li>
+              🚗 car and motorcycle enthusiast
+            </li>
+          </ul>
         </div>
       </div>
 

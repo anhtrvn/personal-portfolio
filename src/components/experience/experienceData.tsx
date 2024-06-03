@@ -20,7 +20,14 @@ export const experienceData = [
     ],
   },
   {
-    title: 'Fullstack Fuel Quote Website',
+    title: (
+      <a
+        href='https://github.com/anhtrvn/FuelQuoteWebsite'
+        className='underline underline-offset-4'
+      >
+        Fullstack Fuel Quote Website
+      </a>
+    ),
     company: 'Software Design, Fall 23',
     techs: [
       'MongoDB',
@@ -32,22 +39,23 @@ export const experienceData = [
     ],
     date: 'Sep. - Dec. 2023',
     summaries: [
-      <a href='https://github.com/anhtrvn/FuelQuoteWebsite' className='underline underline-offset-2' >
-        Repository 🚀
-      </a>,
       'Managed and assigned tasks to team members with recurring weekly meetings.',
       'Created a full-stack website enabling users to register accounts, request fuel quotes based on gallons, and access previous quote requests and personal information.',
     ],
   },
   {
-    title: 'Action Side-scrolling Game',
+    title: (
+      <a
+        href='https://youtu.be/Q9Z-05qVYfE'
+        className='underline underline-offset-4'
+      >
+        Action Side-scrolling Game
+      </a>
+    ),
     company: 'Interactive Game Development, Fall 21',
     techs: ['C#', 'Unity', 'Git'],
     date: 'Sep. - Dec. 2022',
     summaries: [
-      <a href='https://youtu.be/Q9Z-05qVYfE' className='underline underline-offset-2'>
-        Demo 🚀
-      </a>,
       'Team lead: directed the game’s development in Unity, coordinated tasks across three specialized sub-teams in UI, gameplay, and level designs within 3-week sprints.',
       'Gameplay designer: developed game mechanics, including  player skill kits and enemy behaviors.',
       'Level designer: crafted game levels and managed strategic enemy placements.',
@@ -55,7 +63,14 @@ export const experienceData = [
   },
   {
     title: 'CS Academic Tutor',
-    company: 'ConocoPhillips CS Learning Center at UH',
+    company: (
+      <a
+        href='https://www.uh.edu/nsm/computer-science/undergraduate/tutoring/'
+        className='underline underline-offset-4'
+      >
+        ConocoPhillips CS Learning Center at UH
+      </a>
+    ),
     techs: ['C++', 'Python'],
     date: 'Sep. 2022 - Dec. 2023',
     summaries: [

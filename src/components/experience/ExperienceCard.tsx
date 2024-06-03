@@ -1,8 +1,8 @@
 import React from 'react';
 
 type ExperienceData = {
-  title: string;
-  company: string;
+  title: string | React.ReactNode;
+  company: string | React.ReactNode;
   techs: string[];
   date: string;
   summaries: React.ReactNode[];
