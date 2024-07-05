@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -21,14 +20,16 @@ export default function Header() {
 
   return (
     <header className='sticky top-0 z-50 bg-[#1b1d36] p-5 '>
-      <section className='mx-auto sm:flex max-w-6xl justify-between items-center'>
+      <div className='mx-auto max-w-6xl items-center justify-between flex sm:flex-col md:flex-row'>
         {/* Home buttons */}
         <div
           ref={homeRef}
-          className='-ml-[100px] flex flex-row items-center space-x-2 md:space-x-4 opacity-0 transition-all duration-1000'
+          className='-ml-[100px] flex flex-row items-center space-x-2 opacity-0 transition-all duration-1000 md:space-x-4'
         >
           <a href='#hero'>
-            <p className='hidden sm:inline-flex header-button text-[#fca6d1]'>anhtran.</p>
+            <p className='header-button hidden text-[#fca6d1] sm:inline-flex'>
+              anhtran.
+            </p>
           </a>
           <a href='#about'>
             <button className='header-button'>about</button>
@@ -47,16 +48,26 @@ export default function Header() {
           className='-mr-[100px] flex cursor-pointer flex-row items-center space-x-2 opacity-0 transition-all duration-1000'
         >
           <a href='#contact'>
-            <p className='header-button hidden sm:inline-flex text-[#fca6d1]'>contact.</p>
+            <p className='header-button hidden text-[#fca6d1] sm:inline-flex'>
+              contact.
+            </p>
           </a>
           <a href='https://www.linkedin.com/in/anh-tran-12b233233/'>
-            <FontAwesomeIcon icon={faLinkedin} size='xl' className='header-icon' />
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              size='xl'
+              className='header-icon'
+            />
           </a>
           <a href='https://github.com/anhtrvn'>
-            <FontAwesomeIcon icon={faGithub} size='xl' className='header-icon' />
+            <FontAwesomeIcon
+              icon={faGithub}
+              size='xl'
+              className='header-icon'
+            />
           </a>
         </div>
-      </section>
+      </div>
     </header>
   );
 }

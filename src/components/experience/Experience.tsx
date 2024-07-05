@@ -8,7 +8,7 @@ export default function Experience() {
       id='experience'
       className='relative mx-auto flex h-screen w-screen snap-start flex-col items-center justify-evenly overflow-hidden px-5 text-center'
     >
-      <h3 className='absolute top-24 text-center text-2xl uppercase tracking-[20px] text-[#99d6ea] md:text-3xl'>
+      <h3 className='absolute top-24 text-center text-2xl uppercase tracking-[10px] text-[#99d6ea] md:text-3xl'>
         Experience
       </h3>
 

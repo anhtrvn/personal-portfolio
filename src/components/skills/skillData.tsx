@@ -46,7 +46,7 @@ export const skillData = [
   <>
     <TailwindIcon className='skill-fade h-[60px] w-[60px] md:h-[100px] md:w-[100px]' />
     <div className='skill-name'>
-      <p className='skill-text h-[60px] w-[60px] md:h-[100px] md:w-[100px]'>TailwindCSS</p>
+      <p className='skill-text h-[60px] w-[60px] md:h-[100px] md:w-[100px]'>Tailwind</p>
     </div>
   </>,
   <>

@@ -5,17 +5,13 @@ export default function About() {
   const hobbiesRef = useRef<HTMLParagraphElement>(null);
 
   function bioInView() {
-    if (bioRef.current == null || hobbiesRef.current == null) {
-      return;
-    }
+    if (bioRef.current == null || hobbiesRef.current == null) return;
     bioRef.current.style.opacity = '1';
     hobbiesRef.current.style.opacity = '1';
   }
 
   function bioOutView() {
-    if (bioRef.current == null || hobbiesRef.current == null) {
-      return;
-    }
+    if (bioRef.current == null || hobbiesRef.current == null) return;
     bioRef.current.style.opacity = '0';
     hobbiesRef.current.style.opacity = '0';
   }
@@ -28,10 +24,9 @@ export default function About() {
           else bioOutView();
         });
       },
-      {
-        threshold: 1,
-      },
+      { threshold: 1 },
     );
+
     if (bioRef.current == null || hobbiesRef.current == null) return;
     bioObserver.observe(bioRef.current);
   }, []);
@@ -41,7 +36,7 @@ export default function About() {
       id='about'
       className='mx-7xl relative mx-auto flex h-screen snap-start flex-col items-center justify-evenly px-5 text-center md:text-left'
     >
-      <h3 className='absolute top-24 text-2xl uppercase tracking-[20px] text-[#99d6ea] md:text-3xl'>
+      <h3 className='absolute top-24 text-2xl uppercase tracking-[10px] text-[#99d6ea] md:text-3xl'>
         About
       </h3>
 
@@ -73,18 +68,10 @@ export default function About() {
           <span className='font-semibold text-[#fca6d1]'>{'hobbies.'}</span>
           <br />
           <ul className='pl-4'>
-            <li>
-              🏋️‍♂️ gym rat
-            </li>
-            <li>
-              🐱 cat lover
-            </li>
-            <li>
-              🎨 art and diy
-            </li>
-            <li>
-              🚗 car and motorcycle enthusiast
-            </li>
+            <li>🏋️‍♂️ gym rat</li>
+            <li>🐱 cat lover</li>
+            <li>🎨 art and diy</li>
+            <li>🚗 car and motorcycle enthusiast</li>
           </ul>
         </div>
       </div>

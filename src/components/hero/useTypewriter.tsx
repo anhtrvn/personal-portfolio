@@ -10,7 +10,9 @@ const TYPE_TIME = 150;
 const PAUSE_TIME = 1000;
 const DELETE_TIME = 50;
 
-export const useTypewriter = (txts: string[]): { typed: string; text: string; } => {
+export const useTypewriter = (
+  txts: string[],
+): { typed: string; text: string } => {
   const [index, setIndex] = useState(0);
   const [typeState, setTypeState] = useState(TypeState.Typing);
   const [typed, setTyped] = useState('');
@@ -47,7 +49,7 @@ export const useTypewriter = (txts: string[]): { typed: string; text: string; } 
       }
 
       case TypeState.Pausing:
-        
+
       default:
         const timeout = setTimeout(() => {
           setTypeState(TypeState.Deleting);

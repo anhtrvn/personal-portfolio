@@ -13,7 +13,8 @@ type Inputs = {
 export default function ContactMe() {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = 'mailto:anhtran18202@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})';
+    window.location.href =
+      'mailto:anhtran18202@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})';
   };
 
   return (
@@ -21,7 +22,7 @@ export default function ContactMe() {
       id='contact'
       className='relative mx-auto flex h-screen max-w-6xl snap-start flex-col items-center justify-evenly px-5 text-center md:flex-row md:px-10 md:text-left'
     >
-      <h3 className='absolute top-24 text-2xl uppercase tracking-[20px] text-[#99d6ea] md:text-3xl'>
+      <h3 className='absolute top-24 text-2xl uppercase tracking-[10px] text-[#99d6ea] md:text-3xl'>
         Contact
       </h3>
 
@@ -32,9 +33,13 @@ export default function ContactMe() {
 
         <div className='space-y-5 text-[#99d6ea]'>
           <div className='group flex items-center justify-center space-x-5'>
-            <FontAwesomeIcon icon={faEnvelope} size='xl' className='group-hover:text-[#fca6d1]' />
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              size='xl'
+              className='group-hover:text-[#fca6d1]'
+            />
             <div className='relative'>
-              <p className='relative z-10 text-xl sm:text-2xl delay-100 hover:text-[#1b1d36]'>
+              <p className='relative z-10 text-xl delay-100 hover:text-[#1b1d36] sm:text-2xl'>
                 anhtran18202@gmail.com
               </p>
               <div className='highlighter'></div>
@@ -44,7 +49,7 @@ export default function ContactMe() {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className='mx-auto max-w-full flex flex-col space-y-2'
+          className='mx-auto flex max-w-full flex-col space-y-2'
         >
           <span className='flex space-x-2'>
             <input
@@ -75,7 +80,7 @@ export default function ContactMe() {
 
           <button
             type='submit'
-            className='rounded-lg bg-[#fca6d1] px-6 py-2 text-lg font-semibold tracking-widest text-[#1b1d36] transition-all hover:border-gray-400 hover:bg-[#e1e7ec] active:bg-[#99d6ea]'
+            className='rounded-lg bg-[#fca6d1] px-6 py-2 text-lg font-semibold text-[#1b1d36] transition-all hover:border-gray-400 hover:bg-[#e1e7ec] active:bg-[#99d6ea]'
           >
             submit
           </button>
