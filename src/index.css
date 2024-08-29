@@ -2,61 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-  ::root {
-    --scroll-behavior: smooth;
+  body {
+    @apply bg-[#1b1d36] font-mono scroll-smooth;
   }
 }
 
 @layer components {
   /* Header */
   .header-button {
-    @apply px-1 text-lg tracking-[1px] text-[#99d6ea] duration-300 hover:-translate-y-1 
-    hover:text-[#e1e7ec] font-semibold;
+    @apply p-1 text-lg tracking-[1px] font-semibold hover:text-[#e1e7ec] hover:-translate-y-1 duration-200;
   }
 
   .header-icon {
-    @apply px-1 duration-300 hover:-translate-y-1 hover:scale-110 text-[#99d6ea] hover:text-[#e1e7ec];
+    @apply p-1 hover:-translate-y-1 hover:scale-110 hover:text-[#e1e7ec] duration-200;
   }
 
-  /* Hero */
-  .cursor-blink:after {
-    content: "|";
-    @apply text-white;
-    animation: blink 1s step-start infinite;
-  }
-
-  @keyframes blink {
-    50% {
-      opacity: 0;
-    }
-  }
-
-  .load-pfp {
-    @apply transition-all delay-500 ease-in-out;
-    animation: pfp-out-in 2s;
-  }
-
-  @keyframes pfp-out-in {
+  /* Home */
+  @keyframes profile-fade-in {
     0% {
       opacity: 0;
     }
     50% {
       opacity: 0.5;
-      transform: scale(1.5);
+      transform: scale(1.15);
     }
     100% {
       opacity: 1;
     }
   }
 
-  .load-inner-circle {
-    @apply transition-all delay-500 ease-in-out;
-    animation: circle-out-in 2s forwards;
-  }
-
-  @keyframes circle-out-in {
+  @keyframes fade-out {
     0%,
     100% {
       opacity: 0;
@@ -67,12 +43,7 @@
     }
   }
 
-  .load-outer-circle {
-    @apply h-[200px] w-[200px] transition-all delay-300 ease-in-out md:h-[275px] md:w-[275px];
-    animation: circle-out 1s forwards;
-  }
-
-  @keyframes circle-out {
+  @keyframes fade-in {
     from {
       opacity: 0;
     }
@@ -82,65 +53,34 @@
     }
   }
 
-  .pulse-circle {
-    @apply h-[400px] w-[400px] animate-pulse md:h-[550px] md:w-[550px];
-  }
-
-  /* Skills */
-  .skill {
-    @apply opacity-0 flex items-center justify-center;
-  }
-  
-  .skill-text {
-    @apply flex items-center justify-center text-center text-lg md:text-3xl font-semibold text-[#fca6d1];
-  }
-
-  .skill-fade {
-    @apply flex items-center justify-center opacity-90 transition-colors duration-300 ease-in-out group-hover:opacity-10;
-  }
-
-  .skill-name {
-    @apply absolute opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-100;
-  }
-
-  .bounce-show {
-    @apply opacity-100 transition-all delay-300 duration-1000;
-    animation: bounce-once 1s;
-  }
-
-  @keyframes bounce-once {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
+  @keyframes blink {
     50% {
-      transform: translateY(-50px);
+      opacity: 0;
     }
   }
 
-  /* Experience */
-  .card {
-    @apply flex max-h-full w-full flex-shrink-0 snap-center flex-col items-center 
-    space-y-7 break-words rounded-lg bg-[#17182c] border border-[#17182c] p-10 text-center 
-    text-[#e1e7ec] transition-all duration-300 hover:border-[#e1e7ec] md:w-[700px] xl:w-[900px] 
-    overflow-y-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-transparent;
+  .show-profile {
+    @apply transition-all delay-500 ease-in-out;
+    animation: profile-fade-in 2s;
   }
 
-  /* Contact */
-  .contact-input {
-    @apply rounded-lg border-b border-[#17182c] bg-[#17182c] px-6 py-3 text-[#e1e7ec]
-  placeholder-[#e1e7ec]/70 outline-none transition-all hover:border-[#e1e7ec] focus:border-[#e1e7ec]
-  focus:text-[#e1e7ec] w-full;
+  .inner-circle {
+    @apply transition-all delay-500 ease-in-out;
+    animation: fade-out 2s forwards;
   }
 
-  /* Misc */
-  .highlighter {
-    @apply absolute bottom-0 left-0 z-0 h-0.5 w-full origin-bottom bg-[#fca6d1] transition-all
-    duration-300 ease-in-out group-hover:h-full;
+  .outer-circle {
+    @apply h-[200px] w-[200px] transition-all delay-300 ease-in-out;
+    animation: fade-in 1s forwards;
   }
 
-  .aboutme {
-    @apply max-w-6xl text-left text-[#e1e7ec] opacity-0 transition-all delay-300 duration-1000 
-    md:text-lg;
+  .circle-pulse {
+    @apply h-[400px] w-[400px] animate-pulse;
+  }
+
+  .cursor-blink:after {
+    content: '|';
+    @apply text-[#e1e7ec];
+    animation: blink 1s step-start infinite;
   }
 }
