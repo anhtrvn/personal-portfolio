@@ -16,8 +16,8 @@ export default function ExperienceCard({
   summaries,
 }: cardContents) {
   return (
-    <article className='group p-10 max-h-full w-full md:w-[700px] xl:w-[900px] flex-col flex-shrink-0 items-center snap-center text-center overflow-y-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-transparent bg-[#17182c] rounded-lg border border-[#17182c] hover:border-[#e1e7ec]'>
-      <div className='flex-col pb-2 space-y-2'>
+    <article className='group p-10 max-h-full w-full md:w-[700px] xl:w-[900px] flex flex-col flex-shrink-0 items-center snap-center text-center overflow-y-scroll scrollbar-thin scrollbar-track-transparent scrollbar-thumb-transparent bg-[#17182c] rounded-lg border border-[#17182c] hover:border-[#e1e7ec]'>
+      <div className='flex flex-col pb-2 space-y-2'>
         <h1 className='pb-2 text-2xl text-[#fca6d1]'>{title}</h1>
         <h2 className='text-[#e1e7ec]'>{company}</h2>
         <h3 className='uppercase text-[#e1e7ec]/60'>{date}</h3>
@@ -33,6 +33,7 @@ export default function ExperienceCard({
         {techs.map((tech, i) => (
           <span key={i} className='px-1'>
             {tech}
+            {i !== techs.length - 1 && ','}
           </span>
         ))}
       </div>

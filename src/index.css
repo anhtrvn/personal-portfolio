@@ -4,12 +4,32 @@
 
 @layer base {
   body {
-    @apply bg-[#1b1d36] font-mono scroll-smooth;
+    @apply bg-[#1b1d36] font-mono h-screen overflow-hidden;
+  }
+
+  #root {
+    @apply h-full;
   }
 }
 
 @layer components {
   /* Header */
+  @keyframes rotate-right {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(30deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .animate-rotate-right {
+    animation: rotate-right 0.3s ease-in-out;
+  }
+
   .header-button {
     @apply p-1 text-lg tracking-[1px] font-semibold hover:text-[#e1e7ec] hover:-translate-y-1 duration-200;
   }

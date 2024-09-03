@@ -18,7 +18,7 @@ const links = [
 
 export default function Nav() {
   return (
-    <nav className='flex space-x-4'>
+    <nav className='flex space-x-5 items-center justify-center'>
       {links.map((link, i) => {
         return (
           <NavLink

@@ -2,16 +2,13 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header';
 import Home from './pages/Home/Home';
-import Experience from './pages/Experience/Experience';
-import Skills from './pages/Skills/Skills';
+import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
-    <main>
+    <main className='h-full'>
       <Header />
-      <Home />
-      <Experience />
-      <Skills />
+      <Outlet />
     </main>
   );
 }

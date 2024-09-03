@@ -3,7 +3,7 @@ import { skillSet } from './skillSet';
 
 export default function Skills() {
   return (
-    <section className='m-auto flex h-screen max-w-screen-2xl items-center'>
+    <section className='m-auto flex h-full max-w-screen-2xl items-center'>
       <div className='grid-cols-3'>
         {skillSet.map((skill, i) => (
           <div

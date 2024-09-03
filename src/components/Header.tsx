@@ -1,7 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
-import Socials from './Socials';
+import MobileNav from './MobileNav';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 export default function Header() {
   const leftRef = useRef<HTMLDivElement>(null);
@@ -20,29 +22,42 @@ export default function Header() {
   }, []);
 
   return (
-    <header className='sticky p-5 top-0 bg-[#1b1d36] z-50'>
-      <div className='mx-auto flex max-w-6xl justify-between items-center'>
+    <header className='sticky pt-8 pb-2 top-0 bg-[#1b1d36] z-50'>
+      {/* Desktop Nav */}
+      <div className='hidden mx-auto lg:flex max-w-6xl justify-between items-center'>
         <div
-          className='flex items-center -ml-[100px] opacity-0 transition-all duration-1000 space-x-4'
+          className='flex items-center gap-5 -ml-[100px] opacity-0 transition-all duration-700 ease-out'
           ref={leftRef}>
+          <FontAwesomeIcon
+            icon={faStar}
+            size='xs'
+            className='header-icon text-[#e1e7ec]'
+          />
+
           <Link to='/' className='header-button text-[#fca6d1]'>
             anhtran.
           </Link>
-
-          <Nav />
         </div>
 
         <div
-          className='flex items-center -mr-[100px] opacity-0 transition-all duration-1000 space-x-4'
+          className='flex items-center gap-5 -mr-[100px] opacity-0 transition-all duration-700 ease-out'
           ref={rightRef}>
+          <Nav />
+
           <Link to='/contact' className='header-button text-[#fca6d1]'>
             contact.
           </Link>
 
-          <Socials />
+          <FontAwesomeIcon
+            icon={faStar}
+            size='xs'
+            className='header-icon text-[#e1e7ec]'
+          />
         </div>
       </div>
-      </div>
+
+      {/* Mobile Nav */}
+      <MobileNav />
     </header>
   );
 }
