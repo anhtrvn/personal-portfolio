@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 interface SheetProps {
   isOpen: boolean;
@@ -17,7 +17,7 @@ export default function Sheet({ isOpen, toggle, children }: SheetProps) {
       setTimeout(() => {
         toggle();
         closeNav.classList.remove('animate-rotate-right');
-      }, 300);
+      }, 200);
     }
   }
 
@@ -25,7 +25,7 @@ export default function Sheet({ isOpen, toggle, children }: SheetProps) {
     <>
       {/* Background Overlay */}
       <div
-        className={`fixed inset-0 bg-[#17182c]/60 backdrop-blur-sm transition-opacity duration-300 ease-in-out z-0 ${
+        className={`fixed inset-0 bg-[#17182c]/70 backdrop-blur-md transition-opacity duration-300 ease-out z-0 ${
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         onClick={toggle}
@@ -33,12 +33,12 @@ export default function Sheet({ isOpen, toggle, children }: SheetProps) {
 
       {/* Sliding Sheet */}
       <div
-        className={`fixed flex flex-col justify-start items-center top-0 right-0 z-10 h-full w-full sm:w-3/4 md:w-1/3 bg-[#1b1d36] rounded-l-[3rem] backdrop-blur-sm space-y-4 transition-all duration-700 ease-in-out ${
+        className={`fixed flex flex-col justify-start items-center top-0 right-0 z-10 h-full w-full sm:w-3/4 md:w-1/3 space-y-4 transition-all duration-700 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}>
         <div className='p-5 w-full text-[#e1e7ec] flex justify-end'>
           <button onClick={onClose} id='close-nav'>
-            <FontAwesomeIcon icon={faStar} size='lg' />
+            <FontAwesomeIcon icon={faXmark} size='xl' />
           </button>
         </div>
 

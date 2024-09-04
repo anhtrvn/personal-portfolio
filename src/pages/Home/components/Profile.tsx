@@ -34,8 +34,10 @@ export default function Profile() {
       <div
         className='text-[#e1e7ec] m-auto opacity-0 transition-opacity delay-1000 duration-500 ease-in flex items-center gap-4'
         ref={leftRef}>
-        {starLine.map((item, i) => (
-          <React.Fragment key={i}>{item}</React.Fragment>
+        {starLine.map((_, i) => (
+          <React.Fragment key={i}>
+            {starLine[starLine.length - 1 - i]}
+          </React.Fragment>
         ))}
       </div>
 
@@ -49,7 +51,7 @@ export default function Profile() {
       <div
         className='text-[#e1e7ec] m-auto opacity-0 transition-opacity delay-1000 duration-500 ease-in flex items-center gap-4'
         ref={rightRef}>
-        {starLine.reverse().map((item, i) => (
+        {starLine.map((item, i) => (
           <React.Fragment key={i}>{item}</React.Fragment>
         ))}
       </div>

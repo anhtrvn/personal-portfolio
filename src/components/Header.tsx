@@ -2,8 +2,6 @@ import React, { useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
 import MobileNav from './MobileNav';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 export default function Header() {
   const leftRef = useRef<HTMLDivElement>(null);
@@ -28,12 +26,6 @@ export default function Header() {
         <div
           className='flex items-center gap-5 -ml-[100px] opacity-0 transition-all duration-700 ease-out'
           ref={leftRef}>
-          <FontAwesomeIcon
-            icon={faStar}
-            size='xs'
-            className='header-icon text-[#e1e7ec]'
-          />
-
           <Link to='/' className='header-button text-[#fca6d1]'>
             anhtran.
           </Link>
@@ -47,12 +39,6 @@ export default function Header() {
           <Link to='/contact' className='header-button text-[#fca6d1]'>
             contact.
           </Link>
-
-          <FontAwesomeIcon
-            icon={faStar}
-            size='xs'
-            className='header-icon text-[#e1e7ec]'
-          />
         </div>
       </div>
 
