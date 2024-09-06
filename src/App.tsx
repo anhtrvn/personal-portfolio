@@ -1,15 +1,17 @@
 import React from 'react';
-import './App.css';
-import Header from './components/Header';
-import Home from './pages/Home/Home';
 import { Outlet } from 'react-router-dom';
+
+import './App.css';
+import Header from './components/Nav/Header';
 
 function App() {
   return (
-    <main className='h-full'>
+    <>
       <Header />
-      <Outlet />
-    </main>
+      <main className='flex-1 h-full'>
+        <Outlet />
+      </main>
+    </>
   );
 }
 

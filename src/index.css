@@ -3,8 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+  @font-face {
+    font-family: 'Lexend Deca', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+  }
+
   body {
-    @apply bg-[#1b1d36] font-mono h-screen overflow-hidden;
+    @apply bg-primary font-primary text-secondary leading-loose h-screen overflow-hidden;
   }
 
   #root {
@@ -13,33 +18,8 @@
 }
 
 @layer components {
-  /* Header */
-  @keyframes rotate-right {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(30deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-
-  .animate-rotate-right {
-    animation: rotate-right 0.3s ease-in-out;
-  }
-
-  .header-button {
-    @apply p-1 text-lg tracking-[1px] font-semibold hover:text-[#e1e7ec] hover:-translate-y-1 duration-200;
-  }
-
-  .header-icon {
-    @apply p-1 hover:-translate-y-1 hover:scale-110 hover:text-[#e1e7ec] duration-200;
-  }
-
-  /* Home */
-  @keyframes profile-fade-in {
+  /* Animations */
+  @keyframes show-profile {
     0% {
       opacity: 0;
     }
@@ -79,28 +59,51 @@
     }
   }
 
-  .show-profile {
-    @apply transition-all delay-500 ease-in-out;
-    animation: profile-fade-in 2s;
+  @keyframes rotate-right {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(30deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
   }
 
-  .inner-circle {
-    @apply transition-all delay-500 ease-in-out;
+  /* Components */
+  .button-nav {
+    @apply font-semibold tracking-[1px] hover:-translate-y-1 transition-all duration-200;
+  }
+
+  .button-icon {
+    @apply hover:-translate-y-1 hover:scale-110 transition-all duration-200;
+  }
+
+  /* Header */
+  .animate-rotate-right {
+    animation: rotate-right 0.3s ease-in-out;
+  }
+
+  /* Home Page */
+  .animate-profile {
+    @apply ease-in-out;
+    animation: show-profile 2s forwards;
+  }
+
+  .animate-inner-circle {
+    @apply h-[150px] w-[150px] ease-in-out;
     animation: fade-out 2s forwards;
   }
 
-  .outer-circle {
-    @apply h-[200px] w-[200px] transition-all delay-300 ease-in-out;
+  .animate-outer-circle {
+    @apply h-[200px] w-[200px] ease-in-out;
     animation: fade-in 1s forwards;
-  }
-
-  .circle-pulse {
-    @apply h-[400px] w-[400px] animate-pulse;
   }
 
   .cursor-blink:after {
     content: '|';
-    @apply text-[#e1e7ec];
+    @apply text-accent-pink;
     animation: blink 1s step-start infinite;
   }
 }

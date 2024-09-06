@@ -10,26 +10,25 @@ const TYPE_TIME = 150;
 const PAUSE_TIME = 1000;
 const DELETE_TIME = 50;
 
-export const useTypewriter = (
-  texts: string[]
-): { typed: string; text: string } => {
+export const useTypewriter = (texts: string[]): { typed: string } => {
   const [index, setIndex] = useState(0);
   const [typeState, setTypeState] = useState(TypeState.Typing);
   const [typed, setTyped] = useState('');
 
   useEffect(() => {
+    let timeout: NodeJS.Timeout;
+
     switch (typeState) {
       case TypeState.Typing: {
         const nextType = texts[index].slice(0, typed.length + 1);
         if (nextType === typed) {
           setTypeState(TypeState.Pausing);
-          return;
+        } else {
+          timeout = setTimeout(() => {
+            setTyped(nextType);
+          }, TYPE_TIME);
         }
-        const timeout = setTimeout(() => {
-          setTyped(nextType);
-        }, TYPE_TIME);
-
-        return () => clearTimeout(timeout);
+        break;
       }
 
       case TypeState.Deleting: {
@@ -37,26 +36,28 @@ export const useTypewriter = (
           const nextIndex = index + 1;
           setIndex(texts[nextIndex] ? nextIndex : 0);
           setTypeState(TypeState.Typing);
-          return;
+        } else {
+          const nextRemaining = texts[index].slice(0, typed.length - 1);
+          timeout = setTimeout(() => {
+            setTyped(nextRemaining);
+          }, DELETE_TIME);
         }
-        const nextRemaining = texts[index].slice(0, typed.length - 1);
-
-        const timeout = setTimeout(() => {
-          setTyped(nextRemaining);
-        }, DELETE_TIME);
-
-        return () => clearTimeout(timeout);
+        break;
       }
 
-      case TypeState.Pausing:
-
-      default:
-        const timeout = setTimeout(() => {
+      case TypeState.Pausing: {
+        timeout = setTimeout(() => {
           setTypeState(TypeState.Deleting);
         }, PAUSE_TIME);
-        return () => clearTimeout(timeout);
+        break;
+      }
+
+      default:
+        break;
     }
+
+    return () => clearTimeout(timeout);
   }, [texts, typed, index, typeState]);
 
-  return { typed, text: texts[index] };
+  return { typed };
 };

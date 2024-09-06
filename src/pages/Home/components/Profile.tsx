@@ -1,57 +1,69 @@
 import React, { useEffect, useRef } from 'react';
 import profile from '../../../assets/images/profile.png';
-import { starLine } from '../../../assets/images/star_line';
+import { starline } from '../../../assets/images/starline';
+import SweTitle from '../../../assets/images/swe-title';
 
 export default function Profile() {
   const profileRef = useRef<HTMLImageElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
   const rightRef = useRef<HTMLDivElement>(null);
-
-  function animateCircles() {
-    if (profileRef.current === null) return;
-    profileRef.current.classList.add('show-profile');
-  }
+  const sweRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setTimeout(() => {
-      if (leftRef.current === null || rightRef.current === null) return;
+    const onAnimationEnd = () => {
+      setTimeout(() => {
+        if (!leftRef.current || !rightRef.current || !sweRef.current) return;
+        leftRef.current?.classList.add('animate-pulse');
+        rightRef.current?.classList.add('animate-pulse');
+      }, 3000);
+
+      if (!leftRef.current || !rightRef.current || !sweRef.current) return;
       leftRef.current.style.opacity = '1';
       rightRef.current.style.opacity = '1';
-    }, 1000);
+      sweRef.current.style.opacity = '1';
+    };
 
-    setTimeout(() => {
-      if (leftRef.current === null || rightRef.current === null) return;
+    if (!profileRef.current) return;
+    profileRef.current.classList.add('animate-profile');
+    profileRef.current.addEventListener('animationend', onAnimationEnd);
 
-      leftRef.current.classList.add('animate-pulse');
-      rightRef.current.classList.add('animate-pulse');
-    }, 3000);
-
-    animateCircles();
+    return () => {
+      if (!profileRef.current) return;
+      profileRef.current?.removeEventListener('animationend', onAnimationEnd);
+    };
   }, []);
 
   return (
     <>
       <div
-        className='text-[#e1e7ec] m-auto opacity-0 transition-opacity delay-1000 duration-500 ease-in flex items-center gap-4'
+        className='flex items-center gap-4 text-secondary opacity-0 transition-opacity delay-300 duration-500 ease-in'
         ref={leftRef}>
-        {starLine.map((item, i) => (
-          <React.Fragment key={i}>{item}</React.Fragment>
+        {starline.map((_, i) => (
+          <React.Fragment key={i}>
+            {starline[starline.length - 1 - i]}
+          </React.Fragment>
         ))}
       </div>
 
       <img
-        className='mx-auto h-40 w-40 rounded-full border-2 border-[#e1e7ec] object-contain'
+        className='mx-auto h-40 w-40 rounded-full border-2 border-secondary object-contain'
         src={profile}
         alt='profile-picture'
         ref={profileRef}
       />
 
       <div
-        className='text-[#e1e7ec] m-auto opacity-0 transition-opacity delay-1000 duration-500 ease-in flex items-center gap-4'
+        className='flex items-center gap-4 text-secondary opacity-0 transition-opacity delay-300 duration-500 ease-in'
         ref={rightRef}>
-        {starLine.reverse().map((item, i) => (
+        {starline.map((item, i) => (
           <React.Fragment key={i}>{item}</React.Fragment>
         ))}
+      </div>
+
+      <div
+        className='absolute uppercase opacity-0 transition-opacity duration-300 ease-in mb-4'
+        ref={sweRef}>
+        <SweTitle />
       </div>
     </>
   );

@@ -11,14 +11,23 @@ const links = [
     path: '/skills',
   },
   {
-    name: 'experience',
-    path: '/experience',
+    name: 'projects',
+    path: '/projects',
+  },
+  {
+    name: 'contact',
+    path: '/contact',
   },
 ];
 
-export default function Nav() {
+interface NavProps {
+  className?: string;
+  onClick?: () => void;
+}
+
+const Nav: React.FC<NavProps> = ({ className = '', onClick }) => {
   return (
-    <nav className='flex space-x-5 items-center justify-center'>
+    <nav className={`flex gap-8 ${className}`}>
       {links.map((link, i) => {
         return (
           <NavLink
@@ -26,13 +35,16 @@ export default function Nav() {
             key={i}
             className={({ isActive }) =>
               isActive
-                ? 'header-button text-[#e1e7ec]'
-                : 'header-button text-[#99d6ea]'
-            }>
+                ? 'button-nav text-accent-blue'
+                : 'button-nav hover:text-accent-blue text-secondary'
+            }
+            onClick={onClick}>
             {link.name}
           </NavLink>
         );
       })}
     </nav>
   );
-}
+};
+
+export default Nav;

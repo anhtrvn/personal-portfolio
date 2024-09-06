@@ -1,18 +1,48 @@
-import React from 'react';
-import { skillSet } from './skillSet';
+import React, { useState } from 'react';
+import { languages, libraries, tools } from './components/skillSet';
+import { TabButton, TabContent } from '../../components/ui/Tab';
+import SkillMap from './components/SkillMap';
 
-export default function Skills() {
+const tabs = [
+  { value: 'languages', content: languages },
+  { value: 'libraries', content: libraries },
+  { value: 'tools', content: tools },
+];
+
+const Skills = () => {
+  const [activeTab, setActiveTab] = useState('languages');
+
+  const renderTabContent = () => {
+    return tabs.map(({ value, content }) => (
+      <TabContent
+        key={value}
+        value={value}
+        activeTab={activeTab}
+        className='w-full'>
+        <SkillMap items={content} />
+      </TabContent>
+    ));
+  };
+
   return (
-    <section className='m-auto flex h-full max-w-screen-2xl items-center'>
-      <div className='grid-cols-3'>
-        {skillSet.map((skill, i) => (
-          <div
-            className='group flex items-center justify-center opacity-0 py-1'
-            key={i}>
-            {skill}
-          </div>
-        ))}
+    <section className='h-full flex justify-center items-center'>
+      <div className='container flex flex-col items-center justify-center h-3/4 gap-4 max-w-6xl lg:px-16'>
+        <div className='flex items-center justify-center w-full gap-2 bg-tertiary rounded-xl py-1'>
+          {tabs.map(({ value }) => (
+            <TabButton
+              key={value}
+              value={value}
+              onClick={setActiveTab}
+              isActive={activeTab === value}>
+              {value}
+            </TabButton>
+          ))}
+        </div>
+
+        <div className='h-full w-full'>{renderTabContent()}</div>
       </div>
     </section>
   );
-}
+};
+
+export default Skills;
