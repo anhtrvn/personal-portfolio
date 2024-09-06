@@ -7,46 +7,48 @@ const socials = [
   {
     icon: faLinkedin,
     path: 'https://www.linkedin.com/in/anh-tran-12b233233/',
+    label: 'LinkedIn Profile',
   },
   {
     icon: faGithub,
     path: 'https://github.com/anhtrvn',
+    label: 'GitHub Profile',
   },
   {
     icon: faFilePdf,
-    path: '/AnhTran_Resume.pdf', // TODO: download resume pdf
+    path: '/AnhTran_Resume.pdf',
+    label: 'Resume PDF',
   },
 ];
 
-export default function Nav() {
+const Nav = () => {
   const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    setTimeout(() => {
-      if (navRef.current == null) return;
-      navRef.current.style.opacity = '1';
-    }, 1000);
+    if (!navRef.current) return;
+    navRef.current.style.opacity = '1';
   }, []);
 
   return (
     <nav
-      className='flex space-x-4 justify-center items-center text-[#99d6ea] opacity-0 transition-opacity delay-1000 duration-500 ease-in'
+      className='flex gap-8 justify-center items-center text-accent-blue opacity-0 transition-opacity delay-[2.7s] duration-300 ease-in'
       ref={navRef}>
-      {socials.map((social, i) => {
-        return (
-          <a
-            href={social.path}
-            key={i}
-            target='_blank'
-            rel='noopener noreferrer'>
-            <FontAwesomeIcon
-              icon={social.icon}
-              size='lg'
-              className='header-icon'
-            />
-          </a>
-        );
-      })}
+      {socials.map((social) => (
+        <a
+          href={social.path}
+          key={social.path}
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label={social.label}>
+          <FontAwesomeIcon
+            icon={social.icon}
+            size='lg'
+            className='button-icon'
+          />
+        </a>
+      ))}
     </nav>
   );
-}
+};
+
+export default Nav;

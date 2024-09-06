@@ -1,16 +1,16 @@
 import React from 'react';
 
-const CresentTitle: React.FC<React.SVGProps<SVGSVGElement>> = () => {
+const SweTitle: React.FC<React.SVGProps<SVGSVGElement>> = () => {
   return (
-    <svg width='200' height='200' viewBox='0 0 200 200'>
+    <svg width='200' height='250' viewBox='0 0 200 200'>
       <defs>
         <path
           id='text-path'
           d='
             M 100, 100
-            m -90, 0
-            a 90,90 0 1,1 180,0
-            a 90,90 0 1,1 -180,0
+            m -95, 0
+            a 95,95 0 1,1 190,0
+            a 95,95 0 1,1 -190,0
           '
         />
       </defs>
@@ -29,4 +29,4 @@ const CresentTitle: React.FC<React.SVGProps<SVGSVGElement>> = () => {
   );
 };
 
-export default CresentTitle;
+export default SweTitle;

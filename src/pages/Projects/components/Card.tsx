@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface ExpCardProps {
+interface CardProps {
   title: string;
   date: string;
   description: string[];
@@ -8,22 +8,22 @@ interface ExpCardProps {
   imgUrl: string;
 }
 
-export default function ExpCard({
+export default function Card({
   title,
   date,
   description,
   techs,
   imgUrl,
-}: ExpCardProps) {
+}: CardProps) {
   return (
-    <div className='flex flex-col justify-between h-full space-y-4 rounded-xl p-5 bg-[#17182c]'>
+    <div className='flex flex-col justify-between h-full space-y-4 rounded-xl p-5 bg-primary'>
       <img
         src={imgUrl}
         alt='card cover'
         className='flex flex-1 w-full object-cover min-h-[6rem] max-h-full rounded-xl'
       />
 
-      <div className='group text-[#e1e7ec]'>
+      <div className='group text-secondary'>
         <div className='flex justify-between font-bold my-2'>
           <h5>{title}</h5>
           <h6 className='font-normal'>{date}</h6>

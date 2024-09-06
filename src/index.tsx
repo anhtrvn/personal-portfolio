@@ -6,10 +6,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import ErrorPage from './error-page';
+import Header from './components/Nav/Header';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Skills from './pages/Skills/Skills';
-import Experience from './pages/Experience/Experience';
+import Projects from './pages/Projects/Projects';
+import Contact from './pages/Contact/Contact';
 
 const router = createBrowserRouter([
   {
@@ -30,8 +32,12 @@ const router = createBrowserRouter([
         element: <Skills />,
       },
       {
-        path: '/experience',
-        element: <Experience />,
+        path: '/projects',
+        element: <Projects />,
+      },
+      {
+        path: '/contact',
+        element: <Contact />,
       },
     ],
   },

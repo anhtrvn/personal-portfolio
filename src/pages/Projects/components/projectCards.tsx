@@ -1,4 +1,4 @@
-export const expList = [
+export const projectCards = [
   {
     title: 'ETL Pipeline Manager',
     date: 'Spring 24',
