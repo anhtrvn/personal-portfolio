@@ -4,8 +4,8 @@ import Card from './components/Card';
 
 export default function Projects() {
   return (
-    <section className='flex justify-center items-center h-full max-w-screen-2xl'>
-      <div className='grid grid-cols-1 md:grid-cols-3 md:auto-rows-[18rem] gap-4 max-w-6xl mx-auto'>
+    <section className='h-full flex justify-center items-center'>
+      <div className='container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:auto-rows-[18rem] gap-6 max-w-6xl lg:px-16'>
         {projectCards.map((card, i) => (
           <Card
             key={i}
@@ -14,6 +14,7 @@ export default function Projects() {
             techs={card.techs}
             description={card.description}
             imgUrl={card.image}
+            className={i === 0 || i === 3 ? 'lg:col-span-2' : 'col-span-1'}
           />
         ))}
       </div>

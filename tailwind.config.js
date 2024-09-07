@@ -10,10 +10,11 @@ module.exports = {
       primary: ['Lexend Deca', 'sans-serif'],
     },
     extend: {
+      // dark #17182c
       colors: {
-        primary: '#1b1d36',
+        primary: '#17182c',
         secondary: '#e1e7ec',
-        tertiary: '#17182c',
+        tertiary: '#1b1d36',
         accent: {
           blue: '#99d6ea',
           pink: '#fca6d1',

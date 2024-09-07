@@ -25,7 +25,7 @@ const Sheet: React.FC<SheetProps> = ({ isOpen, toggle, children }) => {
     <>
       {/* Background overlay */}
       <div
-        className={`fixed inset-0 bg-tertiary/50 backdrop-blur-md transition-opacity duration-200 ease-in z-0 ${
+        className={`fixed inset-0 bg-primary/70 backdrop-blur-lg transition-opacity duration-200 ease-in z-0 ${
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         onClick={toggle}

@@ -6,7 +6,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import ErrorPage from './error-page';
-import Header from './components/Nav/Header';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Skills from './pages/Skills/Skills';

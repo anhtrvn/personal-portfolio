@@ -1,7 +1,7 @@
 import React from 'react';
 import Circles from './components/Circles';
-import Socials from './components/Socials';
-import { useTypewriter } from './components/useTypewriter';
+import Socials from '../../components/Nav/Socials';
+import { useTypewriter } from '../../components/ui/useTypewriter';
 
 const Home = () => {
   const { typed } = useTypewriter(["hi, I'm Anh Tran", 'welcome!']);

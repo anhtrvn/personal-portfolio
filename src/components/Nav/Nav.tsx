@@ -35,8 +35,8 @@ const Nav: React.FC<NavProps> = ({ className = '', onClick }) => {
             key={i}
             className={({ isActive }) =>
               isActive
-                ? 'button-nav text-accent-blue'
-                : 'button-nav hover:text-accent-blue text-secondary'
+                ? 'button-nav text-accent-pink'
+                : 'button-nav text-accent-blue hover:text-secondary active:text-accent-blue'
             }
             onClick={onClick}>
             {link.name}
