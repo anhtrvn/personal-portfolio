@@ -60,12 +60,12 @@ const CustomCursor = () => {
       {isPointer ? (
         <TbClick
           size={30}
-          className={`text-[#fad5b0] ${clicked ? 'text-[#f7a89e]' : ''}`}
+          className={`${clicked ? 'text-[#f7a89e]' : 'text-[#fad5b0]'}`}
         />
       ) : (
         <TbPointerStar
           size={24}
-          className={`text-[#fad5b0] ${clicked ? 'text-[#f7a89e]' : ''}`}
+          className={`${clicked ? 'text-[#f7a89e]' : 'text-[#fad5b0]'}`}
         />
       )}
     </div>

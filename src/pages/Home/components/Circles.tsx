@@ -6,22 +6,25 @@ const Circles: React.FC = () => {
   const outerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const inner = innerRef.current;
+    const outer = outerRef.current;
+
     const onAnimationEnd = () => {
-      if (!innerRef.current || !outerRef.current) return;
-      outerRef.current.removeEventListener('animationend', onAnimationEnd);
-      outerRef.current.style.height = '400px';
-      outerRef.current.style.width = '400px';
-      outerRef.current.classList.add('animate-pulse');
+      if (!inner || !outer) return;
+      outer.removeEventListener('animationend', onAnimationEnd);
+      outer.style.height = '400px';
+      outer.style.width = '400px';
+      outer.classList.add('animate-pulse');
     };
 
-    if (!innerRef.current || !outerRef.current) return;
-    innerRef.current.classList.add('animate-inner-circle');
-    outerRef.current.classList.add('animate-outer-circle');
-    outerRef.current.addEventListener('animationend', onAnimationEnd);
+    if (!inner || !outer) return;
+    inner.classList.add('animate-inner-circle');
+    outer.classList.add('animate-outer-circle');
+    outer.addEventListener('animationend', onAnimationEnd);
 
     return () => {
-      if (!innerRef.current || !outerRef.current) return;
-      outerRef.current.removeEventListener('animationend', onAnimationEnd);
+      if (!inner || !outer) return;
+      outer.removeEventListener('animationend', onAnimationEnd);
     };
   }, []);
 

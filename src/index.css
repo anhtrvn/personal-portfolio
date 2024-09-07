@@ -1,15 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   @font-face {
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Lexend Deca', monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
     src: url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
   }
 
   body {
-    @apply bg-primary font-primary text-secondary leading-loose h-screen w-screen m-0 cursor-none;
+    @apply bg-primary font-lexend text-secondary leading-loose h-screen w-screen m-0 cursor-none;
   }
 
   #root {
@@ -36,7 +42,7 @@
     }
   }
 
-  @keyframes fade-out {
+  @keyframes scale-out-in {
     0%,
     100% {
       opacity: 0;
@@ -47,7 +53,7 @@
     }
   }
 
-  @keyframes fade-in {
+  @keyframes scale-out {
     from {
       opacity: 0;
     }
@@ -88,7 +94,6 @@
     @apply rounded-xl px-5 py-2 text-lg font-medium tracking-wider hover:translate-y-0 -translate-y-1 hover:shadow-lg transform transition-all shadow-xl duration-200 active:bg-accent-blue active:text-primary hover:bg-secondary hover:text-primary;
   }
 
-  /* Header */
   .animate-rotate-right {
     animation: rotate-right 0.3s ease-in-out;
   }
@@ -101,12 +106,12 @@
 
   .animate-inner-circle {
     @apply h-[150px] w-[150px] ease-in-out;
-    animation: fade-out 2s forwards;
+    animation: scale-out-in 2s forwards;
   }
 
   .animate-outer-circle {
     @apply h-[200px] w-[200px] ease-in-out;
-    animation: fade-in 1s forwards;
+    animation: scale-out 1s forwards;
   }
 
   .cursor-blink:after {

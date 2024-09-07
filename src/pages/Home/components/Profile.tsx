@@ -10,6 +10,8 @@ export default function Profile() {
   const sweRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const pfp = profileRef.current;
+
     const onAnimationEnd = () => {
       setTimeout(() => {
         if (!leftRef.current || !rightRef.current || !sweRef.current) return;
@@ -23,13 +25,13 @@ export default function Profile() {
       sweRef.current.style.opacity = '1';
     };
 
-    if (!profileRef.current) return;
-    profileRef.current.classList.add('animate-profile');
-    profileRef.current.addEventListener('animationend', onAnimationEnd);
+    if (!pfp) return;
+    pfp.classList.add('animate-profile');
+    pfp.addEventListener('animationend', onAnimationEnd);
 
     return () => {
-      if (!profileRef.current) return;
-      profileRef.current?.removeEventListener('animationend', onAnimationEnd);
+      if (!pfp) return;
+      pfp.removeEventListener('animationend', onAnimationEnd);
     };
   }, []);
 
