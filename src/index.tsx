@@ -11,6 +11,7 @@ import About from './pages/About/About';
 import Skills from './pages/Skills/Skills';
 import Projects from './pages/Projects/Projects';
 import Contact from './pages/Contact/Contact';
+import PageTransition from './components/ui/PageTransition';
 
 const router = createBrowserRouter([
   {
@@ -20,23 +21,43 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home />,
+        element: (
+          <PageTransition>
+            <Home />
+          </PageTransition>
+        ),
       },
       {
         path: '/about',
-        element: <About />,
+        element: (
+          <PageTransition>
+            <About />
+          </PageTransition>
+        ),
       },
       {
         path: '/skills',
-        element: <Skills />,
+        element: (
+          <PageTransition>
+            <Skills />
+          </PageTransition>
+        ),
       },
       {
         path: '/projects',
-        element: <Projects />,
+        element: (
+          <PageTransition>
+            <Projects />
+          </PageTransition>
+        ),
       },
       {
         path: '/contact',
-        element: <Contact />,
+        element: (
+          <PageTransition>
+            <Contact />
+          </PageTransition>
+        ),
       },
     ],
   },

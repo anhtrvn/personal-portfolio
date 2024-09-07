@@ -39,12 +39,9 @@ const Socials = () => {
           key={social.path}
           target='_blank'
           rel='noopener noreferrer'
-          aria-label={social.label}>
-          <FontAwesomeIcon
-            icon={social.icon}
-            size='lg'
-            className='button-icon hover:text-secondary active:text-accent-blue'
-          />
+          aria-label={social.label}
+          className='button-icon hover:text-secondary active:text-accent-blue'>
+          <FontAwesomeIcon icon={social.icon} size='lg' />
         </a>
       ))}
     </nav>

@@ -6,10 +6,10 @@ module.exports = {
       center: true,
       padding: '20px',
     },
-    fontFamily: {
-      primary: ['Lexend Deca', 'sans-serif'],
-    },
     extend: {
+      fontFamily: {
+        lexend: ['Lexend Deca', 'monospace'],
+      },
       // dark #17182c
       colors: {
         primary: '#17182c',
