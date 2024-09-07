@@ -5,7 +5,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 export const starline = [
   <span>——</span>,
   <FontAwesomeIcon icon={faStar} size='xs' />,
-  <FontAwesomeIcon icon={faStar} size='sm' />,
+  // <FontAwesomeIcon icon={faStar} size='sm' />,
 ];
 
 type StarLineProps = {

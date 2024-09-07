@@ -9,11 +9,15 @@
   }
 
   body {
-    @apply bg-primary font-primary text-secondary leading-loose h-screen overflow-hidden;
+    @apply bg-primary font-primary text-secondary leading-loose h-screen w-screen m-0 cursor-none;
   }
 
   #root {
-    @apply h-full;
+    @apply flex flex-col w-full h-full justify-center m-0;
+  }
+
+  * {
+    cursor: none !important;
   }
 }
 
@@ -73,11 +77,15 @@
 
   /* Components */
   .button-nav {
-    @apply font-semibold tracking-[1px] hover:-translate-y-1 transition-all duration-200;
+    @apply font-semibold tracking-wider hover:-translate-y-1 transition-all duration-200;
   }
 
   .button-icon {
     @apply hover:-translate-y-1 hover:scale-110 transition-all duration-200;
+  }
+
+  .button-page {
+    @apply rounded-xl px-5 py-2 text-lg font-medium tracking-wider hover:translate-y-0 -translate-y-1 hover:shadow-lg transform transition-all shadow-xl duration-200 active:bg-accent-blue active:text-primary hover:bg-secondary hover:text-primary;
   }
 
   /* Header */
@@ -105,5 +113,10 @@
     content: '|';
     @apply text-accent-pink;
     animation: blink 1s step-start infinite;
+  }
+
+  /* Contact */
+  .contact-input {
+    @apply bg-tertiary px-5 py-2 rounded-xl placeholder-secondary/50 active:text-secondary shadow-md transform transition-all hover:shadow-xl hover:-translate-y-1 hover:scale-105;
   }
 }

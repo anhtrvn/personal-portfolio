@@ -15,8 +15,8 @@ export const TabButton: React.FC<TabButtonProps> = ({
 }) => (
   <button
     onClick={() => onClick(value)}
-    className={`px-4 py-2 tracking-[1px] font-medium rounded-xl transition-colors w-full ${
-      isActive ? 'text-accent-blue' : 'text-secondary'
+    className={`button-page text-accent-blue w-full ${
+      isActive ? 'translate-y-0 shadow-lg bg-accent-pink text-primary' : ''
     }`}>
     {children}
   </button>

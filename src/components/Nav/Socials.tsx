@@ -21,7 +21,7 @@ const socials = [
   },
 ];
 
-const Nav = () => {
+const Socials = () => {
   const navRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const Nav = () => {
           <FontAwesomeIcon
             icon={social.icon}
             size='lg'
-            className='button-icon'
+            className='button-icon hover:text-secondary active:text-accent-blue'
           />
         </a>
       ))}
@@ -51,4 +51,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Socials;
