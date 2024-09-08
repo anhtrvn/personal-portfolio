@@ -15,11 +15,11 @@
   }
 
   body {
-    @apply bg-primary font-lexend text-secondary leading-loose h-screen w-screen m-0 cursor-none;
+    @apply bg-primary font-lexend text-secondary leading-loose h-screen w-screen cursor-none overflow-x-hidden;
   }
 
   #root {
-    @apply flex flex-col w-full h-full justify-center m-0;
+    @apply flex flex-col w-full h-full justify-center;
   }
 
   * {
@@ -91,7 +91,11 @@
   }
 
   .button-page {
-    @apply rounded-xl px-5 py-2 text-lg font-medium tracking-wider hover:translate-y-0 -translate-y-1 hover:shadow-lg transform transition-all shadow-xl duration-200 active:bg-accent-blue active:text-primary hover:bg-secondary hover:text-primary;
+    @apply rounded-xl px-5 py-2 text-lg font-medium tracking-wider -translate-y-1 active:translate-y-0 active:shadow-lg transform transition-all shadow-xl duration-200 active:bg-accent-blue active:text-primary hover:bg-secondary hover:text-primary;
+  }
+
+  .scroller {
+    @apply scrollbar-thin scrollbar-track-transparent scrollbar-thumb-accent-blue;
   }
 
   .animate-rotate-right {

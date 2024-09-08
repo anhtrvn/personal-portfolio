@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { TbPointerStar, TbClick } from 'react-icons/tb'; // Import both icons
+import { TbPointerStar, TbClick } from 'react-icons/tb';
 
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isPointer, setIsPointer] = useState(false); // Track hover state over clickable elements
-  const [clicked, setClicked] = useState(false); // Track click state
+  const [isPointer, setIsPointer] = useState(false);
+  const [clicked, setClicked] = useState(false);
 
-  // Track the mouse position
   const handleMouseMove = (event: MouseEvent) => {
     setPosition({ x: event.clientX, y: event.clientY });
   };
 
-  // Track whether the mouse is over a clickable element
   const handleMouseOver = (event: MouseEvent) => {
     const target = event.target as HTMLElement;
+    // console.log('Mouse over:', target.tagName);
     // If the element is clickable, like links, buttons, or has 'cursor: pointer'
     if (
       target.tagName === 'A' ||
@@ -59,13 +58,15 @@ const CustomCursor = () => {
       }}>
       {isPointer ? (
         <TbClick
-          size={30}
-          className={`${clicked ? 'text-[#f7a89e]' : 'text-[#fad5b0]'}`}
+          className={`text-4xl ${
+            clicked ? 'text-[#f7a89e]' : 'text-[#fad5b0]'
+          }`}
         />
       ) : (
         <TbPointerStar
-          size={24}
-          className={`${clicked ? 'text-[#f7a89e]' : 'text-[#fad5b0]'}`}
+          className={`text-3xl ${
+            clicked ? 'text-[#f7a89e]' : 'text-[#fad5b0]'
+          }`}
         />
       )}
     </div>

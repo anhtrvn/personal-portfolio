@@ -15,8 +15,10 @@ export const TabButton: React.FC<TabButtonProps> = ({
 }) => (
   <button
     onClick={() => onClick(value)}
-    className={`button-page text-accent-blue w-full ${
-      isActive ? 'translate-y-0 shadow-lg bg-accent-pink text-primary' : ''
+    className={`button-page w-full ${
+      isActive
+        ? 'translate-y-0 shadow-lg bg-accent-pink text-primary'
+        : 'text-accent-blue'
     }`}>
     {children}
   </button>

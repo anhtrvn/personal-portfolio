@@ -10,7 +10,6 @@ module.exports = {
       fontFamily: {
         lexend: ['Lexend Deca', 'monospace'],
       },
-      // dark #17182c
       colors: {
         primary: '#17182c',
         secondary: '#e1e7ec',

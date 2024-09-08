@@ -6,7 +6,7 @@ import { HiMiniSparkles } from 'react-icons/hi2';
 
 import Sheet from '../ui/Sheet';
 import Nav from './Nav';
-import { SingleStarLine } from '../../assets/images/starline';
+import { SingleStarLine } from '../../assets/starline';
 
 const MobileNav: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);

@@ -61,7 +61,7 @@ export const languages = [
   },
 ];
 
-export const libraries = [
+export const technologies = [
   {
     icon: <FontAwesomeIcon icon={faNode} />,
     name: 'node.js',
