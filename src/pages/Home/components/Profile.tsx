@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import profile from '../../../assets/images/profile.png';
-import { starline } from '../../../assets/images/starline';
-import SweTitle from '../../../assets/images/swe-title';
+import { starline } from '../../../assets/starline';
+import SweTitle from '../../../assets/swe-title';
 
 export default function Profile() {
   const profileRef = useRef<HTMLImageElement>(null);

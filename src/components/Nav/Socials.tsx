@@ -22,17 +22,8 @@ const socials = [
 ];
 
 const Socials = () => {
-  const navRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    if (!navRef.current) return;
-    navRef.current.style.opacity = '1';
-  }, []);
-
   return (
-    <nav
-      className='flex gap-8 justify-center items-center text-accent-blue opacity-0 transition-opacity delay-[2.7s] duration-300 ease-in'
-      ref={navRef}>
+    <nav className='flex gap-8 justify-center items-center text-accent-blue'>
       {socials.map((social) => (
         <a
           href={social.path}

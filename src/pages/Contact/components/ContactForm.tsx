@@ -14,16 +14,14 @@ const ContactForm: React.FC<FormProps> = ({
   handleChange,
   handleSubmit,
 }) => (
-  <form
-    onSubmit={handleSubmit}
-    className='mx-auto max-w-6xl flex flex-col gap-5'>
-    <span className='flex gap-5'>
+  <form onSubmit={handleSubmit} className='w-full flex flex-col gap-5'>
+    <div className='flex justify-between gap-5 w-full'>
       <input
         name='name'
         value={formData.name}
         onChange={handleChange}
         placeholder='name'
-        className='contact-input'
+        className='contact-input w-1/2'
         type='text'
       />
       <input
@@ -31,10 +29,10 @@ const ContactForm: React.FC<FormProps> = ({
         value={formData.email}
         onChange={handleChange}
         placeholder='email'
-        className='contact-input'
+        className='contact-input w-1/2'
         type='email'
       />
-    </span>
+    </div>
 
     <input
       name='subject'

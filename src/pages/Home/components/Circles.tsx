@@ -32,11 +32,11 @@ const Circles: React.FC = () => {
     <div className='relative flex justify-center items-center'>
       <Profile />
       <div
-        className='absolute mx-auto rounded-full border border-[#99d6ea]'
+        className='absolute mx-auto rounded-full border border-accent-blue'
         ref={innerRef}
       />
       <div
-        className='absolute mx-auto rounded-full border border-[#99d6ea]'
+        className='absolute mx-auto rounded-full border border-accent-blue'
         ref={outerRef}
       />
     </div>

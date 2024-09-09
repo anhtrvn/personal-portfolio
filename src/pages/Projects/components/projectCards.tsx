@@ -15,13 +15,18 @@ import {
 } from 'react-icons/bi';
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
 
+import etl from '../../../assets/images/projects/etl.png';
+import fuelquote from '../../../assets/images/projects/fuelquote.png';
+import survive from '../../../assets/images/projects/survive.jpg';
+import portfolio from '../../../assets/images/projects/portfolio.png';
+
 export const projectCards = [
   {
     title: 'ETL Pipeline Manager',
     date: "Spring '24",
     description: [
       '@ Halliburton',
-      'Developed an ETL Data Pipeline Manager web app for managing ETL jobs efficiently.',
+      'A web application designed to manage, monitor, and schedule ETL jobs efficiently, enabling users to handle and visualize data pipelines with ease.',
     ],
     techs: [
       {
@@ -57,14 +62,14 @@ export const projectCards = [
         name: 'postgresql',
       },
     ],
-    image:
-      'https://starecat.com/content/wp-content/uploads/cat-why-is-this-empty-food-bowl-with-food-in-it.jpg',
+    source: '',
+    image: etl,
   },
   {
-    title: 'Fuel Quoting App',
+    title: 'Fuel Quote Portal',
     date: "Fall '23",
     description: [
-      'A fullstack website enabling users to register accounts, request fuel quotes based on gallons, and access previous quote requests and personal information.',
+      'A full-stack website allowing users to create accounts, request fuel quotes based on gallons, and review previous quote requests and account information.',
     ],
     techs: [
       {
@@ -88,13 +93,15 @@ export const projectCards = [
         name: 'mongodb',
       },
     ],
-    image:
-      'https://starecat.com/content/wp-content/uploads/cat-why-is-this-empty-food-bowl-with-food-in-it.jpg',
+    source: 'https://github.com/anhtrvn/fuel-quote-website',
+    image: fuelquote,
   },
   {
-    title: 'Action Side-Scrolling Game',
+    title: 'Survive',
     date: "Fall '21",
-    description: ['A 3D fantasy game with action side-scrolling mechanics.'],
+    description: [
+      'A 3D fantasy action side-scrolling game featuring dynamic environments and engaging combat mechanics, where players fight enemies and progress through multiple levels.',
+    ],
     techs: [
       {
         icon: <SiCsharp />,
@@ -105,15 +112,38 @@ export const projectCards = [
         name: 'unity',
       },
     ],
-    image:
-      'https://starecat.com/content/wp-content/uploads/cat-why-is-this-empty-food-bowl-with-food-in-it.jpg',
+    source: 'http://youtu.be/Q9Z-05qVYfE?si=iqy_ot8zGaKYof7t',
+    image: survive,
   },
   {
-    title: 'Computer Science Tutor',
+    title: 'Personal Portfolio',
+    date: "Summer '22",
+    description: [
+      'My personal website built to showcase projects and skills, independently learning and implementing modern web development technologies.',
+    ],
+    techs: [
+      {
+        icon: <FontAwesomeIcon icon={faReact} />,
+        name: 'react',
+      },
+      {
+        icon: <BiLogoTypescript />,
+        name: 'typescript',
+      },
+      {
+        icon: <RiTailwindCssFill />,
+        name: 'tailwind.css',
+      },
+    ],
+    source: 'https://github.com/anhtrvn/personal-portfolio',
+    image: portfolio,
+  },
+  {
+    title: 'CompSci Tutor',
     date: "Sep '22 - Dec '23",
     description: [
-      '@ UH ConocoPhillips CS Learning Center',
-      'Provided individualized tutoring sessions for Computer Science intro courses.',
+      '@ UofH ConocoPhillips CompSci Learning Center',
+      'Individualized tutoring for introductory CompSci courses, focusing on fundamental programming concepts and problem-solving skills.',
     ],
     techs: [
       {
@@ -125,7 +155,8 @@ export const projectCards = [
         name: 'c++',
       },
     ],
+    source: 'https://www.uh.edu/nsm/computer-science/undergraduate/tutoring/',
     image:
-      'https://starecat.com/content/wp-content/uploads/cat-why-is-this-empty-food-bowl-with-food-in-it.jpg',
+      'https://www.uh.edu/news-events/stories/2024/august/_images/uh-conocophillips-hero.jpg',
   },
 ];

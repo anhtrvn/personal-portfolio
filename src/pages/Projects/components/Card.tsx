@@ -9,6 +9,7 @@ interface CardProps {
     name: string;
   }[];
   imgUrl: string;
+  srcUrl: string;
   className?: string;
 }
 
@@ -18,6 +19,7 @@ const Card: React.FC<CardProps> = ({
   description,
   techs,
   imgUrl,
+  srcUrl,
   className = '',
 }) => {
   return (
@@ -26,7 +28,7 @@ const Card: React.FC<CardProps> = ({
       <img
         src={imgUrl}
         alt={`${title} cover`}
-        className='w-full object-cover min-h-24 rounded-lg shadow-md'
+        className='object-cover w-full min-h-24 rounded-lg'
       />
 
       {/* Content */}
@@ -53,7 +55,7 @@ const Card: React.FC<CardProps> = ({
           {techs.map((tech, i) => (
             <span
               key={i}
-              className='flex items-center justify-center p-1 rounded-lg'
+              className='flex items-center justify-center pt-1 rounded-lg'
               title={tech.name}>
               {tech.icon}
             </span>

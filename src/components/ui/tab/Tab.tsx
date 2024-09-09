@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface TabButtonProps {
+export interface TabButtonProps {
   value: string;
   onClick: (value: string) => void;
   isActive: boolean;
@@ -15,14 +15,16 @@ export const TabButton: React.FC<TabButtonProps> = ({
 }) => (
   <button
     onClick={() => onClick(value)}
-    className={`button-page text-accent-blue w-full ${
-      isActive ? 'translate-y-0 shadow-lg bg-accent-pink text-primary' : ''
+    className={`button-page w-full ${
+      isActive
+        ? 'translate-y-0 shadow-lg bg-accent-pink text-primary'
+        : 'text-accent-blue'
     }`}>
     {children}
   </button>
 );
 
-interface TabContentProps {
+export interface TabContentProps {
   value: string;
   activeTab: string;
   children: React.ReactNode;
