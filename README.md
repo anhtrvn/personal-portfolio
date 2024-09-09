@@ -1,8 +1,11 @@
 # [Personal Portfolio](https://github.com/anhtrvn/personal-portfolio)
 
+<div>
   <h3 align="center">Welcome to my <a href="https://anhtrvn.github.io/personal-portfolio/" target="_blank">Portfolio Website</a> 🚀<h3>
+  <img src="https://github.com/anhtrvn/personal-portfolio/blob/main/src/assets/images/banner.png?raw=true" alt="banner image" style="width: 100%; height: auto; object-fit: cover">
+</div>
   
-  <p align="center">I built this portfolio to sharpen my skills in <strong>React</strong> while following a <a href="https://youtu.be/urgi2iz9P6U" target="_blank">tutorial</a> as a starting point. From there, I enhanced it with personalized features and design ✨.</p>
+I built this portfolio to sharpen my skills in <strong>React</strong> while following a <a href="https://youtu.be/urgi2iz9P6U" target="_blank">tutorial</a> as a starting point. From there, I enhanced it with personalized features and design ✨.
 
 ## 🛠️ Technologies Used
 
@@ -20,7 +23,7 @@
 
 ## 📚 Learning Journey
 
-<p>This project started with the goal of mastering React, but along the way, I gained valuable insights and skills:</p>
+This project started with the goal of mastering React, but along the way, I gained valuable insights and skills:
 
 - <strong>Exploring React:</strong> Gained hands-on experience with React by building components and managing state.
 - <strong>Integrating TypeScript:</strong> Leveraged TypeScript to improve code quality and maintainability through type safety.
