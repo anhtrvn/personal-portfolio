@@ -91,11 +91,19 @@
   }
 
   .button-page {
-    @apply rounded-xl px-5 py-2 text-lg font-medium tracking-wider -translate-y-1 active:translate-y-0 active:shadow-lg transform transition-all shadow-xl duration-200 active:bg-accent-blue active:text-primary hover:bg-secondary hover:text-primary;
+    @apply rounded-xl px-5 py-2 text-sm md:text-base lg:text-lg font-medium tracking-wider -translate-y-1 active:translate-y-0 active:shadow-lg transform transition-all shadow-xl duration-200 active:bg-accent-blue active:text-primary hover:bg-secondary hover:text-primary;
   }
 
   .scroller {
-    @apply scrollbar-thin scrollbar-track-transparent scrollbar-thumb-accent-blue;
+    @apply scrollbar-thin scrollbar-track-transparent transition-all;
+  }
+
+  .show-scroller {
+    @apply scrollbar-thumb-accent-blue;
+  }
+
+  .hide-scroller {
+    @apply scrollbar-thumb-transparent;
   }
 
   .animate-rotate-right {

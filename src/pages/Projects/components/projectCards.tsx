@@ -15,10 +15,10 @@ import {
 } from 'react-icons/bi';
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
 
-import etl from '../../../assets/images/etl.png';
-import fuelquote from '../../../assets/images/fuelquote.png';
-import portfolio from '../../../assets/images/portfolio.png';
-import survive from '../../../assets/images/survive.jpg';
+import etl from '../../../assets/images/projects/etl.png';
+import fuelquote from '../../../assets/images/projects/fuelquote.png';
+import survive from '../../../assets/images/projects/survive.jpg';
+import portfolio from '../../../assets/images/projects/portfolio.png';
 
 export const projectCards = [
   {

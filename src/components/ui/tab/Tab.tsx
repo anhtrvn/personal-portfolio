@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface TabButtonProps {
+export interface TabButtonProps {
   value: string;
   onClick: (value: string) => void;
   isActive: boolean;
@@ -24,7 +24,7 @@ export const TabButton: React.FC<TabButtonProps> = ({
   </button>
 );
 
-interface TabContentProps {
+export interface TabContentProps {
   value: string;
   activeTab: string;
   children: React.ReactNode;
