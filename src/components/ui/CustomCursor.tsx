@@ -50,7 +50,7 @@ const CustomCursor = () => {
 
   return (
     <div
-      className='fixed pointer-events-none z-[9999]'
+      className='fixed pointer-events-none z-[9999] hidden lg:block'
       style={{
         top: `${position.y}px`,
         left: `${position.x}px`,

@@ -4,6 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  @media (min-width: 1024px) {
+    * {
+      cursor: none !important;
+    }
+  }
+}
+
 @layer base {
   @font-face {
     font-family: 'Lexend Deca', monospace;
@@ -15,15 +23,11 @@
   }
 
   body {
-    @apply bg-primary font-lexend text-secondary leading-loose h-screen w-screen cursor-none overflow-x-hidden;
+    @apply bg-primary font-lexend text-secondary leading-loose h-screen w-screen overflow-x-hidden;
   }
 
   #root {
     @apply flex flex-col w-full h-full justify-center;
-  }
-
-  * {
-    cursor: none !important;
   }
 }
 
