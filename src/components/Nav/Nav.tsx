@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const links = [
   {
@@ -26,8 +26,6 @@ interface NavProps {
 }
 
 const Nav: React.FC<NavProps> = ({ className = '', onClick }) => {
-  const location = useLocation();
-
   return (
     <nav className={`flex gap-8 ${className}`}>
       {links.map((link, i) => {
