@@ -13,7 +13,7 @@ import Projects from './pages/Projects/Projects';
 import Contact from './pages/Contact/Contact';
 import PageTransition from './components/ui/PageTransition';
 
-const router = createBrowserRouter([
+const routes = [
   {
     path: '/',
     element: <App />,
@@ -61,7 +61,9 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+];
+
+const router = createBrowserRouter(routes, { basename: '/personal-portfolio' });
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
