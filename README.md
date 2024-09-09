@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+# [Personal Portfolio](https://github.com/anhtrvn/personal-portfolio)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <h2>Welcome to my <a href="https://anhtrvn.github.io/personal-portfolio/" target="_blank">Portfolio Website</a> 🚀</h2>
+</div>
 
-## Available Scripts
+<div align="center">
+  <p>I built this portfolio to sharpen my skills in <strong>React</strong> while following a <a href="https://youtu.be/urgi2iz9P6U" target="_blank">tutorial</a> as a starting point. From there, I enhanced it with personalized features and design ✨.</p>
+</div>
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🛠️ Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **[React](https://react.dev/)** – A JavaScript library for building user interfaces.
+- **[TypeScript](https://www.typescriptlang.org/)** – Typed superset of JavaScript that scales.
+- **[Tailwind CSS](https://tailwindcss.com/)** – A utility-first CSS framework for rapid UI development.
+- **[GitHub Pages](https://pages.github.com/)** – Hosting for personal, organization, or project pages directly from a GitHub repository.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 🌟 Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Fully responsive design across devices.
+- Elegant and minimalistic UI with a focus on user experience.
+- Clean and structured code using TypeScript for scalability.
+- Deployed using GitHub Pages for seamless access.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📚 Learning Journey
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p>This project started with the goal of mastering React, but along the way, I gained valuable insights and skills:</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- <strong>Exploring React:</strong> Gained hands-on experience with React by building components and managing state.
+- <strong>Integrating TypeScript:</strong> Leveraged TypeScript to improve code quality and maintainability through type safety.
+- <strong>Styling with Tailwind CSS:</strong> Applied Tailwind CSS to create a responsive and visually appealing design quickly.
+- <strong>Deployment with GitHub Pages:</strong> Deployed the application using GitHub Pages for efficient and reliable hosting.
 
-### `npm run eject`
+<p>This portfolio is a continuous work in progress, reflecting my ongoing commitment to learning and applying new technologies and best practices in frontend development.</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Get Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+You can check out the website live [here](https://anhtrvn.github.io/personal-portfolio/) or clone the repository to explore the codebase locally:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone https://github.com/anhtrvn/personal-portfolio.git
+cd personal-portfolio
+npm install
+npm start
+```
