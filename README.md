@@ -1,14 +1,8 @@
 # [Personal Portfolio](https://github.com/anhtrvn/personal-portfolio)
 
-<div align="center">
-  <h2>Welcome to my <a href="https://anhtrvn.github.io/personal-portfolio/" target="_blank">Portfolio Website</a> 🚀</h2>
-</div>
-
-<div align="center">
-  <p>I built this portfolio to sharpen my skills in <strong>React</strong> while following a <a href="https://youtu.be/urgi2iz9P6U" target="_blank">tutorial</a> as a starting point. From there, I enhanced it with personalized features and design ✨.</p>
-</div>
-
----
+  <h3 align="center">Welcome to my <a href="https://anhtrvn.github.io/personal-portfolio/" target="_blank">Portfolio Website</a> 🚀<h3>
+  
+  <p align="center">I built this portfolio to sharpen my skills in <strong>React</strong> while following a <a href="https://youtu.be/urgi2iz9P6U" target="_blank">tutorial</a> as a starting point. From there, I enhanced it with personalized features and design ✨.</p>
 
 ## 🛠️ Technologies Used
 
@@ -17,16 +11,12 @@
 - **[Tailwind CSS](https://tailwindcss.com/)** – A utility-first CSS framework for rapid UI development.
 - **[GitHub Pages](https://pages.github.com/)** – Hosting for personal, organization, or project pages directly from a GitHub repository.
 
----
-
 ## 🌟 Features
 
 - Fully responsive design across devices.
 - Elegant and minimalistic UI with a focus on user experience.
 - Clean and structured code using TypeScript for scalability.
 - Deployed using GitHub Pages for seamless access.
-
----
 
 ## 📚 Learning Journey
 
@@ -38,8 +28,6 @@
 - <strong>Deployment with GitHub Pages:</strong> Deployed the application using GitHub Pages for efficient and reliable hosting.
 
 <p>This portfolio is a continuous work in progress, reflecting my ongoing commitment to learning and applying new technologies and best practices in frontend development.</p>
-
----
 
 ## 🚀 Get Started
 
