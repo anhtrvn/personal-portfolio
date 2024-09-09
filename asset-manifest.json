@@ -1,29 +1,19 @@
 {
   "files": {
-    "main.css": "/personal-portfolio/static/css/main.a74a32e4.css",
-    "main.js": "/personal-portfolio/static/js/main.f260056c.js",
+    "main.css": "/personal-portfolio/static/css/main.2c8fe1e0.css",
+    "main.js": "/personal-portfolio/static/js/main.30836701.js",
     "static/js/453.b21437c2.chunk.js": "/personal-portfolio/static/js/453.b21437c2.chunk.js",
     "static/media/profile.png": "/personal-portfolio/static/media/profile.002bbfde8a5a5503ca9f.png",
-    "static/media/express-svgrepo-com.svg": "/personal-portfolio/static/media/express-svgrepo-com.aed93f6374b5aa9f3449333af5fa7779.svg",
-    "static/media/python-127-svgrepo-com.svg": "/personal-portfolio/static/media/python-127-svgrepo-com.cd2b0599222ec4973a44203a8d731f7c.svg",
-    "static/media/tailwind-svgrepo-com.svg": "/personal-portfolio/static/media/tailwind-svgrepo-com.290b48ab09ad9727c7a6c5e81d9b69eb.svg",
-    "static/media/react-svgrepo-com.svg": "/personal-portfolio/static/media/react-svgrepo-com.b32db8c830e75123119099344e9606b9.svg",
-    "static/media/csharp2-svgrepo-com.svg": "/personal-portfolio/static/media/csharp2-svgrepo-com.04f54d5d641b60af43b59bd2395e5316.svg",
-    "static/media/js02-svgrepo-com.svg": "/personal-portfolio/static/media/js02-svgrepo-com.7cd7f4e32222f409b20c30a8f3167884.svg",
-    "static/media/cplusplus-svgrepo-com.svg": "/personal-portfolio/static/media/cplusplus-svgrepo-com.ecae498375f17bcc467bbdcbd4d83163.svg",
-    "static/media/typescript-svgrepo-com.svg": "/personal-portfolio/static/media/typescript-svgrepo-com.72b9e5fab409bd5a257407757fdfa494.svg",
-    "static/media/mongodb-svgrepo-com.svg": "/personal-portfolio/static/media/mongodb-svgrepo-com.f354506e0934a4ddc823fa4cad14d3c1.svg",
-    "static/media/nextjs-svgrepo-com.svg": "/personal-portfolio/static/media/nextjs-svgrepo-com.4e89f0cfe8aaee7e2f54b4200c964865.svg",
-    "static/media/visual-studio-code-svgrepo-com.svg": "/personal-portfolio/static/media/visual-studio-code-svgrepo-com.759b25318b8d6438ae888a997a6eafe0.svg",
-    "static/media/git-svgrepo-com.svg": "/personal-portfolio/static/media/git-svgrepo-com.d40d4546ab21b26c3088801b20c91c34.svg",
-    "static/media/unity-svgrepo-com.svg": "/personal-portfolio/static/media/unity-svgrepo-com.363e0600ea7f458c8579edb90bf1a8a8.svg",
+    "static/media/survive.jpg": "/personal-portfolio/static/media/survive.76a4656501e2348c04db.jpg",
+    "static/media/etl.png": "/personal-portfolio/static/media/etl.8fac20dfd7b73faa6a53.png",
+    "static/media/fuelquote.png": "/personal-portfolio/static/media/fuelquote.593ef0c8ab8747de03bc.png",
     "index.html": "/personal-portfolio/index.html",
-    "main.a74a32e4.css.map": "/personal-portfolio/static/css/main.a74a32e4.css.map",
-    "main.f260056c.js.map": "/personal-portfolio/static/js/main.f260056c.js.map",
+    "main.2c8fe1e0.css.map": "/personal-portfolio/static/css/main.2c8fe1e0.css.map",
+    "main.30836701.js.map": "/personal-portfolio/static/js/main.30836701.js.map",
     "453.b21437c2.chunk.js.map": "/personal-portfolio/static/js/453.b21437c2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a74a32e4.css",
-    "static/js/main.f260056c.js"
+    "static/css/main.2c8fe1e0.css",
+    "static/js/main.30836701.js"
   ]
 }
