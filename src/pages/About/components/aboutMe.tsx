@@ -26,7 +26,7 @@ export const education = [
 export const hobbies = [
   {
     title: 'cat mom of two',
-    description: 'cat mom of two',
+    description: 'they coded this site actually',
     image: [
       <FontAwesomeIcon icon={faCat} />,
       <FontAwesomeIcon icon={faCat} flip='horizontal' />,
@@ -34,12 +34,12 @@ export const hobbies = [
   },
   {
     title: 'powerbuilding enjoyer',
-    description: 'powerbuilding enjoyer',
+    description: 'caffeine and protein only diet',
     image: <FontAwesomeIcon icon={faDumbbell} />,
   },
   {
     title: 'car & motorcycle enthusiast',
-    description: '',
+    description: 'four or two wheels?',
     image: [
       <FontAwesomeIcon icon={faCarSide} />,
       <FontAwesomeIcon icon={faMotorcycle} />,
@@ -47,12 +47,12 @@ export const hobbies = [
   },
   {
     title: 'gamer',
-    description: 'gamer',
+    description: 'currently making spaghetti in Undertale',
     image: <FontAwesomeIcon icon={faGamepad} />,
   },
   {
-    title: 'Capstone @ Halliburton',
-    description: 'art & fashion fan',
+    title: 'art & fashion fan',
+    description: 'professional attires only',
     image: <FontAwesomeIcon icon={faVestPatches} />,
   },
 ];

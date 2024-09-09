@@ -17,7 +17,7 @@ const MobileNav: React.FC = () => {
     <div className='lg:hidden'>
       <button
         onClick={toggleMobileNav}
-        className='button-icon absolute top-8 right-5 text-accent-blue hover:text-secondary'>
+        className='button-icon absolute top-8 right-5 text-secondary'>
         <FontAwesomeIcon icon={faBars} size='xl' />
       </button>
 
