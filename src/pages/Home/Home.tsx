@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import Circles from './components/Circles';
 import Socials from '../../components/Nav/Socials';
-import { useTypewriter } from '../../components/ui/useTypewriter';
+import { useTypewriter } from '../../components/ui/effects/useTypewriter';
 
 const Home = () => {
   const { typed } = useTypewriter(["hi, I'm Anh Tran", 'welcome!']);

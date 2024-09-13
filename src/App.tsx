@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 import './App.css';
 import Header from './components/Nav/Header';
-import CustomCursor from './components/ui/CustomCursor';
+import CustomCursor from './components/ui/effects/CustomCursor';
 
 function App() {
   return (

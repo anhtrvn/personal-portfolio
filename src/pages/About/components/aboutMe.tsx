@@ -5,14 +5,14 @@ import {
   faCat,
   faDumbbell,
   faCarSide,
-  faMotorcycle,
   faGamepad,
-  faVestPatches,
+  faPalette,
 } from '@fortawesome/free-solid-svg-icons';
+import { SiMazda } from 'react-icons/si';
 
 export const education = [
   {
-    title: 'Capstone @ Halliburton',
+    title: 'Capstone Project @ Halliburton',
     description: "Spring '24",
     image: <FontAwesomeIcon icon={faLaptopCode} />,
   },
@@ -26,33 +26,30 @@ export const education = [
 export const hobbies = [
   {
     title: 'cat mom of two',
-    description: 'they coded this site actually',
+    description: 'the cats coded this site actually',
     image: [
       <FontAwesomeIcon icon={faCat} />,
       <FontAwesomeIcon icon={faCat} flip='horizontal' />,
     ],
   },
   {
-    title: 'powerbuilding enjoyer',
+    title: 'powerbuilding',
     description: 'caffeine and protein only diet',
     image: <FontAwesomeIcon icon={faDumbbell} />,
   },
   {
-    title: 'car & motorcycle enthusiast',
-    description: 'four or two wheels?',
-    image: [
-      <FontAwesomeIcon icon={faCarSide} />,
-      <FontAwesomeIcon icon={faMotorcycle} />,
-    ],
+    title: 'auto',
+    description: 'stutututu',
+    image: <SiMazda />,
   },
   {
-    title: 'gamer',
+    title: 'game',
     description: 'currently making spaghetti in Undertale',
     image: <FontAwesomeIcon icon={faGamepad} />,
   },
   {
-    title: 'art & fashion fan',
-    description: 'professional attires only',
-    image: <FontAwesomeIcon icon={faVestPatches} />,
+    title: 'art',
+    description: 'creativity cannot be crushed',
+    image: <FontAwesomeIcon icon={faPalette} />,
   },
 ];

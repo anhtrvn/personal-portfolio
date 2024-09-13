@@ -4,7 +4,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { PiSparkleFill } from 'react-icons/pi';
 
 import Socials from '../../../components/Nav/Socials';
-import { useTypewriter } from '../../../components/ui/useTypewriter';
+import { useTypewriter } from '../../../components/ui/effects/useTypewriter';
 
 const ContactInfo = () => {
   const { typed } = useTypewriter(['anhtran18202@gmail.com']);

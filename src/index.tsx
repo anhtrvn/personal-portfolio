@@ -11,7 +11,7 @@ import About from './pages/About/About';
 import Skills from './pages/Skills/Skills';
 import Projects from './pages/Projects/Projects';
 import Contact from './pages/Contact/Contact';
-import PageTransition from './components/ui/PageTransition';
+import PageTransition from './components/ui/effects/PageTransition';
 
 const routes = [
   {
