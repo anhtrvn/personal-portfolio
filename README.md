@@ -5,7 +5,7 @@
   <img src="https://github.com/anhtrvn/personal-portfolio/blob/main/src/assets/images/banner.png?raw=true" alt="banner image" style="width: 100%; height: auto; object-fit: cover">
 </div>
   
-I built this portfolio to sharpen my skills in <strong>React</strong> while following a <a href="https://youtu.be/urgi2iz9P6U" target="_blank">tutorial</a> as a starting point. From there, I enhanced it with personalized features and design ✨.
+I built this portfolio to learn <strong>React</strong> while following a <a href="https://youtu.be/urgi2iz9P6U" target="_blank">tutorial</a> as a starting point. From there, I enhanced it with personalized features and design ✨.
 
 ## 🛠️ Technologies Used
 
