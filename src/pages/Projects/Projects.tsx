@@ -15,7 +15,7 @@ const multiSpan = (i: number) => {
 export default function Projects() {
   return (
     <section className='flex justify-center items-center w-full h-full overflow-hidden pb-8 lg:pb-16'>
-      <div className='container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:auto-rows-[18rem] gap-6 max-w-5xl h-full overflow-y-scroll scroller hide-scroller hover:show-scroller'>
+      <div className='container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:auto-rows-[18rem] gap-6 max-w-5xl h-full overflow-x-hidden overflow-y-scroll scroller hide-scroller hover:show-scroller'>
         {projectCards.map((card, i) => (
           <a
             href={card.source}
