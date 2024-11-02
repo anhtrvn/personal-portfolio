@@ -22,7 +22,7 @@ import portfolio from '../../../assets/images/projects/portfolio.png';
 
 export const projectCards = [
   {
-    title: 'ETL Pipeline Manager',
+    title: 'ETL Data Pipeline Manager',
     date: "Spring '24",
     description: [
       '@ Halliburton',
@@ -97,7 +97,7 @@ export const projectCards = [
     image: fuelquote,
   },
   {
-    title: 'Survive',
+    title: 'Survive Game',
     date: "Fall '21",
     description: [
       'A 3D fantasy action side-scrolling game featuring dynamic environments and engaging combat mechanics, where players fight enemies and progress through multiple levels.',

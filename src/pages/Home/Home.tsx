@@ -24,6 +24,7 @@ const Home = () => {
             <Socials />
           </div>
         </div>
+
         <h1 className='text-3xl text-secondary text-center'>
           <span className='cursor-blink' aria-label={typed}>
             {typed}

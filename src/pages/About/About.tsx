@@ -3,12 +3,12 @@ import {
   renderTabContent,
   renderTabButton,
 } from '../../components/ui/tab/utils';
-import { education, hobbies } from './components/aboutMe';
+import { education, about } from './components/aboutMe';
 import AboutMap from './components/AboutMap';
 
 const tabs = [
   { value: 'education', content: education },
-  { value: 'hobbies', content: hobbies },
+  { value: 'about', content: about },
 ];
 
 const About = () => {

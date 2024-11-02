@@ -16,7 +16,7 @@ const socials = [
   },
   {
     icon: faFilePdf,
-    path: '/AnhTran_Resume.pdf',
+    path: `${process.env.PUBLIC_URL}/AnhTran_Resume.pdf`,
     label: 'Resume PDF',
   },
 ];

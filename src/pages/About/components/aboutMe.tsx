@@ -13,20 +13,20 @@ import { SiMazda } from 'react-icons/si';
 export const education = [
   {
     title: 'Capstone Project @ Halliburton',
-    description: "Spring '24",
+    description: "Jan - May '24",
     image: <FontAwesomeIcon icon={faLaptopCode} />,
   },
   {
-    title: 'Computer Science @ University of Houston',
+    title: 'Computer Science, B.S. @ University of Houston',
     description: "Aug '20 - May '24",
     image: <FontAwesomeIcon icon={faGraduationCap} />,
   },
 ];
 
-export const hobbies = [
+export const about = [
   {
     title: 'cat mom of two',
-    description: 'the cats coded this site actually',
+    description: 'yuumi & momo',
     image: [
       <FontAwesomeIcon icon={faCat} />,
       <FontAwesomeIcon icon={faCat} flip='horizontal' />,
@@ -34,22 +34,22 @@ export const hobbies = [
   },
   {
     title: 'powerbuilding',
-    description: 'caffeine and protein only diet',
+    description: 'fueled by caffeine, protein, and heavy lifts',
     image: <FontAwesomeIcon icon={faDumbbell} />,
   },
   {
-    title: 'auto',
-    description: 'stutututu',
+    title: 'cars & motobikes',
+    description: 'adrenaline chaser wheels',
     image: <SiMazda />,
   },
   {
-    title: 'game',
+    title: 'gaming',
     description: 'currently making spaghetti in Undertale',
     image: <FontAwesomeIcon icon={faGamepad} />,
   },
   {
     title: 'art',
-    description: 'creativity cannot be crushed',
+    description: 'design and attention to detail',
     image: <FontAwesomeIcon icon={faPalette} />,
   },
 ];
