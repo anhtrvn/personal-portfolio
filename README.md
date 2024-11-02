@@ -21,15 +21,6 @@ I built this portfolio to learn <strong>React</strong> while following a <a href
 - Clean and structured code using TypeScript for scalability.
 - Deployed using GitHub Pages for seamless access.
 
-## 📚 Learning Journey
-
-This project started with the goal of mastering React, but along the way, I gained valuable insights and skills:
-
-- <strong>Exploring React:</strong> Gained hands-on experience with React by building components and managing state.
-- <strong>Integrating TypeScript:</strong> Leveraged TypeScript to improve code quality and maintainability through type safety.
-- <strong>Styling with Tailwind CSS:</strong> Applied Tailwind CSS to create a responsive and visually appealing design quickly.
-- <strong>Deployment with GitHub Pages:</strong> Deployed the application using GitHub Pages for efficient and reliable hosting.
-
 <p>This portfolio is a continuous work in progress, reflecting my ongoing commitment to learning and applying new technologies and best practices in frontend development.</p>
 
 ## 🚀 Get Started
