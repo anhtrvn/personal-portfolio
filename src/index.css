@@ -4,14 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  @media (min-width: 1024px) {
-    * {
-      cursor: none !important;
-    }
-  }
-}
-
 @layer base {
   @font-face {
     font-family: 'Lexend Deca', monospace;

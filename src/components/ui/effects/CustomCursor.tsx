@@ -12,8 +12,6 @@ const CustomCursor = () => {
 
   const handleMouseOver = (event: MouseEvent) => {
     const target = event.target as HTMLElement;
-    // console.log('Mouse over:', target.tagName);
-    // If the element is clickable, like links, buttons, or has 'cursor: pointer'
     if (
       target.tagName === 'A' ||
       target.tagName === 'BUTTON' ||
@@ -25,7 +23,6 @@ const CustomCursor = () => {
     }
   };
 
-  // Handle mouse click event
   const handleMouseDown = () => {
     setClicked(true);
   };
