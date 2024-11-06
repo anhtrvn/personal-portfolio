@@ -12,7 +12,7 @@ const multiSpan = (i: number) => {
   }
 };
 
-export default function Projects() {
+const Projects = () => {
   return (
     <section className='flex justify-center items-center w-full h-full overflow-hidden pb-8 lg:pb-16'>
       <div className='container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:auto-rows-[18rem] gap-6 max-w-5xl h-full overflow-x-hidden overflow-y-scroll scroller hide-scroller hover:show-scroller'>
@@ -38,4 +38,6 @@ export default function Projects() {
       </div>
     </section>
   );
-}
+};
+
+export default Projects;

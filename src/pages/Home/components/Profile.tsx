@@ -3,7 +3,7 @@ import profile from '../../../assets/images/profile.png';
 import { starline } from '../../../assets/starline';
 import SweTitle from '../../../assets/swe-title';
 
-export default function Profile() {
+const Profile = () => {
   const profileRef = useRef<HTMLImageElement>(null);
   const leftRef = useRef<HTMLDivElement>(null);
   const rightRef = useRef<HTMLDivElement>(null);
@@ -69,4 +69,6 @@ export default function Profile() {
       </div>
     </>
   );
-}
+};
+
+export default Profile;
