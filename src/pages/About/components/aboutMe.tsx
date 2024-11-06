@@ -8,7 +8,6 @@ import {
   faGamepad,
   faPalette,
 } from '@fortawesome/free-solid-svg-icons';
-import { SiMazda } from 'react-icons/si';
 
 export const education = [
   {
@@ -39,8 +38,8 @@ export const about = [
   },
   {
     title: 'cars & motobikes',
-    description: 'adrenaline chaser wheels',
-    image: <SiMazda />,
+    description: 'adrenaline chaser on wheels',
+    image: <FontAwesomeIcon icon={faCarSide} />,
   },
   {
     title: 'gaming',
