@@ -117,7 +117,7 @@ export const projectCards = [
   },
   {
     title: 'Personal Portfolio',
-    date: "Summer '22",
+    date: "Jul '23",
     description: [
       'My personal website built to showcase projects and skills, independently learning and implementing modern web development technologies.',
     ],

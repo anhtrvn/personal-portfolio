@@ -40,8 +40,8 @@ const Contact = () => {
   };
 
   return (
-    <section className='h-full flex justify-center items-center'>
-      <div className='container max-w-xl flex flex-col justify-center items-center gap-10'>
+    <section>
+      <div className='container max-w-xl flex-center flex-col gap-10'>
         <ContactInfo />
         <ContactForm
           formData={formData}

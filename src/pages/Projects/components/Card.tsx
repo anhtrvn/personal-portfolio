@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { ReactElement, FC } from 'react';
 
 interface CardProps {
   title: string;
   date: string;
   description: string[];
   techs: {
-    icon: React.ReactElement;
+    icon: ReactElement;
     name: string;
   }[];
   imgUrl: string;
@@ -13,28 +13,24 @@ interface CardProps {
   className?: string;
 }
 
-const Card: React.FC<CardProps> = ({
+const Card: FC<CardProps> = ({
   title,
   date,
   description,
   techs,
   imgUrl,
   srcUrl,
-  className = '',
 }) => {
   return (
-    <div
-      className={`${className} group flex flex-col justify-between h-full gap-4 rounded-xl p-4 bg-tertiary shadow-lg transform transition-all hover:scale-105 hover:shadow-xl`}>
+    <div className='group project-card'>
       <img
         src={imgUrl}
         alt={`${title} cover`}
         className='object-cover w-full min-h-24 rounded-lg'
       />
 
-      {/* Content */}
       <div className='text-secondary space-y-1'>
-        {/* Title and Date */}
-        <span className='flex justify-between items-center leading-normal'>
+        <span className='flex-between leading-normal'>
           <h5 className='font-semibold tracking-wide text-accent-blue group-hover:text-accent-pink'>
             {title}
           </h5>
@@ -43,19 +39,17 @@ const Card: React.FC<CardProps> = ({
           </h6>
         </span>
 
-        {/* Description */}
         <div className='text-xs leading-normal'>
           {description.map((desc, i) => (
             <p key={i}>{desc}</p>
           ))}
         </div>
 
-        {/* Tech Icons */}
         <div className='flex flex-wrap gap-1 text-2xl group-hover:text-accent-blue text-secondary'>
           {techs.map((tech, i) => (
             <span
               key={i}
-              className='flex items-center justify-center pt-1 rounded-lg'
+              className='flex-center pt-1 rounded-lg'
               title={tech.name}>
               {tech.icon}
             </span>
