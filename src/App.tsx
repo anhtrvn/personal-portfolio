@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className='relative flex-1'>
+      <main>
         <Outlet />
       </main>
     </>
