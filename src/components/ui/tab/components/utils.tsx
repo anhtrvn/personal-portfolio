@@ -1,5 +1,5 @@
-import React from 'react';
-import { TabContent, TabButton } from './Tab';
+import React, { ReactNode } from 'react';
+import { TabBody, TabButton } from './Tab';
 
 export interface TabProps {
   value: string;
@@ -9,16 +9,12 @@ export interface TabProps {
 export const renderTabContent = (
   tabs: TabProps[],
   activeTab: string,
-  children: (content: any[]) => React.ReactNode
+  children: (content: any[]) => ReactNode
 ) => {
   return tabs.map(({ value, content }) => (
-    <TabContent
-      key={value}
-      value={value}
-      activeTab={activeTab}
-      className='w-full'>
+    <TabBody key={value} value={value} activeTab={activeTab} className='w-full'>
       {children(content)}
-    </TabContent>
+    </TabBody>
   ));
 };
 

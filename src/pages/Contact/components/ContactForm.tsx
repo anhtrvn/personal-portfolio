@@ -14,14 +14,14 @@ const ContactForm: React.FC<FormProps> = ({
   handleChange,
   handleSubmit,
 }) => (
-  <form onSubmit={handleSubmit} className='w-full flex flex-col gap-5'>
-    <div className='flex justify-between gap-5 w-full'>
+  <form onSubmit={handleSubmit} className='w-full flex flex-col gap-4'>
+    <div className='flex-between gap-4 w-full'>
       <input
         name='name'
         value={formData.name}
         onChange={handleChange}
         placeholder='name'
-        className='contact-input w-1/2'
+        className='input-contact w-1/2'
         type='text'
       />
       <input
@@ -29,7 +29,7 @@ const ContactForm: React.FC<FormProps> = ({
         value={formData.email}
         onChange={handleChange}
         placeholder='email'
-        className='contact-input w-1/2'
+        className='input-contact w-1/2'
         type='email'
       />
     </div>
@@ -39,7 +39,7 @@ const ContactForm: React.FC<FormProps> = ({
       value={formData.subject}
       onChange={handleChange}
       placeholder='subject'
-      className='contact-input'
+      className='input-contact'
       type='text'
     />
     <textarea
@@ -47,10 +47,10 @@ const ContactForm: React.FC<FormProps> = ({
       value={formData.message}
       onChange={handleChange}
       placeholder='message'
-      className='contact-input'
+      className='input-contact'
     />
 
-    <button type='submit' className='button-page bg-accent-pink text-primary'>
+    <button type='submit' className='button-default button-active'>
       submit
     </button>
   </form>

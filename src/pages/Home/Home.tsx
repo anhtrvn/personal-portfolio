@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import Circles from './components/Circles';
-import Socials from '../../components/Nav/Socials';
+import Socials from '../../components/Nav/components/Socials';
 import { useTypewriter } from '../../components/ui/effects/useTypewriter';
 
 const Home = () => {
@@ -9,18 +9,16 @@ const Home = () => {
   const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!navRef.current) return;
+    if (navRef.current === null) return;
     navRef.current.style.opacity = '1';
   }, []);
 
   return (
-    <section className='h-full flex justify-center items-center'>
-      <div className='container flex flex-col items-center space-y-24'>
+    <section>
+      <div className='container flex-center flex-col h-full gap-y-24'>
         <div className='flex flex-col space-y-10'>
           <Circles />
-          <div
-            className='z-10 opacity-0 transition-opacity delay-[2.7s] duration-300 ease-in'
-            ref={navRef}>
+          <div className='z-10 profile-decor' ref={navRef}>
             <Socials />
           </div>
         </div>

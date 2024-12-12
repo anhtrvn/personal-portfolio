@@ -6,39 +6,33 @@ const Circles: React.FC = () => {
   const outerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (innerRef.current === null || outerRef.current === null) return;
+
     const inner = innerRef.current;
     const outer = outerRef.current;
 
-    const onAnimationEnd = () => {
-      if (!inner || !outer) return;
-      outer.removeEventListener('animationend', onAnimationEnd);
+    inner.classList.add('animate-inner-circle');
+    outer.classList.add('animate-outer-circle');
+
+    const animationEnd = () => {
+      outer.removeEventListener('animationend', animationEnd);
       outer.style.height = '400px';
       outer.style.width = '400px';
       outer.classList.add('animate-pulse');
     };
 
-    if (!inner || !outer) return;
-    inner.classList.add('animate-inner-circle');
-    outer.classList.add('animate-outer-circle');
-    outer.addEventListener('animationend', onAnimationEnd);
+    outer.addEventListener('animationend', animationEnd);
 
     return () => {
-      if (!inner || !outer) return;
-      outer.removeEventListener('animationend', onAnimationEnd);
+      outer.removeEventListener('animationend', animationEnd);
     };
   }, []);
 
   return (
-    <div className='relative flex justify-center items-center'>
+    <div className='relative flex-center'>
       <Profile />
-      <div
-        className='absolute mx-auto rounded-full border border-accent-blue'
-        ref={innerRef}
-      />
-      <div
-        className='absolute mx-auto rounded-full border border-accent-blue'
-        ref={outerRef}
-      />
+      <div className='circle' ref={innerRef} />
+      <div className='circle' ref={outerRef} />
     </div>
   );
 };

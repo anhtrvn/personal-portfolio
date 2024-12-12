@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ReactNode } from 'react';
 
 type TransitionProps = {
-  children: React.ReactNode;
+  children: ReactNode;
 };
 
 const transition = {
@@ -25,8 +25,7 @@ const PageTransition: React.FC<TransitionProps> = ({ children }) => {
   }, [children]);
 
   return (
-    <div
-      className={`absolute inset-0 w-full h-full transition-opacity duration-300 ${animationType}`}>
+    <div className={`transition-200 h-full ${animationType}`}>
       {displayChildren}
     </div>
   );

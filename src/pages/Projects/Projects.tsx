@@ -1,23 +1,24 @@
 import React from 'react';
-import { projectCards } from './components/projectCards';
+import { projectCards } from './components/content';
 import Card from './components/Card';
 
 const multiSpan = (i: number) => {
   if (i === 0 || i === 3) {
     return 'lg:col-span-2';
-  } else if (i === projectCards.length - 1) {
-    return 'lg:col-span-3';
-  } else {
-    return 'col-span-1';
   }
+  if (i === projectCards.length - 1) {
+    return 'md:col-span-2 lg:col-span-3';
+  }
+  return 'col-span-1';
 };
 
 const Projects = () => {
   return (
-    <section className='flex justify-center items-center w-full h-full overflow-hidden pb-8 lg:pb-16'>
-      <div className='container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:auto-rows-[18rem] gap-6 max-w-5xl h-full overflow-x-hidden overflow-y-scroll scroller hide-scroller hover:show-scroller'>
+    <section className=''>
+      <div className='project-container'>
         {projectCards.map((card, i) => (
           <a
+            key={i}
             href={card.source}
             target='_blank'
             rel='noopener noreferrer'
@@ -31,7 +32,6 @@ const Projects = () => {
               description={card.description}
               imgUrl={card.image}
               srcUrl={card.source}
-              className='cursor-pointer'
             />
           </a>
         ))}

@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { HiMiniSparkles } from 'react-icons/hi2';
+import { icons } from '../../assets/misc/homeProfile';
 
-import Sheet from '../ui/Sheet';
-import Nav from './Nav';
-import { SingleStarLine } from '../../assets/starline';
+import Sheet from '../ui/sheet/Sheet';
+import Brand from './components/Brand';
+import Navbar from './Navbar';
 
 const MobileNav: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -14,34 +13,36 @@ const MobileNav: React.FC = () => {
   const toggleMobileNav = () => setIsOpen((prevState) => !prevState);
 
   return (
-    <div className='lg:hidden'>
+    <>
       <button
         onClick={toggleMobileNav}
-        className='button-icon absolute top-8 right-5 text-secondary'>
+        className='absolute top-12 right-10 button-icon text-secondary'>
         <FontAwesomeIcon icon={faBars} size='xl' />
       </button>
 
       <Sheet isOpen={isOpen} toggle={toggleMobileNav}>
-        <nav className='flex flex-col items-end gap-10'>
-          <div className='inline-flex gap-1'>
-            <HiMiniSparkles className='text-accent-pink text-xl' />
-            <Link
-              to='/'
-              className='button-nav font-semibold text-4xl text-secondary'
-              onClick={toggleMobileNav}>
-              anhtran
-            </Link>
-          </div>
+        <div className='flex flex-col items-end gap-10 px-5'>
+          <Brand onClick={toggleMobileNav} />
 
-          <SingleStarLine />
+          <span className='flex-center gap-10'>
+            <span className='flex-center gap-4'>
+              {Array.from({ length: 3 }, (_, i) => (
+                <Fragment key={i}>
+                  {icons.map((icon, i) => (
+                    <Fragment key={i}>{icons[icons.length - 1 - i]}</Fragment>
+                  ))}
+                </Fragment>
+              ))}
+            </span>
+          </span>
 
-          <Nav
+          <Navbar
             className='flex-col items-end text-2xl'
             onClick={toggleMobileNav}
           />
-        </nav>
+        </div>
       </Sheet>
-    </div>
+    </>
   );
 };
 
