@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { ReactNode, FC } from 'react';
 
 export interface TabButtonProps {
   value: string;
   onClick: (value: string) => void;
   isActive: boolean;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-export const TabButton: React.FC<TabButtonProps> = ({
+export const TabButton: FC<TabButtonProps> = ({
   value,
   onClick,
   isActive,
@@ -15,23 +15,19 @@ export const TabButton: React.FC<TabButtonProps> = ({
 }) => (
   <button
     onClick={() => onClick(value)}
-    className={`button-page w-full ${
-      isActive
-        ? 'translate-y-0 shadow-lg bg-accent-pink text-primary'
-        : 'text-accent-blue'
-    }`}>
+    className={`button-default ${isActive ? 'button-active' : ''}`}>
     {children}
   </button>
 );
 
-export interface TabContentProps {
+export interface TabBodyProps {
   value: string;
   activeTab: string;
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
 }
 
-export const TabContent: React.FC<TabContentProps> = ({
+export const TabBody: FC<TabBodyProps> = ({
   value,
   activeTab,
   children,
