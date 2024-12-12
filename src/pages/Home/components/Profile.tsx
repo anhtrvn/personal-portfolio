@@ -1,7 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, Fragment } from 'react';
 import profile from '../../../assets/images/profile.png';
-import { starline } from '../../../assets/starline';
-import SweTitle from '../../../assets/swe-title';
+import Swe, { icons } from '../../../assets/misc/homeProfile';
 
 const Profile = () => {
   const profileRef = useRef<HTMLImageElement>(null);
@@ -10,42 +9,43 @@ const Profile = () => {
   const sweRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (
+      profileRef.current === null ||
+      leftRef.current === null ||
+      rightRef.current === null ||
+      sweRef.current === null
+    )
+      return;
+
     const pfp = profileRef.current;
+    const left = leftRef.current;
+    const right = rightRef.current;
+    const swe = sweRef.current;
 
-    const onAnimationEnd = () => {
-      setTimeout(() => {
-        if (!leftRef.current || !rightRef.current || !sweRef.current) return;
-        leftRef.current?.classList.add('animate-pulse');
-        rightRef.current?.classList.add('animate-pulse');
-      }, 3000);
+    left.style.opacity = '1';
+    right.style.opacity = '1';
+    swe.style.opacity = '1';
 
-      if (!leftRef.current || !rightRef.current || !sweRef.current) return;
-      leftRef.current.style.opacity = '1';
-      rightRef.current.style.opacity = '1';
-      sweRef.current.style.opacity = '1';
+    const animationEnd = () => {
+      left.classList.add('animate-pulse');
+      right.classList.add('animate-pulse');
     };
 
-    if (!pfp) return;
     pfp.classList.add('animate-profile');
-    pfp.addEventListener('animationend', onAnimationEnd);
+    pfp.addEventListener('animationend', animationEnd);
 
     return () => {
-      if (!pfp) return;
-      pfp.removeEventListener('animationend', onAnimationEnd);
+      pfp.removeEventListener('animationend', animationEnd);
     };
   }, []);
 
   return (
     <>
-      <div
-        className='flex items-center gap-4 text-secondary opacity-0 transition-opacity delay-300 duration-500 ease-in'
-        ref={leftRef}>
-        {starline.map((_, i) => (
-          <React.Fragment key={i}>
-            {starline[starline.length - 1 - i]}
-          </React.Fragment>
+      <span className='profile-decor flex-center gap-4' ref={leftRef}>
+        {icons.map((_, i) => (
+          <Fragment key={i}>{icons[icons.length - 1 - i]}</Fragment>
         ))}
-      </div>
+      </span>
 
       <img
         className='mx-auto h-40 w-40 rounded-full border-2 border-secondary object-contain'
@@ -54,18 +54,14 @@ const Profile = () => {
         ref={profileRef}
       />
 
-      <div
-        className='flex items-center gap-4 text-secondary opacity-0 transition-opacity delay-300 duration-500 ease-in'
-        ref={rightRef}>
-        {starline.map((item, i) => (
-          <React.Fragment key={i}>{item}</React.Fragment>
+      <span className='profile-decor flex-center gap-4' ref={rightRef}>
+        {icons.map((item, i) => (
+          <Fragment key={i}>{item}</Fragment>
         ))}
-      </div>
+      </span>
 
-      <div
-        className='absolute uppercase opacity-0 transition-opacity duration-300 ease-in mb-4'
-        ref={sweRef}>
-        <SweTitle />
+      <div className='absolute uppercase mb-4 profile-decor' ref={sweRef}>
+        <Swe />
       </div>
     </>
   );

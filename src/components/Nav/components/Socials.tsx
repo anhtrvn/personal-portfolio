@@ -23,7 +23,7 @@ const socials = [
 
 const Socials = () => {
   return (
-    <nav className='flex gap-8 justify-center items-center text-accent-blue'>
+    <nav className='flex-center gap-8 text-accent-blue'>
       {socials.map((social) => (
         <a
           href={social.path}

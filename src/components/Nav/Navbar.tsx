@@ -20,12 +20,12 @@ const links = [
   },
 ];
 
-interface NavProps {
+interface NavbarProps {
   className?: string;
   onClick?: () => void;
 }
 
-const Nav: React.FC<NavProps> = ({ className = '', onClick }) => {
+const Navbar: React.FC<NavbarProps> = ({ className = '', onClick }) => {
   return (
     <nav className={`flex gap-8 ${className}`}>
       {links.map((link, i) => {
@@ -34,9 +34,7 @@ const Nav: React.FC<NavProps> = ({ className = '', onClick }) => {
             to={link.path}
             key={i}
             className={({ isActive }) =>
-              isActive
-                ? 'button-nav text-accent-pink'
-                : 'button-nav text-accent-blue hover:text-secondary active:text-accent-blue'
+              isActive ? 'button-nav text-accent-pink' : 'button-nav'
             }
             onClick={onClick}>
             {link.name}
@@ -47,4 +45,4 @@ const Nav: React.FC<NavProps> = ({ className = '', onClick }) => {
   );
 };
 
-export default Nav;
+export default Navbar;

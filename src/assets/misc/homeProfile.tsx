@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { FC, SVGProps } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar, faMinus } from '@fortawesome/free-solid-svg-icons';
 
-const SweTitle: React.FC<React.SVGProps<SVGSVGElement>> = () => {
+export const icons = [
+  <FontAwesomeIcon icon={faMinus} />,
+  <FontAwesomeIcon icon={faStar} size='xs' />,
+];
+
+const Swe: FC<SVGProps<SVGSVGElement>> = () => {
   return (
     <svg width='200' height='250' viewBox='0 0 200 200'>
       <defs>
@@ -29,4 +36,4 @@ const SweTitle: React.FC<React.SVGProps<SVGSVGElement>> = () => {
   );
 };
 
-export default SweTitle;
+export default Swe;
